@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MySqlConnect</id>
+    <version>1.0.0</version>
+    <title>MySqlConnect</title>
+    <authors>MD. Shohag Mia</authors>
+    <owners>MD. Shohag Mia</owners>
+    <projectUrl>https://github.com/mdshohagmia/MySqlConnect</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>It's the instead of mysql  database connector with our ASP.Net applications.
+Example: Console, Web Form, MVC5 applications etc.</description>
+    <summary>It's the instead of mysql  database connector with our ASP.Net applications.</summary>
+    <releaseNotes>Bug Fixed</releaseNotes>
+    <copyright>Copyright © 2017 MD. Shohag Mia. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>mysql database connectionstring mysqlconnect dotNet .net</tags>
+  </metadata>
+</package>
