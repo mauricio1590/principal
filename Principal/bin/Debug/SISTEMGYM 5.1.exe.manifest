@@ -211,14 +211,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1128960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1190912">
       <assemblyIdentity name="SISTEMGYM 5.1" version="5.2.0.261" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TuRRujb5sEyG7TT9uM2QKdY+GHWOqdkfEIadJIIOTgk=</dsig:DigestValue>
+        <dsig:DigestValue>VMvHTOpkPto+3+9arVnrQhcq7gShb55eBhJXW/D+pTY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

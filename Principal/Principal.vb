@@ -44,7 +44,9 @@ Public Class Principal
     Public intFormularioClientespa = 0
     Public intCongelarConClaveAdmin As Integer = 2
 
+    '' cedula del clietne que firma 
 
+    Public strCedula As String = 0
     'INFORMACION DEL ESTABLECIMIENTO 
     Public strNit As String = ""
     Public strNombre As String = ""

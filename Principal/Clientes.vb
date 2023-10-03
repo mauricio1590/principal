@@ -938,4 +938,12 @@ Public Class Clientes
     Private Sub FichaFacialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FichaFacialToolStripMenuItem.Click
         Principal.AbrirFormularios(Of consentimientofacial)()
     End Sub
+
+    Private Sub FichaCorporalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FichaCorporalToolStripMenuItem.Click
+        Principal.AbrirFormularios(Of Consentimientocorporal)()
+    End Sub
+
+    Private Sub FirmarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FirmarToolStripMenuItem.Click
+        Principal.AbrirFormularios(Of firmar)()
+    End Sub
 End Class

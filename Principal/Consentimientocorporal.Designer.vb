@@ -30,7 +30,6 @@ Partial Class Consentimientocorporal
         Me.rbCardiacano = New System.Windows.Forms.RadioButton()
         Me.rbCardiacasi = New System.Windows.Forms.RadioButton()
         Me.txtDocumento = New System.Windows.Forms.TextBox()
-        Me.txtcardiacas = New System.Windows.Forms.TextBox()
         Me.btncerrar = New System.Windows.Forms.Button()
         Me.PanelCabecera = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -38,13 +37,10 @@ Partial Class Consentimientocorporal
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.rbRenalesno = New System.Windows.Forms.RadioButton()
         Me.rbRenalessi = New System.Windows.Forms.RadioButton()
-        Me.txtRenales = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.rbCirculatoriasno = New System.Windows.Forms.RadioButton()
         Me.rbCirculatoriassi = New System.Windows.Forms.RadioButton()
-        Me.txtCirculatorias = New System.Windows.Forms.TextBox()
-        Me.txtPulmonares = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rbPulmonaresno = New System.Windows.Forms.RadioButton()
         Me.rbPulmonaressi = New System.Windows.Forms.RadioButton()
@@ -53,18 +49,14 @@ Partial Class Consentimientocorporal
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.rbDigestivasno = New System.Windows.Forms.RadioButton()
         Me.rbDigestivassi = New System.Windows.Forms.RadioButton()
-        Me.txtDigestivas = New System.Windows.Forms.TextBox()
-        Me.txtHermatologica = New System.Windows.Forms.TextBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.rbHermatologicano = New System.Windows.Forms.RadioButton()
         Me.rbHermatologicasi = New System.Windows.Forms.RadioButton()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txstEndocrinas = New System.Windows.Forms.TextBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.rbEndocrinasno = New System.Windows.Forms.RadioButton()
         Me.rbEndocrinassi = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtNeurologicas = New System.Windows.Forms.TextBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.rbNeurologicano = New System.Windows.Forms.RadioButton()
         Me.rbNeurologicasi = New System.Windows.Forms.RadioButton()
@@ -73,38 +65,30 @@ Partial Class Consentimientocorporal
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.rbPresionno = New System.Windows.Forms.RadioButton()
         Me.rbPresionsi = New System.Windows.Forms.RadioButton()
-        Me.txtPresion = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.rbAlergiasno = New System.Windows.Forms.RadioButton()
         Me.rbAlergiassi = New System.Windows.Forms.RadioButton()
-        Me.txtAlergias = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.rbPpielno = New System.Windows.Forms.RadioButton()
         Me.rbPpielsi = New System.Windows.Forms.RadioButton()
-        Me.txtProblemaspiel = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.rbConvulsionno = New System.Windows.Forms.RadioButton()
         Me.rbConvulsionsi = New System.Windows.Forms.RadioButton()
-        Me.txtConvulsiones = New System.Windows.Forms.TextBox()
-        Me.txtTabaco = New System.Windows.Forms.TextBox()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.rbTabacono = New System.Windows.Forms.RadioButton()
         Me.rbTabacosi = New System.Windows.Forms.RadioButton()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtAlcohol = New System.Windows.Forms.TextBox()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.rbAlcoholno = New System.Windows.Forms.RadioButton()
         Me.rbAlcoholsi = New System.Windows.Forms.RadioButton()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtDrogas = New System.Windows.Forms.TextBox()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.rbDrogasno = New System.Windows.Forms.RadioButton()
         Me.rbDrogassi = New System.Windows.Forms.RadioButton()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.txtMarcapasos = New System.Windows.Forms.TextBox()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
         Me.rbMarcapasosNo = New System.Windows.Forms.RadioButton()
         Me.rbMarcapasossi = New System.Windows.Forms.RadioButton()
@@ -117,9 +101,9 @@ Partial Class Consentimientocorporal
         Me.txtp2 = New System.Windows.Forms.TextBox()
         Me.txtp3 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtca1 = New System.Windows.Forms.TextBox()
+        Me.txtca2 = New System.Windows.Forms.TextBox()
+        Me.txtca3 = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtbI1 = New System.Windows.Forms.TextBox()
         Me.txtBi2 = New System.Windows.Forms.TextBox()
@@ -154,6 +138,16 @@ Partial Class Consentimientocorporal
         Me.txtTratamiento = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtEdad = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.txtPeso = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtestatura = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarPorDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -171,6 +165,7 @@ Partial Class Consentimientocorporal
         Me.GroupBox14.SuspendLayout()
         Me.GroupBox15.SuspendLayout()
         Me.GroupBox16.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblCliente
@@ -246,14 +241,6 @@ Partial Class Consentimientocorporal
         Me.txtDocumento.Size = New System.Drawing.Size(214, 21)
         Me.txtDocumento.TabIndex = 46
         '
-        'txtcardiacas
-        '
-        Me.txtcardiacas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcardiacas.Location = New System.Drawing.Point(120, 126)
-        Me.txtcardiacas.Name = "txtcardiacas"
-        Me.txtcardiacas.Size = New System.Drawing.Size(214, 21)
-        Me.txtcardiacas.TabIndex = 47
-        '
         'btncerrar
         '
         Me.btncerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -275,7 +262,7 @@ Partial Class Consentimientocorporal
         Me.PanelCabecera.Controls.Add(Me.Label7)
         Me.PanelCabecera.Controls.Add(Me.btncerrar)
         Me.PanelCabecera.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelCabecera.Location = New System.Drawing.Point(0, 0)
+        Me.PanelCabecera.Location = New System.Drawing.Point(0, 24)
         Me.PanelCabecera.Name = "PanelCabecera"
         Me.PanelCabecera.Size = New System.Drawing.Size(1066, 30)
         Me.PanelCabecera.TabIndex = 51
@@ -337,14 +324,6 @@ Partial Class Consentimientocorporal
         Me.rbRenalessi.Text = "Si"
         Me.rbRenalessi.UseVisualStyleBackColor = True
         '
-        'txtRenales
-        '
-        Me.txtRenales.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRenales.Location = New System.Drawing.Point(120, 183)
-        Me.txtRenales.Name = "txtRenales"
-        Me.txtRenales.Size = New System.Drawing.Size(214, 21)
-        Me.txtRenales.TabIndex = 53
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -389,22 +368,6 @@ Partial Class Consentimientocorporal
         Me.rbCirculatoriassi.TabStop = True
         Me.rbCirculatoriassi.Text = "Si"
         Me.rbCirculatoriassi.UseVisualStyleBackColor = True
-        '
-        'txtCirculatorias
-        '
-        Me.txtCirculatorias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCirculatorias.Location = New System.Drawing.Point(120, 237)
-        Me.txtCirculatorias.Name = "txtCirculatorias"
-        Me.txtCirculatorias.Size = New System.Drawing.Size(214, 21)
-        Me.txtCirculatorias.TabIndex = 56
-        '
-        'txtPulmonares
-        '
-        Me.txtPulmonares.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPulmonares.Location = New System.Drawing.Point(120, 290)
-        Me.txtPulmonares.Name = "txtPulmonares"
-        Me.txtPulmonares.Size = New System.Drawing.Size(214, 21)
-        Me.txtPulmonares.TabIndex = 56
         '
         'GroupBox2
         '
@@ -496,22 +459,6 @@ Partial Class Consentimientocorporal
         Me.rbDigestivassi.Text = "Si"
         Me.rbDigestivassi.UseVisualStyleBackColor = True
         '
-        'txtDigestivas
-        '
-        Me.txtDigestivas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDigestivas.Location = New System.Drawing.Point(120, 349)
-        Me.txtDigestivas.Name = "txtDigestivas"
-        Me.txtDigestivas.Size = New System.Drawing.Size(214, 21)
-        Me.txtDigestivas.TabIndex = 59
-        '
-        'txtHermatologica
-        '
-        Me.txtHermatologica.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHermatologica.Location = New System.Drawing.Point(120, 416)
-        Me.txtHermatologica.Name = "txtHermatologica"
-        Me.txtHermatologica.Size = New System.Drawing.Size(214, 21)
-        Me.txtHermatologica.TabIndex = 59
-        '
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.rbHermatologicano)
@@ -557,14 +504,6 @@ Partial Class Consentimientocorporal
         Me.Label4.TabIndex = 60
         Me.Label4.Text = "Enfermedades Hermatologicas"
         '
-        'txstEndocrinas
-        '
-        Me.txstEndocrinas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txstEndocrinas.Location = New System.Drawing.Point(120, 481)
-        Me.txstEndocrinas.Name = "txstEndocrinas"
-        Me.txstEndocrinas.Size = New System.Drawing.Size(214, 21)
-        Me.txstEndocrinas.TabIndex = 59
-        '
         'GroupBox7
         '
         Me.GroupBox7.Controls.Add(Me.rbEndocrinasno)
@@ -609,14 +548,6 @@ Partial Class Consentimientocorporal
         Me.Label6.Size = New System.Drawing.Size(125, 13)
         Me.Label6.TabIndex = 60
         Me.Label6.Text = "Enfermedades Endocrinas"
-        '
-        'txtNeurologicas
-        '
-        Me.txtNeurologicas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNeurologicas.Location = New System.Drawing.Point(120, 537)
-        Me.txtNeurologicas.Name = "txtNeurologicas"
-        Me.txtNeurologicas.Size = New System.Drawing.Size(214, 21)
-        Me.txtNeurologicas.TabIndex = 59
         '
         'GroupBox8
         '
@@ -667,7 +598,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(381, 107)
+        Me.Label9.Location = New System.Drawing.Point(285, 107)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(107, 13)
         Me.Label9.TabIndex = 63
@@ -678,7 +609,7 @@ Partial Class Consentimientocorporal
         Me.GroupBox9.Controls.Add(Me.rbPresionno)
         Me.GroupBox9.Controls.Add(Me.rbPresionsi)
         Me.GroupBox9.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox9.Location = New System.Drawing.Point(381, 118)
+        Me.GroupBox9.Location = New System.Drawing.Point(285, 118)
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox9.TabIndex = 61
@@ -708,19 +639,11 @@ Partial Class Consentimientocorporal
         Me.rbPresionsi.Text = "Si"
         Me.rbPresionsi.UseVisualStyleBackColor = True
         '
-        'txtPresion
-        '
-        Me.txtPresion.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPresion.Location = New System.Drawing.Point(491, 126)
-        Me.txtPresion.Name = "txtPresion"
-        Me.txtPresion.Size = New System.Drawing.Size(214, 21)
-        Me.txtPresion.TabIndex = 62
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(381, 159)
+        Me.Label11.Location = New System.Drawing.Point(285, 159)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(85, 13)
         Me.Label11.TabIndex = 66
@@ -731,7 +654,7 @@ Partial Class Consentimientocorporal
         Me.GroupBox11.Controls.Add(Me.rbAlergiasno)
         Me.GroupBox11.Controls.Add(Me.rbAlergiassi)
         Me.GroupBox11.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox11.Location = New System.Drawing.Point(381, 175)
+        Me.GroupBox11.Location = New System.Drawing.Point(285, 175)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox11.TabIndex = 64
@@ -761,19 +684,11 @@ Partial Class Consentimientocorporal
         Me.rbAlergiassi.Text = "Si"
         Me.rbAlergiassi.UseVisualStyleBackColor = True
         '
-        'txtAlergias
-        '
-        Me.txtAlergias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAlergias.Location = New System.Drawing.Point(491, 183)
-        Me.txtAlergias.Name = "txtAlergias"
-        Me.txtAlergias.Size = New System.Drawing.Size(214, 21)
-        Me.txtAlergias.TabIndex = 65
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(378, 215)
+        Me.Label10.Location = New System.Drawing.Point(282, 215)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(100, 13)
         Me.Label10.TabIndex = 69
@@ -784,7 +699,7 @@ Partial Class Consentimientocorporal
         Me.GroupBox10.Controls.Add(Me.rbPpielno)
         Me.GroupBox10.Controls.Add(Me.rbPpielsi)
         Me.GroupBox10.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox10.Location = New System.Drawing.Point(381, 229)
+        Me.GroupBox10.Location = New System.Drawing.Point(285, 229)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox10.TabIndex = 67
@@ -814,19 +729,11 @@ Partial Class Consentimientocorporal
         Me.rbPpielsi.Text = "Si"
         Me.rbPpielsi.UseVisualStyleBackColor = True
         '
-        'txtProblemaspiel
-        '
-        Me.txtProblemaspiel.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProblemaspiel.Location = New System.Drawing.Point(491, 237)
-        Me.txtProblemaspiel.Name = "txtProblemaspiel"
-        Me.txtProblemaspiel.Size = New System.Drawing.Size(214, 21)
-        Me.txtProblemaspiel.TabIndex = 68
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(381, 268)
+        Me.Label12.Location = New System.Drawing.Point(285, 268)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(93, 13)
         Me.Label12.TabIndex = 72
@@ -837,7 +744,7 @@ Partial Class Consentimientocorporal
         Me.GroupBox12.Controls.Add(Me.rbConvulsionno)
         Me.GroupBox12.Controls.Add(Me.rbConvulsionsi)
         Me.GroupBox12.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox12.Location = New System.Drawing.Point(381, 282)
+        Me.GroupBox12.Location = New System.Drawing.Point(285, 282)
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox12.TabIndex = 70
@@ -867,28 +774,12 @@ Partial Class Consentimientocorporal
         Me.rbConvulsionsi.Text = "Si"
         Me.rbConvulsionsi.UseVisualStyleBackColor = True
         '
-        'txtConvulsiones
-        '
-        Me.txtConvulsiones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConvulsiones.Location = New System.Drawing.Point(491, 290)
-        Me.txtConvulsiones.Name = "txtConvulsiones"
-        Me.txtConvulsiones.Size = New System.Drawing.Size(214, 21)
-        Me.txtConvulsiones.TabIndex = 71
-        '
-        'txtTabaco
-        '
-        Me.txtTabaco.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTabaco.Location = New System.Drawing.Point(491, 350)
-        Me.txtTabaco.Name = "txtTabaco"
-        Me.txtTabaco.Size = New System.Drawing.Size(214, 21)
-        Me.txtTabaco.TabIndex = 71
-        '
         'GroupBox13
         '
         Me.GroupBox13.Controls.Add(Me.rbTabacono)
         Me.GroupBox13.Controls.Add(Me.rbTabacosi)
         Me.GroupBox13.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox13.Location = New System.Drawing.Point(381, 342)
+        Me.GroupBox13.Location = New System.Drawing.Point(285, 342)
         Me.GroupBox13.Name = "GroupBox13"
         Me.GroupBox13.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox13.TabIndex = 70
@@ -922,26 +813,18 @@ Partial Class Consentimientocorporal
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(381, 328)
+        Me.Label13.Location = New System.Drawing.Point(285, 328)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 13)
         Me.Label13.TabIndex = 72
         Me.Label13.Text = "tabaco"
-        '
-        'txtAlcohol
-        '
-        Me.txtAlcohol.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAlcohol.Location = New System.Drawing.Point(491, 413)
-        Me.txtAlcohol.Name = "txtAlcohol"
-        Me.txtAlcohol.Size = New System.Drawing.Size(214, 21)
-        Me.txtAlcohol.TabIndex = 71
         '
         'GroupBox14
         '
         Me.GroupBox14.Controls.Add(Me.rbAlcoholno)
         Me.GroupBox14.Controls.Add(Me.rbAlcoholsi)
         Me.GroupBox14.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox14.Location = New System.Drawing.Point(381, 405)
+        Me.GroupBox14.Location = New System.Drawing.Point(285, 405)
         Me.GroupBox14.Name = "GroupBox14"
         Me.GroupBox14.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox14.TabIndex = 70
@@ -975,26 +858,18 @@ Partial Class Consentimientocorporal
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(381, 391)
+        Me.Label15.Location = New System.Drawing.Point(285, 391)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(43, 13)
         Me.Label15.TabIndex = 72
         Me.Label15.Text = "Alcohol"
-        '
-        'txtDrogas
-        '
-        Me.txtDrogas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDrogas.Location = New System.Drawing.Point(491, 478)
-        Me.txtDrogas.Name = "txtDrogas"
-        Me.txtDrogas.Size = New System.Drawing.Size(214, 21)
-        Me.txtDrogas.TabIndex = 71
         '
         'GroupBox15
         '
         Me.GroupBox15.Controls.Add(Me.rbDrogasno)
         Me.GroupBox15.Controls.Add(Me.rbDrogassi)
         Me.GroupBox15.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox15.Location = New System.Drawing.Point(381, 470)
+        Me.GroupBox15.Location = New System.Drawing.Point(285, 470)
         Me.GroupBox15.Name = "GroupBox15"
         Me.GroupBox15.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox15.TabIndex = 70
@@ -1028,26 +903,18 @@ Partial Class Consentimientocorporal
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(381, 456)
+        Me.Label16.Location = New System.Drawing.Point(285, 456)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(38, 13)
         Me.Label16.TabIndex = 72
         Me.Label16.Text = "Drogas"
-        '
-        'txtMarcapasos
-        '
-        Me.txtMarcapasos.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMarcapasos.Location = New System.Drawing.Point(491, 537)
-        Me.txtMarcapasos.Name = "txtMarcapasos"
-        Me.txtMarcapasos.Size = New System.Drawing.Size(214, 21)
-        Me.txtMarcapasos.TabIndex = 71
         '
         'GroupBox16
         '
         Me.GroupBox16.Controls.Add(Me.rbMarcapasosNo)
         Me.GroupBox16.Controls.Add(Me.rbMarcapasossi)
         Me.GroupBox16.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox16.Location = New System.Drawing.Point(381, 529)
+        Me.GroupBox16.Location = New System.Drawing.Point(285, 529)
         Me.GroupBox16.Name = "GroupBox16"
         Me.GroupBox16.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox16.TabIndex = 70
@@ -1081,7 +948,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(381, 515)
+        Me.Label17.Location = New System.Drawing.Point(285, 515)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(61, 13)
         Me.Label17.TabIndex = 72
@@ -1091,7 +958,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(749, 131)
+        Me.Label18.Location = New System.Drawing.Point(479, 161)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(41, 13)
         Me.Label18.TabIndex = 72
@@ -1100,7 +967,7 @@ Partial Class Consentimientocorporal
         'txtc1
         '
         Me.txtc1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtc1.Location = New System.Drawing.Point(832, 126)
+        Me.txtc1.Location = New System.Drawing.Point(571, 152)
         Me.txtc1.Name = "txtc1"
         Me.txtc1.Size = New System.Drawing.Size(44, 21)
         Me.txtc1.TabIndex = 62
@@ -1108,7 +975,7 @@ Partial Class Consentimientocorporal
         'txtc2
         '
         Me.txtc2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtc2.Location = New System.Drawing.Point(895, 127)
+        Me.txtc2.Location = New System.Drawing.Point(634, 153)
         Me.txtc2.Name = "txtc2"
         Me.txtc2.Size = New System.Drawing.Size(44, 21)
         Me.txtc2.TabIndex = 62
@@ -1116,7 +983,7 @@ Partial Class Consentimientocorporal
         'txtc3
         '
         Me.txtc3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtc3.Location = New System.Drawing.Point(957, 127)
+        Me.txtc3.Location = New System.Drawing.Point(696, 153)
         Me.txtc3.Name = "txtc3"
         Me.txtc3.Size = New System.Drawing.Size(44, 21)
         Me.txtc3.TabIndex = 62
@@ -1124,7 +991,7 @@ Partial Class Consentimientocorporal
         'txtp1
         '
         Me.txtp1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtp1.Location = New System.Drawing.Point(832, 175)
+        Me.txtp1.Location = New System.Drawing.Point(571, 201)
         Me.txtp1.Name = "txtp1"
         Me.txtp1.Size = New System.Drawing.Size(44, 21)
         Me.txtp1.TabIndex = 62
@@ -1132,7 +999,7 @@ Partial Class Consentimientocorporal
         'txtp2
         '
         Me.txtp2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtp2.Location = New System.Drawing.Point(895, 176)
+        Me.txtp2.Location = New System.Drawing.Point(634, 202)
         Me.txtp2.Name = "txtp2"
         Me.txtp2.Size = New System.Drawing.Size(44, 21)
         Me.txtp2.TabIndex = 62
@@ -1140,7 +1007,7 @@ Partial Class Consentimientocorporal
         'txtp3
         '
         Me.txtp3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtp3.Location = New System.Drawing.Point(957, 176)
+        Me.txtp3.Location = New System.Drawing.Point(696, 202)
         Me.txtp3.Name = "txtp3"
         Me.txtp3.Size = New System.Drawing.Size(44, 21)
         Me.txtp3.TabIndex = 62
@@ -1149,41 +1016,41 @@ Partial Class Consentimientocorporal
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(749, 180)
+        Me.Label19.Location = New System.Drawing.Point(479, 210)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(36, 13)
         Me.Label19.TabIndex = 72
         Me.Label19.Text = "Pecho"
         '
-        'TextBox1
+        'txtca1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(832, 214)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(44, 21)
-        Me.TextBox1.TabIndex = 62
+        Me.txtca1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtca1.Location = New System.Drawing.Point(571, 240)
+        Me.txtca1.Name = "txtca1"
+        Me.txtca1.Size = New System.Drawing.Size(44, 21)
+        Me.txtca1.TabIndex = 62
         '
-        'TextBox2
+        'txtca2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(895, 215)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(44, 21)
-        Me.TextBox2.TabIndex = 62
+        Me.txtca2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtca2.Location = New System.Drawing.Point(634, 241)
+        Me.txtca2.Name = "txtca2"
+        Me.txtca2.Size = New System.Drawing.Size(44, 21)
+        Me.txtca2.TabIndex = 62
         '
-        'TextBox3
+        'txtca3
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(957, 215)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(44, 21)
-        Me.TextBox3.TabIndex = 62
+        Me.txtca3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtca3.Location = New System.Drawing.Point(696, 241)
+        Me.txtca3.Name = "txtca3"
+        Me.txtca3.Size = New System.Drawing.Size(44, 21)
+        Me.txtca3.TabIndex = 62
         '
         'Label20
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(749, 219)
+        Me.Label20.Location = New System.Drawing.Point(479, 249)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(39, 13)
         Me.Label20.TabIndex = 72
@@ -1192,7 +1059,7 @@ Partial Class Consentimientocorporal
         'txtbI1
         '
         Me.txtbI1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtbI1.Location = New System.Drawing.Point(832, 259)
+        Me.txtbI1.Location = New System.Drawing.Point(571, 285)
         Me.txtbI1.Name = "txtbI1"
         Me.txtbI1.Size = New System.Drawing.Size(44, 21)
         Me.txtbI1.TabIndex = 62
@@ -1200,7 +1067,7 @@ Partial Class Consentimientocorporal
         'txtBi2
         '
         Me.txtBi2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBi2.Location = New System.Drawing.Point(895, 260)
+        Me.txtBi2.Location = New System.Drawing.Point(634, 286)
         Me.txtBi2.Name = "txtBi2"
         Me.txtBi2.Size = New System.Drawing.Size(44, 21)
         Me.txtBi2.TabIndex = 62
@@ -1208,7 +1075,7 @@ Partial Class Consentimientocorporal
         'txtBi3
         '
         Me.txtBi3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBi3.Location = New System.Drawing.Point(957, 260)
+        Me.txtBi3.Location = New System.Drawing.Point(696, 286)
         Me.txtBi3.Name = "txtBi3"
         Me.txtBi3.Size = New System.Drawing.Size(44, 21)
         Me.txtBi3.TabIndex = 62
@@ -1217,7 +1084,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(749, 264)
+        Me.Label21.Location = New System.Drawing.Point(479, 294)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(50, 13)
         Me.Label21.TabIndex = 72
@@ -1226,7 +1093,7 @@ Partial Class Consentimientocorporal
         'txtBd1
         '
         Me.txtBd1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBd1.Location = New System.Drawing.Point(832, 305)
+        Me.txtBd1.Location = New System.Drawing.Point(571, 331)
         Me.txtBd1.Name = "txtBd1"
         Me.txtBd1.Size = New System.Drawing.Size(44, 21)
         Me.txtBd1.TabIndex = 62
@@ -1234,7 +1101,7 @@ Partial Class Consentimientocorporal
         'txtBd2
         '
         Me.txtBd2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBd2.Location = New System.Drawing.Point(895, 306)
+        Me.txtBd2.Location = New System.Drawing.Point(634, 332)
         Me.txtBd2.Name = "txtBd2"
         Me.txtBd2.Size = New System.Drawing.Size(44, 21)
         Me.txtBd2.TabIndex = 62
@@ -1242,7 +1109,7 @@ Partial Class Consentimientocorporal
         'txtBd3
         '
         Me.txtBd3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBd3.Location = New System.Drawing.Point(957, 306)
+        Me.txtBd3.Location = New System.Drawing.Point(696, 332)
         Me.txtBd3.Name = "txtBd3"
         Me.txtBd3.Size = New System.Drawing.Size(44, 21)
         Me.txtBd3.TabIndex = 62
@@ -1251,7 +1118,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(749, 310)
+        Me.Label22.Location = New System.Drawing.Point(479, 340)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(52, 13)
         Me.Label22.TabIndex = 72
@@ -1260,7 +1127,7 @@ Partial Class Consentimientocorporal
         'txtmi1
         '
         Me.txtmi1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmi1.Location = New System.Drawing.Point(832, 348)
+        Me.txtmi1.Location = New System.Drawing.Point(571, 374)
         Me.txtmi1.Name = "txtmi1"
         Me.txtmi1.Size = New System.Drawing.Size(44, 21)
         Me.txtmi1.TabIndex = 62
@@ -1268,7 +1135,7 @@ Partial Class Consentimientocorporal
         'txtMd1
         '
         Me.txtMd1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMd1.Location = New System.Drawing.Point(832, 394)
+        Me.txtMd1.Location = New System.Drawing.Point(571, 420)
         Me.txtMd1.Name = "txtMd1"
         Me.txtMd1.Size = New System.Drawing.Size(44, 21)
         Me.txtMd1.TabIndex = 62
@@ -1276,7 +1143,7 @@ Partial Class Consentimientocorporal
         'txtMi2
         '
         Me.txtMi2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMi2.Location = New System.Drawing.Point(895, 349)
+        Me.txtMi2.Location = New System.Drawing.Point(634, 375)
         Me.txtMi2.Name = "txtMi2"
         Me.txtMi2.Size = New System.Drawing.Size(44, 21)
         Me.txtMi2.TabIndex = 62
@@ -1284,7 +1151,7 @@ Partial Class Consentimientocorporal
         'txtMd2
         '
         Me.txtMd2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMd2.Location = New System.Drawing.Point(895, 395)
+        Me.txtMd2.Location = New System.Drawing.Point(634, 421)
         Me.txtMd2.Name = "txtMd2"
         Me.txtMd2.Size = New System.Drawing.Size(44, 21)
         Me.txtMd2.TabIndex = 62
@@ -1292,7 +1159,7 @@ Partial Class Consentimientocorporal
         'txtMi3
         '
         Me.txtMi3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMi3.Location = New System.Drawing.Point(957, 349)
+        Me.txtMi3.Location = New System.Drawing.Point(696, 375)
         Me.txtMi3.Name = "txtMi3"
         Me.txtMi3.Size = New System.Drawing.Size(44, 21)
         Me.txtMi3.TabIndex = 62
@@ -1300,7 +1167,7 @@ Partial Class Consentimientocorporal
         'txtMd3
         '
         Me.txtMd3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMd3.Location = New System.Drawing.Point(957, 395)
+        Me.txtMd3.Location = New System.Drawing.Point(696, 421)
         Me.txtMd3.Name = "txtMd3"
         Me.txtMd3.Size = New System.Drawing.Size(44, 21)
         Me.txtMd3.TabIndex = 62
@@ -1309,7 +1176,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(749, 353)
+        Me.Label23.Location = New System.Drawing.Point(479, 383)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(54, 13)
         Me.Label23.TabIndex = 72
@@ -1319,7 +1186,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(749, 399)
+        Me.Label24.Location = New System.Drawing.Point(479, 429)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(56, 13)
         Me.Label24.TabIndex = 72
@@ -1328,7 +1195,7 @@ Partial Class Consentimientocorporal
         'txtAba1
         '
         Me.txtAba1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAba1.Location = New System.Drawing.Point(832, 437)
+        Me.txtAba1.Location = New System.Drawing.Point(571, 463)
         Me.txtAba1.Name = "txtAba1"
         Me.txtAba1.Size = New System.Drawing.Size(44, 21)
         Me.txtAba1.TabIndex = 62
@@ -1336,7 +1203,7 @@ Partial Class Consentimientocorporal
         'txtAbb1
         '
         Me.txtAbb1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAbb1.Location = New System.Drawing.Point(832, 528)
+        Me.txtAbb1.Location = New System.Drawing.Point(571, 554)
         Me.txtAbb1.Name = "txtAbb1"
         Me.txtAbb1.Size = New System.Drawing.Size(44, 21)
         Me.txtAbb1.TabIndex = 62
@@ -1344,7 +1211,7 @@ Partial Class Consentimientocorporal
         'txtAba2
         '
         Me.txtAba2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAba2.Location = New System.Drawing.Point(895, 438)
+        Me.txtAba2.Location = New System.Drawing.Point(634, 464)
         Me.txtAba2.Name = "txtAba2"
         Me.txtAba2.Size = New System.Drawing.Size(44, 21)
         Me.txtAba2.TabIndex = 62
@@ -1352,7 +1219,7 @@ Partial Class Consentimientocorporal
         'txtAbb2
         '
         Me.txtAbb2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAbb2.Location = New System.Drawing.Point(895, 529)
+        Me.txtAbb2.Location = New System.Drawing.Point(634, 555)
         Me.txtAbb2.Name = "txtAbb2"
         Me.txtAbb2.Size = New System.Drawing.Size(44, 21)
         Me.txtAbb2.TabIndex = 62
@@ -1360,7 +1227,7 @@ Partial Class Consentimientocorporal
         'txtAba3
         '
         Me.txtAba3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAba3.Location = New System.Drawing.Point(957, 438)
+        Me.txtAba3.Location = New System.Drawing.Point(696, 464)
         Me.txtAba3.Name = "txtAba3"
         Me.txtAba3.Size = New System.Drawing.Size(44, 21)
         Me.txtAba3.TabIndex = 62
@@ -1368,7 +1235,7 @@ Partial Class Consentimientocorporal
         'txtAbb3
         '
         Me.txtAbb3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAbb3.Location = New System.Drawing.Point(957, 529)
+        Me.txtAbb3.Location = New System.Drawing.Point(696, 555)
         Me.txtAbb3.Name = "txtAbb3"
         Me.txtAbb3.Size = New System.Drawing.Size(44, 21)
         Me.txtAbb3.TabIndex = 62
@@ -1377,7 +1244,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(749, 442)
+        Me.Label25.Location = New System.Drawing.Point(479, 470)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(75, 13)
         Me.Label25.TabIndex = 72
@@ -1387,7 +1254,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(749, 533)
+        Me.Label26.Location = New System.Drawing.Point(479, 558)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(75, 13)
         Me.Label26.TabIndex = 72
@@ -1396,7 +1263,7 @@ Partial Class Consentimientocorporal
         'txtAbm1
         '
         Me.txtAbm1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAbm1.Location = New System.Drawing.Point(832, 483)
+        Me.txtAbm1.Location = New System.Drawing.Point(571, 509)
         Me.txtAbm1.Name = "txtAbm1"
         Me.txtAbm1.Size = New System.Drawing.Size(44, 21)
         Me.txtAbm1.TabIndex = 62
@@ -1404,7 +1271,7 @@ Partial Class Consentimientocorporal
         'txtAbm2
         '
         Me.txtAbm2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAbm2.Location = New System.Drawing.Point(895, 484)
+        Me.txtAbm2.Location = New System.Drawing.Point(634, 510)
         Me.txtAbm2.Name = "txtAbm2"
         Me.txtAbm2.Size = New System.Drawing.Size(44, 21)
         Me.txtAbm2.TabIndex = 62
@@ -1412,7 +1279,7 @@ Partial Class Consentimientocorporal
         'txtAbm3
         '
         Me.txtAbm3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAbm3.Location = New System.Drawing.Point(957, 484)
+        Me.txtAbm3.Location = New System.Drawing.Point(696, 510)
         Me.txtAbm3.Name = "txtAbm3"
         Me.txtAbm3.Size = New System.Drawing.Size(44, 21)
         Me.txtAbm3.TabIndex = 62
@@ -1421,7 +1288,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(740, 487)
+        Me.Label27.Location = New System.Drawing.Point(479, 513)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(86, 13)
         Me.Label27.TabIndex = 72
@@ -1430,7 +1297,7 @@ Partial Class Consentimientocorporal
         'txtObservaciones
         '
         Me.txtObservaciones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservaciones.Location = New System.Drawing.Point(13, 606)
+        Me.txtObservaciones.Location = New System.Drawing.Point(810, 175)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
         Me.txtObservaciones.Size = New System.Drawing.Size(214, 67)
@@ -1440,7 +1307,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(10, 579)
+        Me.Label28.Location = New System.Drawing.Point(807, 148)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(123, 13)
         Me.Label28.TabIndex = 72
@@ -1449,7 +1316,7 @@ Partial Class Consentimientocorporal
         'txtTratamiento
         '
         Me.txtTratamiento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTratamiento.Location = New System.Drawing.Point(381, 606)
+        Me.txtTratamiento.Location = New System.Drawing.Point(810, 332)
         Me.txtTratamiento.Multiline = True
         Me.txtTratamiento.Name = "txtTratamiento"
         Me.txtTratamiento.Size = New System.Drawing.Size(214, 67)
@@ -1459,7 +1326,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(378, 579)
+        Me.Label29.Location = New System.Drawing.Point(807, 293)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(125, 13)
         Me.Label29.TabIndex = 72
@@ -1467,18 +1334,104 @@ Partial Class Consentimientocorporal
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(792, 620)
+        Me.btnGuardar.Location = New System.Drawing.Point(644, 59)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 73
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
+        'txtEdad
+        '
+        Me.txtEdad.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEdad.Location = New System.Drawing.Point(523, 113)
+        Me.txtEdad.Name = "txtEdad"
+        Me.txtEdad.Size = New System.Drawing.Size(44, 21)
+        Me.txtEdad.TabIndex = 62
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(488, 118)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(29, 13)
+        Me.Label30.TabIndex = 72
+        Me.Label30.Text = "Edad"
+        '
+        'txtPeso
+        '
+        Me.txtPeso.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPeso.Location = New System.Drawing.Point(728, 115)
+        Me.txtPeso.Name = "txtPeso"
+        Me.txtPeso.Size = New System.Drawing.Size(44, 21)
+        Me.txtPeso.TabIndex = 62
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(693, 118)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(29, 13)
+        Me.Label31.TabIndex = 72
+        Me.Label31.Text = "Peso"
+        '
+        'txtestatura
+        '
+        Me.txtestatura.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtestatura.Location = New System.Drawing.Point(637, 115)
+        Me.txtestatura.Name = "txtestatura"
+        Me.txtestatura.Size = New System.Drawing.Size(44, 21)
+        Me.txtestatura.TabIndex = 62
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(587, 118)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(44, 13)
+        Me.Label32.TabIndex = 72
+        Me.Label32.Text = "Estatura"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1066, 24)
+        Me.MenuStrip1.TabIndex = 74
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'OpcionesToolStripMenuItem
+        '
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarPorDocumentoToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
+        Me.OpcionesToolStripMenuItem.Text = "Opciones"
+        '
+        'BuscarPorDocumentoToolStripMenuItem
+        '
+        Me.BuscarPorDocumentoToolStripMenuItem.Name = "BuscarPorDocumentoToolStripMenuItem"
+        Me.BuscarPorDocumentoToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.BuscarPorDocumentoToolStripMenuItem.Text = "buscar por documento "
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Location = New System.Drawing.Point(750, 59)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.TabIndex = 75
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
         'Consentimientocorporal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1066, 768)
+        Me.ClientSize = New System.Drawing.Size(1066, 631)
+        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Label28)
@@ -1493,6 +1446,9 @@ Partial Class Consentimientocorporal
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label31)
+        Me.Controls.Add(Me.Label32)
+        Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label13)
@@ -1504,17 +1460,10 @@ Partial Class Consentimientocorporal
         Me.Controls.Add(Me.GroupBox12)
         Me.Controls.Add(Me.txtTratamiento)
         Me.Controls.Add(Me.txtObservaciones)
-        Me.Controls.Add(Me.txtMarcapasos)
-        Me.Controls.Add(Me.txtDrogas)
-        Me.Controls.Add(Me.txtAlcohol)
-        Me.Controls.Add(Me.txtTabaco)
-        Me.Controls.Add(Me.txtConvulsiones)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox10)
-        Me.Controls.Add(Me.txtProblemaspiel)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.GroupBox11)
-        Me.Controls.Add(Me.txtAlergias)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.GroupBox9)
         Me.Controls.Add(Me.txtAbm3)
@@ -1530,24 +1479,26 @@ Partial Class Consentimientocorporal
         Me.Controls.Add(Me.txtAba2)
         Me.Controls.Add(Me.txtBd2)
         Me.Controls.Add(Me.txtMi2)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtca3)
         Me.Controls.Add(Me.txtAbm1)
         Me.Controls.Add(Me.txtBi2)
         Me.Controls.Add(Me.txtAbb1)
         Me.Controls.Add(Me.txtp3)
         Me.Controls.Add(Me.txtMd1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtca2)
         Me.Controls.Add(Me.txtAba1)
         Me.Controls.Add(Me.txtBd1)
         Me.Controls.Add(Me.txtmi1)
         Me.Controls.Add(Me.txtc3)
         Me.Controls.Add(Me.txtbI1)
         Me.Controls.Add(Me.txtp2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtca1)
         Me.Controls.Add(Me.txtc2)
         Me.Controls.Add(Me.txtp1)
+        Me.Controls.Add(Me.txtPeso)
+        Me.Controls.Add(Me.txtestatura)
+        Me.Controls.Add(Me.txtEdad)
         Me.Controls.Add(Me.txtc1)
-        Me.Controls.Add(Me.txtPresion)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
@@ -1556,27 +1507,21 @@ Partial Class Consentimientocorporal
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.txtNeurologicas)
-        Me.Controls.Add(Me.txstEndocrinas)
-        Me.Controls.Add(Me.txtHermatologica)
-        Me.Controls.Add(Me.txtDigestivas)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox6)
-        Me.Controls.Add(Me.txtPulmonares)
-        Me.Controls.Add(Me.txtCirculatorias)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.txtRenales)
         Me.Controls.Add(Me.PanelCabecera)
         Me.Controls.Add(Me.lblCliente)
         Me.Controls.Add(Me.lblDocumento)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.txtDocumento)
-        Me.Controls.Add(Me.txtcardiacas)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Consentimientocorporal"
         Me.Text = "Consentimientocorporal"
         Me.GroupBox3.ResumeLayout(False)
@@ -1613,6 +1558,8 @@ Partial Class Consentimientocorporal
         Me.GroupBox15.PerformLayout()
         Me.GroupBox16.ResumeLayout(False)
         Me.GroupBox16.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1625,7 +1572,6 @@ Partial Class Consentimientocorporal
     Friend WithEvents rbCardiacano As RadioButton
     Friend WithEvents rbCardiacasi As RadioButton
     Friend WithEvents txtDocumento As TextBox
-    Friend WithEvents txtcardiacas As TextBox
     Friend WithEvents btncerrar As Button
     Friend WithEvents PanelCabecera As Panel
     Friend WithEvents Label7 As Label
@@ -1633,13 +1579,10 @@ Partial Class Consentimientocorporal
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents rbRenalesno As RadioButton
     Friend WithEvents rbRenalessi As RadioButton
-    Friend WithEvents txtRenales As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents rbCirculatoriasno As RadioButton
     Friend WithEvents rbCirculatoriassi As RadioButton
-    Friend WithEvents txtCirculatorias As TextBox
-    Friend WithEvents txtPulmonares As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents rbPulmonaresno As RadioButton
     Friend WithEvents rbPulmonaressi As RadioButton
@@ -1648,18 +1591,14 @@ Partial Class Consentimientocorporal
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents rbDigestivasno As RadioButton
     Friend WithEvents rbDigestivassi As RadioButton
-    Friend WithEvents txtDigestivas As TextBox
-    Friend WithEvents txtHermatologica As TextBox
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents rbHermatologicano As RadioButton
     Friend WithEvents rbHermatologicasi As RadioButton
     Friend WithEvents Label4 As Label
-    Friend WithEvents txstEndocrinas As TextBox
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents rbEndocrinasno As RadioButton
     Friend WithEvents rbEndocrinassi As RadioButton
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtNeurologicas As TextBox
     Friend WithEvents GroupBox8 As GroupBox
     Friend WithEvents rbNeurologicano As RadioButton
     Friend WithEvents rbNeurologicasi As RadioButton
@@ -1668,38 +1607,30 @@ Partial Class Consentimientocorporal
     Friend WithEvents GroupBox9 As GroupBox
     Friend WithEvents rbPresionno As RadioButton
     Friend WithEvents rbPresionsi As RadioButton
-    Friend WithEvents txtPresion As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents rbAlergiasno As RadioButton
     Friend WithEvents rbAlergiassi As RadioButton
-    Friend WithEvents txtAlergias As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents GroupBox10 As GroupBox
     Friend WithEvents rbPpielno As RadioButton
     Friend WithEvents rbPpielsi As RadioButton
-    Friend WithEvents txtProblemaspiel As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents GroupBox12 As GroupBox
     Friend WithEvents rbConvulsionno As RadioButton
     Friend WithEvents rbConvulsionsi As RadioButton
-    Friend WithEvents txtConvulsiones As TextBox
-    Friend WithEvents txtTabaco As TextBox
     Friend WithEvents GroupBox13 As GroupBox
     Friend WithEvents rbTabacono As RadioButton
     Friend WithEvents rbTabacosi As RadioButton
     Friend WithEvents Label13 As Label
-    Friend WithEvents txtAlcohol As TextBox
     Friend WithEvents GroupBox14 As GroupBox
     Friend WithEvents rbAlcoholno As RadioButton
     Friend WithEvents rbAlcoholsi As RadioButton
     Friend WithEvents Label15 As Label
-    Friend WithEvents txtDrogas As TextBox
     Friend WithEvents GroupBox15 As GroupBox
     Friend WithEvents rbDrogasno As RadioButton
     Friend WithEvents rbDrogassi As RadioButton
     Friend WithEvents Label16 As Label
-    Friend WithEvents txtMarcapasos As TextBox
     Friend WithEvents GroupBox16 As GroupBox
     Friend WithEvents rbMarcapasosNo As RadioButton
     Friend WithEvents rbMarcapasossi As RadioButton
@@ -1712,9 +1643,9 @@ Partial Class Consentimientocorporal
     Friend WithEvents txtp2 As TextBox
     Friend WithEvents txtp3 As TextBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtca1 As TextBox
+    Friend WithEvents txtca2 As TextBox
+    Friend WithEvents txtca3 As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents txtbI1 As TextBox
     Friend WithEvents txtBi2 As TextBox
@@ -1749,4 +1680,14 @@ Partial Class Consentimientocorporal
     Friend WithEvents txtTratamiento As TextBox
     Friend WithEvents Label29 As Label
     Friend WithEvents btnGuardar As Button
+    Friend WithEvents txtEdad As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents txtPeso As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents txtestatura As TextBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BuscarPorDocumentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnModificar As Button
 End Class
