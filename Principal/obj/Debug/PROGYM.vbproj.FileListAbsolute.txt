@@ -368,3 +368,5 @@ D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Inasi
 D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.HistorialDeSaldoVentas.resources
 D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.SuggestedBindingRedirects.cache
 D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.consentimientofacial.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Consentimientocorporal.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.firmar.resources

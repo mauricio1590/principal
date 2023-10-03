@@ -30,6 +30,7 @@ Partial Class consentimientofacial
         Me.PanelCabecera = New System.Windows.Forms.Panel()
         Me.btncerrar = New System.Windows.Forms.Button()
         Me.panelContenedor = New System.Windows.Forms.Panel()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.lblCliente = New System.Windows.Forms.Label()
@@ -138,31 +139,30 @@ Partial Class consentimientofacial
         Me.rbRenalesno = New System.Windows.Forms.RadioButton()
         Me.rbRenalessi = New System.Windows.Forms.RadioButton()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtFracturafacial = New System.Windows.Forms.TextBox()
-        Me.txtProblemaspiel = New System.Windows.Forms.TextBox()
-        Me.txtPresion = New System.Windows.Forms.TextBox()
-        Me.txtAzucar = New System.Windows.Forms.TextBox()
         Me.txtObeservacionesPiel = New System.Windows.Forms.TextBox()
         Me.txtObservaciones1 = New System.Windows.Forms.TextBox()
-        Me.txtMedicamento = New System.Windows.Forms.TextBox()
-        Me.txtCirculatorias = New System.Windows.Forms.TextBox()
-        Me.txtCirugias = New System.Windows.Forms.TextBox()
-        Me.txtDentales = New System.Windows.Forms.TextBox()
-        Me.txtCremas = New System.Windows.Forms.TextBox()
-        Me.txtLcontacto = New System.Windows.Forms.TextBox()
-        Me.txtConvulsiones = New System.Windows.Forms.TextBox()
-        Me.txtDigestivas = New System.Windows.Forms.TextBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.rbAlergiasno = New System.Windows.Forms.RadioButton()
         Me.rbAlergiassi = New System.Windows.Forms.RadioButton()
-        Me.txtRenales = New System.Windows.Forms.TextBox()
-        Me.txtAlergias = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.rbCardiacano = New System.Windows.Forms.RadioButton()
         Me.rbCardiacasi = New System.Windows.Forms.RadioButton()
-        Me.txtDocumento = New System.Windows.Forms.TextBox()
+        Me.txtAlergias = New System.Windows.Forms.TextBox()
+        Me.txtConvulsiones = New System.Windows.Forms.TextBox()
+        Me.txtCremas = New System.Windows.Forms.TextBox()
+        Me.txtCirugias = New System.Windows.Forms.TextBox()
+        Me.txtMedicamento = New System.Windows.Forms.TextBox()
+        Me.txtProblemaspiel = New System.Windows.Forms.TextBox()
+        Me.txtFracturafacial = New System.Windows.Forms.TextBox()
         Me.txtcardiacas = New System.Windows.Forms.TextBox()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.txtDocumento = New System.Windows.Forms.TextBox()
+        Me.txtRenales = New System.Windows.Forms.TextBox()
+        Me.txtDigestivas = New System.Windows.Forms.TextBox()
+        Me.txtLcontacto = New System.Windows.Forms.TextBox()
+        Me.txtDentales = New System.Windows.Forms.TextBox()
+        Me.txtCirculatorias = New System.Windows.Forms.TextBox()
+        Me.txtAzucar = New System.Windows.Forms.TextBox()
+        Me.txtPresion = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         Me.panelContenedor.SuspendLayout()
@@ -342,6 +342,15 @@ Partial Class consentimientofacial
         Me.panelContenedor.Name = "panelContenedor"
         Me.panelContenedor.Size = New System.Drawing.Size(987, 725)
         Me.panelContenedor.TabIndex = 34
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(800, 541)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(150, 41)
+        Me.btnLimpiar.TabIndex = 47
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
@@ -1546,38 +1555,6 @@ Partial Class consentimientofacial
         Me.Label14.TabIndex = 43
         Me.Label14.Text = "Enfermedades cardiacas"
         '
-        'txtFracturafacial
-        '
-        Me.txtFracturafacial.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFracturafacial.Location = New System.Drawing.Point(548, 120)
-        Me.txtFracturafacial.Name = "txtFracturafacial"
-        Me.txtFracturafacial.Size = New System.Drawing.Size(214, 21)
-        Me.txtFracturafacial.TabIndex = 42
-        '
-        'txtProblemaspiel
-        '
-        Me.txtProblemaspiel.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProblemaspiel.Location = New System.Drawing.Point(548, 71)
-        Me.txtProblemaspiel.Name = "txtProblemaspiel"
-        Me.txtProblemaspiel.Size = New System.Drawing.Size(214, 21)
-        Me.txtProblemaspiel.TabIndex = 42
-        '
-        'txtPresion
-        '
-        Me.txtPresion.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPresion.Location = New System.Drawing.Point(121, 400)
-        Me.txtPresion.Name = "txtPresion"
-        Me.txtPresion.Size = New System.Drawing.Size(214, 21)
-        Me.txtPresion.TabIndex = 42
-        '
-        'txtAzucar
-        '
-        Me.txtAzucar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAzucar.Location = New System.Drawing.Point(121, 354)
-        Me.txtAzucar.Name = "txtAzucar"
-        Me.txtAzucar.Size = New System.Drawing.Size(214, 21)
-        Me.txtAzucar.TabIndex = 42
-        '
         'txtObeservacionesPiel
         '
         Me.txtObeservacionesPiel.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1595,70 +1572,6 @@ Partial Class consentimientofacial
         Me.txtObservaciones1.Name = "txtObservaciones1"
         Me.txtObservaciones1.Size = New System.Drawing.Size(214, 48)
         Me.txtObservaciones1.TabIndex = 42
-        '
-        'txtMedicamento
-        '
-        Me.txtMedicamento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMedicamento.Location = New System.Drawing.Point(548, 364)
-        Me.txtMedicamento.Name = "txtMedicamento"
-        Me.txtMedicamento.Size = New System.Drawing.Size(214, 21)
-        Me.txtMedicamento.TabIndex = 42
-        '
-        'txtCirculatorias
-        '
-        Me.txtCirculatorias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCirculatorias.Location = New System.Drawing.Point(121, 304)
-        Me.txtCirculatorias.Name = "txtCirculatorias"
-        Me.txtCirculatorias.Size = New System.Drawing.Size(214, 21)
-        Me.txtCirculatorias.TabIndex = 42
-        '
-        'txtCirugias
-        '
-        Me.txtCirugias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCirugias.Location = New System.Drawing.Point(548, 311)
-        Me.txtCirugias.Name = "txtCirugias"
-        Me.txtCirugias.Size = New System.Drawing.Size(214, 21)
-        Me.txtCirugias.TabIndex = 42
-        '
-        'txtDentales
-        '
-        Me.txtDentales.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDentales.Location = New System.Drawing.Point(121, 264)
-        Me.txtDentales.Name = "txtDentales"
-        Me.txtDentales.Size = New System.Drawing.Size(214, 21)
-        Me.txtDentales.TabIndex = 42
-        '
-        'txtCremas
-        '
-        Me.txtCremas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCremas.Location = New System.Drawing.Point(548, 265)
-        Me.txtCremas.Name = "txtCremas"
-        Me.txtCremas.Size = New System.Drawing.Size(214, 21)
-        Me.txtCremas.TabIndex = 42
-        '
-        'txtLcontacto
-        '
-        Me.txtLcontacto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLcontacto.Location = New System.Drawing.Point(121, 211)
-        Me.txtLcontacto.Name = "txtLcontacto"
-        Me.txtLcontacto.Size = New System.Drawing.Size(214, 21)
-        Me.txtLcontacto.TabIndex = 42
-        '
-        'txtConvulsiones
-        '
-        Me.txtConvulsiones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConvulsiones.Location = New System.Drawing.Point(548, 219)
-        Me.txtConvulsiones.Name = "txtConvulsiones"
-        Me.txtConvulsiones.Size = New System.Drawing.Size(214, 21)
-        Me.txtConvulsiones.TabIndex = 42
-        '
-        'txtDigestivas
-        '
-        Me.txtDigestivas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDigestivas.Location = New System.Drawing.Point(121, 165)
-        Me.txtDigestivas.Name = "txtDigestivas"
-        Me.txtDigestivas.Size = New System.Drawing.Size(214, 21)
-        Me.txtDigestivas.TabIndex = 42
         '
         'GroupBox11
         '
@@ -1695,22 +1608,6 @@ Partial Class consentimientofacial
         Me.rbAlergiassi.Text = "Si"
         Me.rbAlergiassi.UseVisualStyleBackColor = True
         '
-        'txtRenales
-        '
-        Me.txtRenales.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRenales.Location = New System.Drawing.Point(121, 119)
-        Me.txtRenales.Name = "txtRenales"
-        Me.txtRenales.Size = New System.Drawing.Size(214, 21)
-        Me.txtRenales.TabIndex = 42
-        '
-        'txtAlergias
-        '
-        Me.txtAlergias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAlergias.Location = New System.Drawing.Point(548, 168)
-        Me.txtAlergias.Name = "txtAlergias"
-        Me.txtAlergias.Size = New System.Drawing.Size(214, 21)
-        Me.txtAlergias.TabIndex = 42
-        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.rbCardiacano)
@@ -1746,13 +1643,61 @@ Partial Class consentimientofacial
         Me.rbCardiacasi.Text = "Si"
         Me.rbCardiacasi.UseVisualStyleBackColor = True
         '
-        'txtDocumento
+        'txtAlergias
         '
-        Me.txtDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDocumento.Location = New System.Drawing.Point(121, 17)
-        Me.txtDocumento.Name = "txtDocumento"
-        Me.txtDocumento.Size = New System.Drawing.Size(214, 21)
-        Me.txtDocumento.TabIndex = 42
+        Me.txtAlergias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAlergias.Location = New System.Drawing.Point(548, 168)
+        Me.txtAlergias.Name = "txtAlergias"
+        Me.txtAlergias.Size = New System.Drawing.Size(214, 21)
+        Me.txtAlergias.TabIndex = 42
+        '
+        'txtConvulsiones
+        '
+        Me.txtConvulsiones.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtConvulsiones.Location = New System.Drawing.Point(548, 219)
+        Me.txtConvulsiones.Name = "txtConvulsiones"
+        Me.txtConvulsiones.Size = New System.Drawing.Size(214, 21)
+        Me.txtConvulsiones.TabIndex = 42
+        '
+        'txtCremas
+        '
+        Me.txtCremas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCremas.Location = New System.Drawing.Point(548, 265)
+        Me.txtCremas.Name = "txtCremas"
+        Me.txtCremas.Size = New System.Drawing.Size(214, 21)
+        Me.txtCremas.TabIndex = 42
+        '
+        'txtCirugias
+        '
+        Me.txtCirugias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCirugias.Location = New System.Drawing.Point(548, 311)
+        Me.txtCirugias.Name = "txtCirugias"
+        Me.txtCirugias.Size = New System.Drawing.Size(214, 21)
+        Me.txtCirugias.TabIndex = 42
+        '
+        'txtMedicamento
+        '
+        Me.txtMedicamento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMedicamento.Location = New System.Drawing.Point(548, 364)
+        Me.txtMedicamento.Name = "txtMedicamento"
+        Me.txtMedicamento.Size = New System.Drawing.Size(214, 21)
+        Me.txtMedicamento.TabIndex = 42
+        '
+        'txtProblemaspiel
+        '
+        Me.txtProblemaspiel.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProblemaspiel.Location = New System.Drawing.Point(548, 71)
+        Me.txtProblemaspiel.Name = "txtProblemaspiel"
+        Me.txtProblemaspiel.Size = New System.Drawing.Size(214, 21)
+        Me.txtProblemaspiel.TabIndex = 42
+        '
+        'txtFracturafacial
+        '
+        Me.txtFracturafacial.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFracturafacial.Location = New System.Drawing.Point(548, 120)
+        Me.txtFracturafacial.Name = "txtFracturafacial"
+        Me.txtFracturafacial.Size = New System.Drawing.Size(214, 21)
+        Me.txtFracturafacial.TabIndex = 42
         '
         'txtcardiacas
         '
@@ -1762,14 +1707,69 @@ Partial Class consentimientofacial
         Me.txtcardiacas.Size = New System.Drawing.Size(214, 21)
         Me.txtcardiacas.TabIndex = 42
         '
-        'btnLimpiar
+        'txtDocumento
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(800, 541)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(150, 41)
-        Me.btnLimpiar.TabIndex = 47
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
+        Me.txtDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDocumento.Location = New System.Drawing.Point(121, 17)
+        Me.txtDocumento.Name = "txtDocumento"
+        Me.txtDocumento.Size = New System.Drawing.Size(214, 21)
+        Me.txtDocumento.TabIndex = 42
+        '
+        'txtRenales
+        '
+        Me.txtRenales.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRenales.Location = New System.Drawing.Point(121, 119)
+        Me.txtRenales.Name = "txtRenales"
+        Me.txtRenales.Size = New System.Drawing.Size(214, 21)
+        Me.txtRenales.TabIndex = 42
+        '
+        'txtDigestivas
+        '
+        Me.txtDigestivas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDigestivas.Location = New System.Drawing.Point(121, 165)
+        Me.txtDigestivas.Name = "txtDigestivas"
+        Me.txtDigestivas.Size = New System.Drawing.Size(214, 21)
+        Me.txtDigestivas.TabIndex = 42
+        '
+        'txtLcontacto
+        '
+        Me.txtLcontacto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLcontacto.Location = New System.Drawing.Point(121, 211)
+        Me.txtLcontacto.Name = "txtLcontacto"
+        Me.txtLcontacto.Size = New System.Drawing.Size(214, 21)
+        Me.txtLcontacto.TabIndex = 42
+        '
+        'txtDentales
+        '
+        Me.txtDentales.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDentales.Location = New System.Drawing.Point(121, 264)
+        Me.txtDentales.Name = "txtDentales"
+        Me.txtDentales.Size = New System.Drawing.Size(214, 21)
+        Me.txtDentales.TabIndex = 42
+        '
+        'txtCirculatorias
+        '
+        Me.txtCirculatorias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCirculatorias.Location = New System.Drawing.Point(121, 304)
+        Me.txtCirculatorias.Name = "txtCirculatorias"
+        Me.txtCirculatorias.Size = New System.Drawing.Size(214, 21)
+        Me.txtCirculatorias.TabIndex = 42
+        '
+        'txtAzucar
+        '
+        Me.txtAzucar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAzucar.Location = New System.Drawing.Point(121, 354)
+        Me.txtAzucar.Name = "txtAzucar"
+        Me.txtAzucar.Size = New System.Drawing.Size(214, 21)
+        Me.txtAzucar.TabIndex = 42
+        '
+        'txtPresion
+        '
+        Me.txtPresion.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPresion.Location = New System.Drawing.Point(121, 400)
+        Me.txtPresion.Name = "txtPresion"
+        Me.txtPresion.Size = New System.Drawing.Size(214, 21)
+        Me.txtPresion.TabIndex = 42
         '
         'consentimientofacial
         '
@@ -1908,27 +1908,12 @@ Partial Class consentimientofacial
     Friend WithEvents rbRenalesno As RadioButton
     Friend WithEvents rbRenalessi As RadioButton
     Friend WithEvents Label14 As Label
-    Friend WithEvents txtFracturafacial As TextBox
-    Friend WithEvents txtProblemaspiel As TextBox
-    Friend WithEvents txtPresion As TextBox
-    Friend WithEvents txtAzucar As TextBox
-    Friend WithEvents txtMedicamento As TextBox
-    Friend WithEvents txtCirculatorias As TextBox
-    Friend WithEvents txtCirugias As TextBox
-    Friend WithEvents txtDentales As TextBox
-    Friend WithEvents txtCremas As TextBox
-    Friend WithEvents txtLcontacto As TextBox
-    Friend WithEvents txtConvulsiones As TextBox
-    Friend WithEvents txtDigestivas As TextBox
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents rbAlergiasno As RadioButton
     Friend WithEvents rbAlergiassi As RadioButton
-    Friend WithEvents txtRenales As TextBox
-    Friend WithEvents txtAlergias As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents rbCardiacano As RadioButton
     Friend WithEvents rbCardiacasi As RadioButton
-    Friend WithEvents txtcardiacas As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Label28 As Label
@@ -1981,11 +1966,26 @@ Partial Class consentimientofacial
     Friend WithEvents txtObservaciones1 As TextBox
     Friend WithEvents lblCliente As Label
     Friend WithEvents lblDocumento As Label
-    Friend WithEvents txtDocumento As TextBox
     Friend WithEvents btnGuardar As Button
     Friend WithEvents Label30 As Label
     Friend WithEvents txtObeservacionesPiel As TextBox
     Friend WithEvents BuscarPorDocumentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnLimpiar As Button
+    Friend WithEvents txtFracturafacial As TextBox
+    Friend WithEvents txtProblemaspiel As TextBox
+    Friend WithEvents txtPresion As TextBox
+    Friend WithEvents txtAzucar As TextBox
+    Friend WithEvents txtMedicamento As TextBox
+    Friend WithEvents txtCirculatorias As TextBox
+    Friend WithEvents txtCirugias As TextBox
+    Friend WithEvents txtDentales As TextBox
+    Friend WithEvents txtCremas As TextBox
+    Friend WithEvents txtLcontacto As TextBox
+    Friend WithEvents txtConvulsiones As TextBox
+    Friend WithEvents txtDigestivas As TextBox
+    Friend WithEvents txtRenales As TextBox
+    Friend WithEvents txtAlergias As TextBox
+    Friend WithEvents txtDocumento As TextBox
+    Friend WithEvents txtcardiacas As TextBox
 End Class

@@ -50,6 +50,8 @@ Partial Class Clientes
         Me.ConsentimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.descargarUsuario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FichaFacialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FichaCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lstNombres = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -76,7 +78,7 @@ Partial Class Clientes
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.imagenfoto = New System.Windows.Forms.PictureBox()
         Me.capturada = New System.Windows.Forms.PictureBox()
-        Me.FichaFacialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FirmarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         CType(Me.huella4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -291,7 +293,7 @@ Partial Class Clientes
         'OpcionesToolStripMenuItem
         '
         Me.OpcionesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarClientesToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ConsentimientoToolStripMenuItem, Me.ToolStripMenuItem3, Me.descargarUsuario, Me.FichaFacialToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarClientesToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ConsentimientoToolStripMenuItem, Me.ToolStripMenuItem3, Me.descargarUsuario, Me.FichaFacialToolStripMenuItem, Me.FichaCorporalToolStripMenuItem, Me.FirmarToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -333,6 +335,18 @@ Partial Class Clientes
         Me.descargarUsuario.Name = "descargarUsuario"
         Me.descargarUsuario.Size = New System.Drawing.Size(260, 22)
         Me.descargarUsuario.Text = "Descargar Usuario de la Nube"
+        '
+        'FichaFacialToolStripMenuItem
+        '
+        Me.FichaFacialToolStripMenuItem.Name = "FichaFacialToolStripMenuItem"
+        Me.FichaFacialToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.FichaFacialToolStripMenuItem.Text = "Ficha Facial"
+        '
+        'FichaCorporalToolStripMenuItem
+        '
+        Me.FichaCorporalToolStripMenuItem.Name = "FichaCorporalToolStripMenuItem"
+        Me.FichaCorporalToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.FichaCorporalToolStripMenuItem.Text = "Ficha Corporal"
         '
         'lstNombres
         '
@@ -574,11 +588,11 @@ Partial Class Clientes
         Me.capturada.TabIndex = 32
         Me.capturada.TabStop = False
         '
-        'FichaFacialToolStripMenuItem
+        'FirmarToolStripMenuItem
         '
-        Me.FichaFacialToolStripMenuItem.Name = "FichaFacialToolStripMenuItem"
-        Me.FichaFacialToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
-        Me.FichaFacialToolStripMenuItem.Text = "Ficha Facial"
+        Me.FirmarToolStripMenuItem.Name = "FirmarToolStripMenuItem"
+        Me.FirmarToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.FirmarToolStripMenuItem.Text = "Firmar"
         '
         'Clientes
         '
@@ -703,4 +717,6 @@ Partial Class Clientes
     Friend WithEvents huella3 As PictureBox
     Friend WithEvents huella4 As PictureBox
     Friend WithEvents FichaFacialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FichaCorporalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FirmarToolStripMenuItem As ToolStripMenuItem
 End Class

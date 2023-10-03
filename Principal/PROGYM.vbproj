@@ -279,6 +279,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExamineBase.vb" />
+    <Compile Include="firmar.Designer.vb">
+      <DependentUpon>firmar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="firmar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HistorialDeSaldoVentas.Designer.vb">
       <DependentUpon>HistorialDeSaldoVentas.vb</DependentUpon>
     </Compile>
@@ -529,6 +535,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firmar.resx">
+      <DependentUpon>firmar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="historialCliente.resx">
       <DependentUpon>historialCliente.vb</DependentUpon>
