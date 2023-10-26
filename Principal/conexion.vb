@@ -24,6 +24,9 @@ Public Class conexion
         End Try
         Return booRegistrado
     End Function
+
+
+
     Function saberSaldo(strcedula As String, Optional ByRef tipo As Integer = 0) As Boolean
         Dim boosaldo As Boolean = False
         Dim arlCoincidencias As ArrayList
@@ -80,6 +83,8 @@ Public Class conexion
             Case 1
 
                 If intTarjeta = 1 Then
+
+                    'tarjeta='" & intTarjeta & "'
                     Consulta = "SELECT d.id,d.cedula AS Cedula,CONCAT(UPPER(c.nombre),' ',UPPER(c.apellido)) as Cliente,UPPER(tiempo) AS Descripcion,Valor,LEFT(d.fecha_pago,10)AS Fecha, bc.no as Banco" & vbCrLf &
                                                            "FROM detalles d,cliente c,bancoscuentas bc WHERE c.cedula=d.cedula AND tarjeta='" & intTarjeta & "' and bc.id=d.banco  and d.fecha_pago  " & vbCrLf &
                                                            " BETWEEN STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND STR_TO_DATE('" & fhasta & "','%d/%m/%Y') order by d.id "
@@ -918,7 +923,26 @@ Public Class conexion
                 reporteListview(lstreporte, arlDatos1, True, FilasEtiquetas, True, ColumnasAmplitudes, ColumnasJustificaciones, ColumnasEsNumero, , booPromediar)
 
                 Exit Sub
+            Case 37
+                Consulta = "SELECT d.id,d.cedula AS Cedula,CONCAT(UPPER(c.nombre),' ',UPPER(c.apellido)) as Cliente,UPPER(tiempo) AS Descripcion,Valor,LEFT(d.fecha_pago,10)AS Fecha, bc.no as Banco" & vbCrLf &
+                                                        "FROM detalles d,cliente c,bancoscuentas bc WHERE c.cedula=d.cedula AND  bc.id=d.banco  and d.fecha_pago  " & vbCrLf &
+                                                        " BETWEEN STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND STR_TO_DATE('" & fhasta & "','%d/%m/%Y') order by d.id "
+                FilasEtiquetas = {0, 1, 2, 3, 4, 5, 6}
+                ColumnasEsNumero = {False, False, False, False, True, False, False}
+                ColumnasJustificaciones = {0, 0, 0, 1, 1, 1, 1}
+                ColumnasAmplitudes = {0, 100, 250, 150, 100, 100, 100}
 
+                Dim arlDatos1 As ArrayList = Gestor1.DatosDeConsulta(Consulta, True, Principal.cadenadeconexion)
+                Dim douSaldoEx As Double = 0
+                For i As Integer = 1 To arlDatos1.Count - 1
+                    If Not arlDatos1(i)(4).ToString.Equals("") Then
+                        douSaldoEx += arlDatos1(i)(4)
+                        totales.Text = douSaldoEx
+                    End If
+                Next
+                booPromediar = False
+                reporteListview(lstreporte, arlDatos1, True, FilasEtiquetas, True, ColumnasAmplitudes, ColumnasJustificaciones, ColumnasEsNumero, True, booPromediar)
+                Exit Sub
             Case 100
                 Consulta = " Select id,peso As Peso, talla As Talla,imc As IMC, porgrasa As '% grasa'," & vbCrLf &
                                     "pantorrilla AS pantorrilla,muslomedio AS Muslo, gluteo AS Gluteo,cintura AS Cintura, " & vbCrLf &
@@ -1161,7 +1185,7 @@ Public Class conexion
                             "FROM entrada en,cliente cl " & vbCrLf &
                             "WHERE cl.id= " & idcliente & " " & vbCrLf &
                             "AND en.cedula=cl.cedula  " & vbCrLf &
-                            "AND en.fecha>= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND en.fecha <  STR_TO_DATE('" & fhasta & "','%d/%m/%Y') ORDER By en.id"
+                            "AND en.fecha>= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND en.fecha <  STR_TO_DATE('" & fhasta & "','%d/%m/%Y') GROUP BY left(en.fecha,10) ORDER By en.id"
                 FilasEtiquetas = {0, 1, 2, 3, 4}
                 ColumnasEsNumero = {False, False, False, False, False}
                 ColumnasJustificaciones = {0, 0, 0, 0, 0}

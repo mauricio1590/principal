@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>262</ApplicationRevision>
+    <ApplicationRevision>266</ApplicationRevision>
     <ApplicationVersion>5.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -193,6 +193,8 @@
     <Compile Include="ArquepSpa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <None Include="AutorizacionHidraFacialVO" />
+    <Compile Include="AutorizacionFacialVO.vb" />
     <Compile Include="bancoscuentas.Designer.vb">
       <DependentUpon>bancoscuentas.vb</DependentUpon>
     </Compile>
@@ -279,12 +281,21 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExamineBase.vb" />
+    <Compile Include="FichaCorporalVO.vb" />
+    <Compile Include="FichaFacialVO.vb" />
+    <Compile Include="firmaAcompañante.Designer.vb">
+      <DependentUpon>firmaAcompañante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="firmaAcompañante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="firmar.Designer.vb">
       <DependentUpon>firmar.vb</DependentUpon>
     </Compile>
     <Compile Include="firmar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HidraFacialVO.vb" />
     <Compile Include="HistorialDeSaldoVentas.Designer.vb">
       <DependentUpon>HistorialDeSaldoVentas.vb</DependentUpon>
     </Compile>
@@ -297,6 +308,7 @@
     <Compile Include="InasistenciaUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Report.vb" />
     <Compile Include="VentasDetallado.Designer.vb">
       <DependentUpon>VentasDetallado.vb</DependentUpon>
     </Compile>
@@ -535,6 +547,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firmaAcompañante.resx">
+      <DependentUpon>firmaAcompañante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="firmar.resx">
       <DependentUpon>firmar.vb</DependentUpon>

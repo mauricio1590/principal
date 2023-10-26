@@ -5,6 +5,11 @@ Public Class consentimientofacial
     Public conexion As New MySqlConnection
     Dim intRegistro As Integer = 0
     Dim idFacialModificado As Integer = 0
+    Dim PDF As New Report
+    Dim Logo As String = Principal.strunidad + ":\sistemgym_datos\imagenes\Logo.png"
+    Dim Titulo As String = Principal.strunidad + ":\sistemgym_datos\imagenes\Titulo.png"
+    Dim si_no As String = Principal.strunidad + ":\sistemgym_datos\imagenes\SI_NO-3.png"
+    Dim Anatomia As String = Principal.strunidad + ":\sistemgym_datos\imagenes\Anatomia.png"
     Dim idTerceroModificado As Integer = 0
     Private Sub txtDocumento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDocumento.KeyPress
         If Asc(e.KeyChar) = 13 Then
@@ -154,13 +159,18 @@ Public Class consentimientofacial
 
     Private Sub BuscarPorDocumentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarPorDocumentoToolStripMenuItem.Click
         Dim strCedula = InputBox("Escriba una cedula", "Mensaje del Sistema")
-        If Not strCedula.Equals("") Then
-            alimentarFacial(strCedula, 1)
-            btnGuardar.Enabled = True
-            btnModificar.Enabled = True
+        If validaciones.saberingreso(strCedula) Then
+            If Not strCedula.Equals("") Then
+                alimentarFacial(strCedula, 1)
+                btnGuardar.Enabled = True
+                btnModificar.Enabled = True
+            Else
+                MessageBox.Show("EL documento ingresado no se encontro en la base de datos", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
         Else
             MessageBox.Show("EL documento ingresado no se encontro en la base de datos", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+
     End Sub
 
     Public Function alimentarFacial(cedula As String, tipobusqueda As Integer) As Boolean
@@ -326,5 +336,149 @@ Public Class consentimientofacial
 
     Private Sub consentimientofacial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnModificar.Enabled = False
+    End Sub
+
+    Private Sub GenerarDocumentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerarDocumentoToolStripMenuItem.Click
+
+        Dim intIdTercero As Integer = validaciones.saberIdTerceroByCedula(txtDocumento.Text)
+        Dim intEcardiaca As Integer = 2
+        Dim strCardiaca As String = txtcardiacas.Text
+        Dim intRenal As Integer = 2
+        Dim strRenal As String = txtRenales.Text
+        Dim intDigestivo As Integer = 2
+        Dim strDigestivo As String = txtDigestivas.Text
+        Dim intLcontacto As Integer = 2
+        Dim strLcontacto As String = txtLcontacto.Text
+        Dim intImpDental As Integer = 2
+        Dim strImpDental As String = txtDentales.Text
+        Dim intEcirculatoria As Integer = 2
+        Dim strEcirculatoria As String = txtCirculatorias.Text
+        Dim intPazucar As Integer = 2
+        Dim strPazucar As String = txtAzucar.Text
+        Dim intPpresion As Integer = 2
+        Dim strPpresion As String = txtPresion.Text
+        Dim intPpiel As Integer = 2
+        Dim strPpiel As String = txtProblemaspiel.Text
+        Dim intFfacial As Integer = 2
+        Dim strFfacial As String = txtFracturafacial.Text
+        Dim intAlergias As Integer = 2
+        Dim strAlergias As String = txtAlergias.Text
+        Dim intConvulsiones As Integer = 2
+        Dim strConvulsiones As String = txtConvulsiones.Text
+        Dim intCremas As Integer = 2
+        Dim strcremas As String = txtCremas.Text
+        Dim intCirugias As Integer = 2
+        Dim strCirugias As String = txtCirugias.Text
+        Dim intMedicamento As Integer = 2
+        Dim strMedicamento As String = txtMedicamento.Text
+        Dim strObservaciones As String = txtObservaciones1.Text
+        Dim intPielSeca As Integer = 2
+        Dim intPielLevementeSeca As Integer = 2
+        Dim intPielMedianamenteSeca As Integer = 2
+        Dim intPielMuySeca As Integer = 2
+        Dim intPielgrasa As Integer = 2
+        Dim intPielLevementegrasa As Integer = 2
+        Dim intPielMedianamenteGrasa As Integer = 2
+        Dim intPielMuyGrasa As Integer = 2
+        Dim strObservacionesPiel As String = txtObservaciones1.Text
+        Dim intDesvitalizada As Integer = 2
+        Dim intAsfictica As Integer = 2
+        Dim intHidratada As Integer = 2
+        Dim intStandar As Integer = 2
+
+        If rbCardiacasi.Checked Then intEcardiaca = 1 : Else intEcardiaca = 2
+        If rbRenalessi.Checked Then intRenal = 1 : Else intRenal = 2
+        If rbDigestivassi.Checked Then intDigestivo = 1 : Else intDigestivo = 2
+        If rbLcontactosi.Checked Then intLcontacto = 1 : Else intLcontacto = 2
+        If rbDentalessi.Checked Then intImpDental = 1 : Else intImpDental = 2
+        If rbCirculatoriassi.Checked Then intEcirculatoria = 1 : Else intEcirculatoria = 2
+        If rbAzucarsi.Checked Then intPazucar = 1 : Else intPazucar = 2
+        If rbPresionsi.Checked Then intPpresion = 1 : Else intPpresion = 2
+        If rbPpielsi.Checked Then intPpiel = 1 : Else intPpiel = 2
+        If rbFfacialsi.Checked Then intFfacial = 1 : Else intFfacial = 2
+        If rbAlergiassi.Checked Then intAlergias = 1 : Else intAlergias = 2
+        If rbConvulsionsi.Checked Then intConvulsiones = 1 : Else intConvulsiones = 2
+        If rbCremassi.Checked Then intCremas = 1 : Else intCremas = 2
+        If rbCirugiassi.Checked Then intCirugias = 1 : Else intCirugias = 2
+        If rbMedicamentossi.Checked Then intMedicamento = 1 : Else intMedicamento = 2
+        If rbPielsecasi.Checked Then intPielSeca = 1 : Else intPielSeca = 2
+        If rbPielLevesecasi.Checked Then intPielLevementeSeca = 1 : Else intPielLevementeSeca = 2
+        If rbPielMediasecasi.Checked Then intPielMedianamenteSeca = 1 : Else intPielMedianamenteSeca = 2
+        If rbPielmuySecasi.Checked Then intPielMuySeca = 1 : Else intPielMuySeca = 2
+        If rbPielgrasasi.Checked Then intPielgrasa = 1 : Else intPielgrasa = 2
+        If rbPielLeveGrasasi.Checked Then intPielLevementegrasa = 1 : Else intPielLevementegrasa = 2
+        If rbPielMediaGrasasi.Checked Then intPielMedianamenteGrasa = 1 : Else intPielMedianamenteGrasa = 2
+        If rbPielMuyGrasasi.Checked Then intPielMuyGrasa = 1 : Else intPielMuyGrasa = 2
+        If rbDesvitalizadasi.Checked Then intDesvitalizada = 1 : Else intDesvitalizada = 2
+        If rbAsficticasi.Checked Then intAsfictica = 1 : Else intAsfictica = 2
+        If rbHidratadasi.Checked Then intHidratada = 1 : Else intHidratada = 2
+        If rbStandarsi.Checked Then intStandar = 1 : Else intStandar = 2
+
+        Dim img As Image = Image.FromFile(Logo)
+        Dim cedula As String = txtDocumento.Text
+        Dim img2 As Image = Image.FromFile(Titulo)
+        Dim S_N As Image = Image.FromFile(si_no)
+        Dim img3 As Image = Image.FromFile(Anatomia)
+        Dim Datos As New FichaFacialVO(Principal.strunidad + ":\sistemgym_datos\fotos\profesional.jpg",
+                                       idFacialModificado,
+                                       lblCliente.Text,
+                                       "Cúcuta",
+                                       saberEdad(cedula),
+                                       "NA",
+                                       traerCampo(cedula, "nacimiento"),
+                                       traerCampo(cedula, "correo"),
+                                        traerCampo(cedula, "telefono"),
+                                       "Chequeo",
+                                       intEcardiaca, strCardiaca,
+                                       intEcirculatoria, strEcirculatoria,
+                                       intAlergias, strAlergias,
+                                       intRenal, strRenal,
+                                       intPazucar, strPazucar,
+                                       intConvulsiones, strConvulsiones,
+                                       intDigestivo, strDigestivo,
+                                       intPpresion, strPpresion,
+                                       intCremas, strcremas,
+                                       intLcontacto, strLcontacto,
+                                       intPpiel, strPpiel,
+                                       intCirugias, strCirugias,
+                                       intImpDental, strImpDental,
+                                       2, "",
+                                       intMedicamento, strMedicamento,
+                                       2, "",
+                                       strObservaciones,
+                                       intPielSeca,
+                                       intPielLevementeSeca,
+                                       intPielMedianamenteSeca,
+                                       intPielMuySeca,
+                                       intPielgrasa,
+                                       intPielMuyGrasa,
+                                       intPielMedianamenteGrasa,
+                                       intPielMuyGrasa,
+                                       strObservacionesPiel,
+                                       intDesvitalizada,
+                                       intAsfictica,
+                                       intHidratada,
+                                       intStandar)
+        PDF = New Report
+        PDF.FichaFacialPDF(img, img2, Datos, img3)
+    End Sub
+
+    Private Sub ConsentimientoToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ConsentimientoHidrafacialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsentimientoHidrafacialToolStripMenuItem.Click
+        Dim img As Image = Image.FromFile(Logo)
+        Dim img2 As Image = Image.FromFile(Titulo)
+        Dim S_N As Image = Image.FromFile(si_no)
+        Dim procedimiento As String = InputBox("Escriba el procedimiento")
+        Dim img3 As Image = Image.FromFile(Anatomia)
+        Dim Datos As New HidraFacialVO(lblCliente.Text,
+                                               Date.Now,
+                                               traerCampo(txtDocumento.Text, "ruta"),
+                                                traerCampo(txtDocumento.Text, "instructor"),
+                                                procedimiento)
+        PDF = New Report
+        PDF.ConsentimientoHidrafacialPDF(img, img2, img3, Datos)
     End Sub
 End Class

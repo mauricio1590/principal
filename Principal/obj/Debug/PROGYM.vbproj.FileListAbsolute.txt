@@ -370,3 +370,4 @@ D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.S
 D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.consentimientofacial.resources
 D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Consentimientocorporal.resources
 D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.firmar.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.firmaAcompañante.resources

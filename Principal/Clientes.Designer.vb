@@ -52,13 +52,13 @@ Partial Class Clientes
         Me.descargarUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.FichaFacialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FichaCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FirmarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lstNombres = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.PanelCabecera = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btncerrar = New System.Windows.Forms.Button()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtEps = New System.Windows.Forms.TextBox()
@@ -75,10 +75,11 @@ Partial Class Clientes
         Me.huella3 = New System.Windows.Forms.PictureBox()
         Me.huella2 = New System.Windows.Forms.PictureBox()
         Me.huella1 = New System.Windows.Forms.PictureBox()
+        Me.btncerrar = New System.Windows.Forms.Button()
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.imagenfoto = New System.Windows.Forms.PictureBox()
         Me.capturada = New System.Windows.Forms.PictureBox()
-        Me.FirmarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FirmaDelAcompañanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         CType(Me.huella4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -293,7 +294,7 @@ Partial Class Clientes
         'OpcionesToolStripMenuItem
         '
         Me.OpcionesToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarClientesToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ConsentimientoToolStripMenuItem, Me.ToolStripMenuItem3, Me.descargarUsuario, Me.FichaFacialToolStripMenuItem, Me.FichaCorporalToolStripMenuItem, Me.FirmarToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarClientesToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ConsentimientoToolStripMenuItem, Me.ToolStripMenuItem3, Me.descargarUsuario, Me.FichaFacialToolStripMenuItem, Me.FichaCorporalToolStripMenuItem, Me.FirmarToolStripMenuItem, Me.FirmaDelAcompañanteToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -348,6 +349,12 @@ Partial Class Clientes
         Me.FichaCorporalToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
         Me.FichaCorporalToolStripMenuItem.Text = "Ficha Corporal"
         '
+        'FirmarToolStripMenuItem
+        '
+        Me.FirmarToolStripMenuItem.Name = "FirmarToolStripMenuItem"
+        Me.FirmarToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.FirmarToolStripMenuItem.Text = "Firma del Paciente "
+        '
         'lstNombres
         '
         Me.lstNombres.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
@@ -398,21 +405,6 @@ Partial Class Clientes
         Me.Label7.Size = New System.Drawing.Size(148, 16)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Registro de Clientes"
-        '
-        'btncerrar
-        '
-        Me.btncerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btncerrar.BackgroundImage = Global.Principal.My.Resources.Resources.cerrar
-        Me.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btncerrar.FlatAppearance.BorderSize = 0
-        Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncerrar.Location = New System.Drawing.Point(875, 0)
-        Me.btncerrar.Name = "btncerrar"
-        Me.btncerrar.Size = New System.Drawing.Size(30, 30)
-        Me.btncerrar.TabIndex = 0
-        Me.btncerrar.UseVisualStyleBackColor = True
         '
         'txtEmail
         '
@@ -558,6 +550,21 @@ Partial Class Clientes
         Me.huella1.TabIndex = 43
         Me.huella1.TabStop = False
         '
+        'btncerrar
+        '
+        Me.btncerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btncerrar.BackgroundImage = Global.Principal.My.Resources.Resources.cerrar
+        Me.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btncerrar.FlatAppearance.BorderSize = 0
+        Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncerrar.Location = New System.Drawing.Point(875, 0)
+        Me.btncerrar.Name = "btncerrar"
+        Me.btncerrar.Size = New System.Drawing.Size(30, 30)
+        Me.btncerrar.TabIndex = 0
+        Me.btncerrar.UseVisualStyleBackColor = True
+        '
         'imagenHuella
         '
         Me.imagenHuella.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -588,11 +595,11 @@ Partial Class Clientes
         Me.capturada.TabIndex = 32
         Me.capturada.TabStop = False
         '
-        'FirmarToolStripMenuItem
+        'FirmaDelAcompañanteToolStripMenuItem
         '
-        Me.FirmarToolStripMenuItem.Name = "FirmarToolStripMenuItem"
-        Me.FirmarToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
-        Me.FirmarToolStripMenuItem.Text = "Firmar"
+        Me.FirmaDelAcompañanteToolStripMenuItem.Name = "FirmaDelAcompañanteToolStripMenuItem"
+        Me.FirmaDelAcompañanteToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.FirmaDelAcompañanteToolStripMenuItem.Text = "Firma del Acompañante"
         '
         'Clientes
         '
@@ -719,4 +726,5 @@ Partial Class Clientes
     Friend WithEvents FichaFacialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FichaCorporalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FirmarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FirmaDelAcompañanteToolStripMenuItem As ToolStripMenuItem
 End Class

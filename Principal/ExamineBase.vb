@@ -14,7 +14,7 @@
         Dim arlCoincidencias As ArrayList = gestor.DatosDeConsulta("SELECT COUNT(*) FROM REPORTE", , Principal.cadenadeconexion)
         If Not arlCoincidencias.Count = 0 Then
             For Each reporte As ArrayList In arlCoincidencias
-                If Not reporte(0) = 36 Then
+                If Not reporte(0) = 37 Then
                     con.registreDatos("DROP TABLE REPORTE")
                     examineTabla("reporte")
                 End If
@@ -406,6 +406,45 @@
                       "`mo` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP," & vbCrLf &
                       "PRIMARY KEY (`serial`)" & vbCrLf &
                     ") "
+
+                Case "corporal"
+                    strcadena = "CREATE TABLE corporal(
+                                id int auto_increment,
+                                idtercero int not null,
+                                ecardiaca int,
+                                erenal int,
+                                ecirculatoria int,
+                                epulmonares int, 
+                                edigestivas int ,
+                                ehermatologicas int,
+                                eendocrinas int ,
+                                eneurologicas int,
+                                ppresion int,
+                                alergias int,
+                                ppiel int,
+                                convulsiones int,
+                                tabaco int,
+                                alcohol int,
+                                drogas int,
+                                marcapasos int, 
+                                edad varchar(255) DEFAULT '',
+                                peso varchar(255) DEFAULT '', 
+                                estatura varchar(255) DEFAULT '' ,
+                                observacionesg text,
+                                diagnosticos text,
+                                cintura varchar(255),
+                                pecho varchar(255),
+                                cadera varchar(255),
+                                brazoi varchar(255),
+                                brazod varchar(255),
+                                musloi varchar(255),
+                                muslod varchar(255),
+                                abdomena varchar(255),
+                                abdomenm varchar(255),
+                                abdomenb varchar(255),
+                                mo timestamp DEFAULT CURRENT_TIMESTAMP,
+                                PRIMARY KEY(id)
+                            );"
                 Case "cortesias"
                     strcadena = " CREATE TABLE `cortesias` ( " & vbCrLf &
                       "`id` int(11) NOT NULL AUTO_INCREMENT," & vbCrLf &
@@ -482,6 +521,58 @@
                                   "`fac_fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP," & vbCrLf &
                                   "`fac_tipo` int(1) NOT NULL," & vbCrLf &
                                   "PRIMARY KEY (`id_factura`)) "
+
+                Case "facial"
+                    strcadena = "CREATE TABLE facial(
+                                id int auto_increment,
+                                idtercero int not null,
+                                ecardiaca int DEFAULT '2',
+                                ecardiacat varchar(255) DEFAULT '',
+                                erenal int DEFAULT '2',
+                                erenalt varchar(255) DEFAULT '',
+                                edigestiva int DEFAULT '2',
+                                edigestivat varchar(255) DEFAULT '',
+                                lcontacto int DEFAULT '2',
+                                lcontactot varchar(255) DEFAULT '',
+                                impdental int DEFAULT '2',
+                                impdentalt varchar(255) DEFAULT '',
+                                ecirculatoria int DEFAULT '2',
+                                ecirculatoriat varchar(255) DEFAULT '',
+                                pazucar int DEFAULT '2',
+                                pazucart varchar(255) DEFAULT '',
+                                ppresion int DEFAULT '2',
+                                ppresiont varchar(255) DEFAULT '',
+                                ppiel int DEFAULT '2',
+                                ppielt varchar(255) DEFAULT '',
+                                ffacial int DEFAULT '2',
+                                ffacialt varchar(255) DEFAULT '',
+                                alergias int DEFAULT '2',
+                                alergiast varchar(255) DEFAULT '',
+                                convulsiones int DEFAULT '2',
+                                convulsionest varchar(255) DEFAULT '',
+                                cremas int DEFAULT '2',
+                                cremast varchar(255) DEFAULT '',
+                                cirugias int DEFAULT '2',
+                                cirugiast varchar(255) DEFAULT '',
+                                medicamento int DEFAULT '2',
+                                medicamentot varchar(255) DEFAULT '',
+                                observaciones text,
+                                pielseca int DEFAULT '2',
+                                piellevementeseca int DEFAULT '2',
+                                pielmedianamenteseca int DEFAULT '2',
+                                pielmuyseca int DEFAULT '2',
+                                pielgrasa int DEFAULT '2',
+                                piellevementegrasa int DEFAULT '2',
+                                pielmedianamentegrasa int DEFAULT '2',
+                                pielmuygrasa int DEFAULT '2',
+                                obspiel text,
+                                desvitalizada   int DEFAULT '2',
+                                asfictica int DEFAULT '2',
+                                hidratada int DEFAULT '2',
+                                standar int DEFAULT '2',
+                                mo timestamp DEFAULT CURRENT_TIMESTAMP,
+                                PRIMARY KEY(id)
+                            );"
 
                 Case "gastos"
                     strcadena = " CREATE TABLE `gastos` (" & vbCrLf &
@@ -686,7 +777,8 @@
                                                                     ('Horario de Clientes por Horas',2),('Ingreso por Horas Detallado',2),
                                                                     ('Historial de Mensualidades',1),('Reporte de  Ventas',1),('Informe de Valoraciones',9),
                                                                     ('Clientes nuevos año calendario',2),('Historial de Actividad de Usuario',2),('Personalizados',10),
-                                                                    ('Historial de congelados por mes',2),('Inasistenia de Usuarios',2),('Informe General',1)"
+                                                                    ('Historial de congelados por mes',2),('Inasistenia de Usuarios',2),('Informe General',1)
+                                                                    ,('Reporte De Ingresos Cosolidado',1)"
                 Case "reporte_empleado"
                     strcadena = " CREATE TABLE `reporte_empleado` (" & vbCrLf &
                                   "`id` int(11) NOT NULL AUTO_INCREMENT," & vbCrLf &
@@ -805,6 +897,7 @@
         examineTabla("clientespa")
         examineTabla("conf")
         examineTabla("congelado")
+        examineTabla("corporal")
         examineTabla("cortesias")
         examineTabla("cuenta_cliente")
         examineTabla("detalles")
@@ -813,6 +906,7 @@
         examineTabla("empleado")
         examineTabla("entrada")
         examineTabla("factura")
+        examineTabla("facial")
         examineTabla("hora")
         examineTabla("horario")
         examineTabla("historialdesaldo")

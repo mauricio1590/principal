@@ -649,9 +649,13 @@ Public Class Pago
                 lbldia.Text = dias
                 Select Case dias
                     Case Is <= 30
+                        If dias > 6 AndAlso dias < 8 Then
+                            dias = dias - 1
+                        End If
                         fecha = DateAdd(DateInterval.Day, dias, Today)
                     Case Is < 365
                         fecha = DateAdd(DateInterval.Day, dias, Today)
+
                 'fecha = DateAdd(DateInterval.Month, dias / 30, Today)
                 'If Not dias Mod 30 = 0 Then fecha = DateAdd(DateInterval.Day, dias Mod 30, fecha)
                     Case Is >= 365

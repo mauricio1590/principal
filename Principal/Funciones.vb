@@ -198,11 +198,25 @@ Module Funciones
         Dim saber As Boolean = False
 
         If UsuarioInactivo(strCedula) Then
-                saber = True
-            End If
+            saber = True
+        End If
 
         Return saber
     End Function
+
+
+
+    Public Function saberEdad(strCedula As String) As String
+        Dim edad As String = ""
+        Dim cadena As String = "SELECT nacimiento FROM cliente WHERE cedula=" & strCedula & ""
+        Dim arlCoincidencias As ArrayList = Gestor1.DatosDeConsulta(cadena,, Principal.cadenadeconexion)
+        If Not arlCoincidencias.Count = 0 Then
+            Dim nacimiento As Date = arlCoincidencias(0)(0)
+            edad = DateDiff(DateInterval.Year, nacimiento, Now.Date)
+        End If
+        Return edad
+    End Function
+
     Public Function tarifaRestringida(idTarifa As Integer, detalle As String) As Boolean
         Dim saber As Boolean = False
         Dim cadena As String = "SELECT * FROM precio WHERE serial=" & idTarifa & " and det='" & detalle & "'"
@@ -485,6 +499,19 @@ Module Funciones
         Return Nothing
 
     End Function
+    Public Function traerCampo(strcedula As String, strCampo As String) As String
+        Dim retorno As String = ""
+        Dim arlCoincidencias = Gestor1.DatosDeConsulta("SELECT " & strCampo & " FROM cliente WHERE cedula ='" & strcedula & "'", , Principal.cadenadeconexion)
+
+        For Each Encontrado As ArrayList In arlCoincidencias
+            Dim lviEncontrado As New ListViewItem
+            retorno = Encontrado(0)
+
+        Next
+        Return retorno
+
+    End Function
+
     Public Sub mostrarBancosCuentas(lstBancos As ListView)
 
         Dim arlCoincidencias = Gestor1.DatosDeConsulta("SELECT id,no,ifnull(descripcion,'nada') FROM bancoscuentas", , Principal.cadenadeconexion)

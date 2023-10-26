@@ -5,6 +5,13 @@ Public Class Consentimientocorporal
     Dim idcorporalModificado As Integer = 0
     Dim intRegistro As Integer = 0
     Public conexion As New MySqlConnection
+    Dim PDF As New Report
+    Dim Logo As String = Principal.strunidad + ":\sistemgym_datos\imagenes\Logo.png"
+    Dim Titulo As String = Principal.strunidad + ":\sistemgym_datos\imagenes\Titulo.png"
+    Dim si_no As String = Principal.strunidad + ":\sistemgym_datos\imagenes\SI_NO-3.png"
+    Dim Titulo2 As String = Principal.strunidad + ":\sistemgym_datos\imagenes\Titulo_FichaCorporal-3.png"
+    Dim Anatomia As String = Principal.strunidad + ":\sistemgym_datos\imagenes\Anatomia.png"
+    Dim Corporal As String = Principal.strunidad + ":\sistemgym_datos\imagenes\FichaCorporal.png"
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         registreCorporal(1)
         limpiar()
@@ -177,11 +184,16 @@ Public Class Consentimientocorporal
     End Sub
 
     Private Sub BuscarPorDocumentoToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles BuscarPorDocumentoToolStripMenuItem.Click
+
         Dim strCedula = InputBox("Escriba una cedula", "Mensaje del Sistema")
-        If Not strCedula.Equals("") Then
-            alimentarCorporal(strCedula, 1)
-            btnGuardar.Enabled = True
-            btnModificar.Enabled = True
+        If validaciones.saberingreso(strCedula) Then
+            If Not strCedula.Equals("") Then
+                alimentarCorporal(strCedula, 1)
+                btnGuardar.Enabled = True
+                btnModificar.Enabled = True
+            Else
+
+            End If
         Else
             MessageBox.Show("EL documento ingresado no se encontro en la base de datos", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -288,5 +300,147 @@ Public Class Consentimientocorporal
         registreCorporal(2)
         limpiar()
         MessageBox.Show("Registro Actualizado", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+    End Sub
+
+    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub GenerarConsnetimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerarConsnetimientoToolStripMenuItem.Click
+        Dim img As Image = Image.FromFile(Logo)
+        Dim img2 As Image = Image.FromFile(Titulo)
+        Dim S_N As Image = Image.FromFile(si_no)
+        Dim img3 As Image = Image.FromFile(Anatomia)
+        Dim acompañante As String = InputBox("Escriba el nombre del acopañante")
+        Dim cedacompañante As String = InputBox("Escriba la cedula del acopañante")
+        Dim Datos As New AutorizacionFacialVO(lblCliente.Text,
+                                               acompañante,
+                                                cedacompañante,
+                                                Date.Now,
+                                               acompañante,
+                                                traerCampo(txtDocumento.Text, "ruta"),
+                                                traerCampo(txtDocumento.Text, "instructor"))
+        PDF = New Report
+        PDF.ConsentimientoPDF(img, img2, img3, Datos)
+    End Sub
+
+    Private Sub GenerarDocumentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerarDocumentoToolStripMenuItem.Click
+        Dim intEcardiaca As Integer = 2
+        Dim intRenales As Integer = 2
+        Dim intCirculatoria As Integer = 2
+        Dim intPulmonares As Integer = 2
+        Dim intDigestivas As Integer = 2
+        Dim intHermatologica As Integer = 2
+        Dim intEndocrina As Integer = 2
+        Dim intNeurologica As Integer = 2
+        Dim intPpresion As Integer = 2
+        Dim intAlergias As Integer = 2
+        Dim intPpiel As Integer = 2
+        Dim intConvulsiones As Integer = 2
+
+        Dim inttabaco As Integer = 2
+        Dim intAlcohol As Integer = 2
+        Dim intDrogras As Integer = 2
+        Dim intMarcapasos As Integer = 2
+
+        Dim cintura As String = txtc1.Text & "-" & txtc2.Text & "-" & txtc3.Text
+        Dim Pecho As String = txtp1.Text & "-" & txtp2.Text & "-" & txtp3.Text
+        Dim cadera As String = txtca1.Text & "-" & txtca2.Text & "-" & txtca3.Text
+        Dim brazoIzq As String = txtbI1.Text & "-" & txtBi2.Text & "-" & txtBi3.Text
+        Dim brazoder As String = txtBd1.Text & "-" & txtBd2.Text & "-" & txtBd3.Text
+        Dim musloizq As String = txtmi1.Text & "-" & txtMi2.Text & "-" & txtMi3.Text
+        Dim musloder As String = txtMd1.Text & "-" & txtMd2.Text & "-" & txtMd3.Text
+        Dim abdomenalto As String = txtAba1.Text & "-" & txtAba2.Text & "-" & txtAba3.Text
+        Dim abdomenmedio As String = txtAbm1.Text & "-" & txtAbm2.Text & "-" & txtAbm3.Text
+        Dim abdomenbajo As String = txtAbb1.Text & "-" & txtAbb2.Text & "-" & txtAbb3.Text
+
+        Dim generales As String = txtObservaciones.Text
+        Dim diagnostico As String = txtTratamiento.Text
+
+        If rbCardiacasi.Checked Then intEcardiaca = 1 : Else intEcardiaca = 2
+        If rbRenalessi.Checked Then intRenales = 1 : Else intRenales = 2
+        If rbCirculatoriassi.Checked Then intCirculatoria = 1 : Else intCirculatoria = 2
+        If rbPulmonaressi.Checked Then intPulmonares = 1 : Else intPulmonares = 2
+        If rbDigestivassi.Checked Then intDigestivas = 1 : Else intDigestivas = 2
+        If rbHermatologicasi.Checked Then intHermatologica = 1 : Else intHermatologica = 2
+        If rbEndocrinassi.Checked Then intEndocrina = 1 : Else intEndocrina = 2
+        If rbNeurologicasi.Checked Then intNeurologica = 1 : Else intNeurologica = 2
+        If rbPresionsi.Checked Then intPpresion = 1 : Else intPpresion = 2
+        If rbAlergiassi.Checked Then intAlergias = 1 : Else intAlergias = 2
+        If rbPpielsi.Checked Then intPpiel = 1 : Else intPpiel = 2
+        If rbConvulsionsi.Checked Then intConvulsiones = 1 : Else intConvulsiones = 2
+        If rbTabacosi.Checked Then inttabaco = 1 : Else inttabaco = 2
+        If rbAlcoholsi.Checked Then intAlcohol = 1 : Else intAlcohol = 2
+        If rbDrogassi.Checked Then intDrogras = 1 : Else intDrogras = 2
+        If rbMarcapasossi.Checked Then intMarcapasos = 1 : Else intMarcapasos = 2
+
+        Dim img As Image = Image.FromFile(Logo)
+        Dim cedula As String = txtDocumento.Text
+        Dim img2 As Image = Image.FromFile(Titulo2)
+        Dim S_N As Image = Image.FromFile(si_no)
+        Dim img3 As Image = Image.FromFile(Corporal)
+        Dim Datos As New FichaCorporalVO(Principal.strunidad + ":\sistemgym_datos\fotos\profesional.jpg",
+                                       idcorporalModificado,
+                                        lblCliente.Text,
+                                       "Cúcuta",
+                                       saberEdad(cedula),
+                                        "Soltero",
+                                       traerCampo(cedula, "nacimiento"),
+                                       traerCampo(cedula, "correo"),
+                                        traerCampo(cedula, "telefono"),
+                                       "Chequeo",
+                                       intEcardiaca,
+                                       intRenales,
+                                       intCirculatoria,
+                                       intPulmonares,
+                                       intDigestivas,
+                                       intHermatologica,
+                                       intEndocrina,
+                                       intNeurologica,
+                                       intPpresion,
+                                       intAlergias,
+                                       intPpiel,
+                                       intConvulsiones,
+                                       inttabaco,
+                                       intAlcohol,
+                                       intDrogras,
+                                       intMarcapasos,
+                                       txtPeso.Text,
+                                       txtestatura.Text,
+                                       txtc1.Text,
+                                       txtc2.Text,
+                                       txtc3.Text,
+                                       txtp1.Text,
+                                       txtp2.Text,
+                                       txtp3.Text,
+                                       txtca1.Text,
+                                       txtca2.Text,
+                                       txtca3.Text,
+                                       txtbI1.Text,
+                                       txtBi2.Text,
+                                       txtBi3.Text,
+                                       txtBd1.Text,
+                                       txtBd2.Text,
+                                       txtBd3.Text,
+                                       txtmi1.Text,
+                                       txtMi2.Text,
+                                       txtMi3.Text,
+                                       txtMd1.Text,
+                                       txtMd2.Text,
+                                       txtMd3.Text,
+                                       txtAba1.Text,
+                                       txtAba2.Text,
+                                       txtAba3.Text,
+                                       txtAbm1.Text,
+                                       txtAbm2.Text,
+                                       txtAbm3.Text,
+                                       txtAba1.Text,
+                                       txtAba2.Text,
+                                       txtAba3.Text,
+                                       generales,
+                                       diagnostico,
+                                       traerCampo(txtDocumento.Text, "ruta"))
+        PDF = New Report
+        PDF.FichaCorporalPDF(img, img2, Datos, img3)
     End Sub
 End Class

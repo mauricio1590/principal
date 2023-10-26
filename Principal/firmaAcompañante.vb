@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports MySql.Data
-Public Class firmar
+
+Public Class firmaAcompañante
     Dim con As New conexion
 
     Dim bm As Bitmap
@@ -18,19 +19,17 @@ Public Class firmar
     Dim strFirma As String
     Private Sub firmar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
         Bounds = Screen.FromPoint(MousePosition).Bounds
         iniciar()
 
+
     End Sub
     Sub iniciar()
-
         bm = New Bitmap(pic.Width, pic.Height)
         g = Graphics.FromImage(bm)
         g.Clear(Color.White)
 
         pic.Image = bm
-
     End Sub
     Private Sub pic_MouseDown(sender As Object, e As MouseEventArgs) Handles pic.MouseDown
         paintd = True
@@ -94,7 +93,7 @@ Public Class firmar
         conexion.Open()
         Dim cmd As New MySqlCommand()
         cmd = conexion.CreateCommand()
-        cmd.CommandText = "update cliente set ruta=? where cedula='" & strCedula & "' "
+        cmd.CommandText = "update cliente set instructor=? where cedula='" & strCedula & "' "
         cmd.Parameters.AddWithValue("ruta", ruta)
         cmd.ExecuteNonQuery()
         cmd.Dispose()
@@ -104,10 +103,6 @@ Public Class firmar
 
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
         Me.Close()
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
     End Sub
 
     Private Sub pic_Click(sender As Object, e As EventArgs) Handles pic.Click

@@ -30,9 +30,9 @@ Partial Class Consentimientocorporal
         Me.rbCardiacano = New System.Windows.Forms.RadioButton()
         Me.rbCardiacasi = New System.Windows.Forms.RadioButton()
         Me.txtDocumento = New System.Windows.Forms.TextBox()
-        Me.btncerrar = New System.Windows.Forms.Button()
         Me.PanelCabecera = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.btncerrar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.rbRenalesno = New System.Windows.Forms.RadioButton()
@@ -148,6 +148,8 @@ Partial Class Consentimientocorporal
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarPorDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnModificar = New System.Windows.Forms.Button()
+        Me.GenerarDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GenerarConsnetimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox3.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -241,21 +243,6 @@ Partial Class Consentimientocorporal
         Me.txtDocumento.Size = New System.Drawing.Size(214, 21)
         Me.txtDocumento.TabIndex = 46
         '
-        'btncerrar
-        '
-        Me.btncerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btncerrar.BackgroundImage = CType(resources.GetObject("btncerrar.BackgroundImage"), System.Drawing.Image)
-        Me.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btncerrar.FlatAppearance.BorderSize = 0
-        Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncerrar.Location = New System.Drawing.Point(1021, 0)
-        Me.btncerrar.Name = "btncerrar"
-        Me.btncerrar.Size = New System.Drawing.Size(30, 30)
-        Me.btncerrar.TabIndex = 0
-        Me.btncerrar.UseVisualStyleBackColor = True
-        '
         'PanelCabecera
         '
         Me.PanelCabecera.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(70, Byte), Integer))
@@ -278,6 +265,21 @@ Partial Class Consentimientocorporal
         Me.Label7.Size = New System.Drawing.Size(109, 16)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Ficha Corporal"
+        '
+        'btncerrar
+        '
+        Me.btncerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btncerrar.BackgroundImage = CType(resources.GetObject("btncerrar.BackgroundImage"), System.Drawing.Image)
+        Me.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btncerrar.FlatAppearance.BorderSize = 0
+        Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncerrar.Location = New System.Drawing.Point(1021, 0)
+        Me.btncerrar.Name = "btncerrar"
+        Me.btncerrar.Size = New System.Drawing.Size(30, 30)
+        Me.btncerrar.TabIndex = 0
+        Me.btncerrar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -1334,7 +1336,7 @@ Partial Class Consentimientocorporal
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(644, 59)
+        Me.btnGuardar.Location = New System.Drawing.Point(843, 476)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 73
@@ -1380,7 +1382,7 @@ Partial Class Consentimientocorporal
         'txtestatura
         '
         Me.txtestatura.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtestatura.Location = New System.Drawing.Point(637, 115)
+        Me.txtestatura.Location = New System.Drawing.Point(634, 113)
         Me.txtestatura.Name = "txtestatura"
         Me.txtestatura.Size = New System.Drawing.Size(44, 21)
         Me.txtestatura.TabIndex = 62
@@ -1389,7 +1391,7 @@ Partial Class Consentimientocorporal
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(587, 118)
+        Me.Label32.Location = New System.Drawing.Point(584, 118)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(44, 13)
         Me.Label32.TabIndex = 72
@@ -1406,7 +1408,7 @@ Partial Class Consentimientocorporal
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarPorDocumentoToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarPorDocumentoToolStripMenuItem, Me.GenerarDocumentoToolStripMenuItem, Me.GenerarConsnetimientoToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -1414,17 +1416,29 @@ Partial Class Consentimientocorporal
         'BuscarPorDocumentoToolStripMenuItem
         '
         Me.BuscarPorDocumentoToolStripMenuItem.Name = "BuscarPorDocumentoToolStripMenuItem"
-        Me.BuscarPorDocumentoToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.BuscarPorDocumentoToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.BuscarPorDocumentoToolStripMenuItem.Text = "buscar por documento "
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(750, 59)
+        Me.btnModificar.Location = New System.Drawing.Point(949, 476)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
         Me.btnModificar.TabIndex = 75
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'GenerarDocumentoToolStripMenuItem
+        '
+        Me.GenerarDocumentoToolStripMenuItem.Name = "GenerarDocumentoToolStripMenuItem"
+        Me.GenerarDocumentoToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
+        Me.GenerarDocumentoToolStripMenuItem.Text = "Generar Ficha Corporal"
+        '
+        'GenerarConsnetimientoToolStripMenuItem
+        '
+        Me.GenerarConsnetimientoToolStripMenuItem.Name = "GenerarConsnetimientoToolStripMenuItem"
+        Me.GenerarConsnetimientoToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
+        Me.GenerarConsnetimientoToolStripMenuItem.Text = "Generar Consentimiento"
         '
         'Consentimientocorporal
         '
@@ -1690,4 +1704,6 @@ Partial Class Consentimientocorporal
     Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuscarPorDocumentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnModificar As Button
+    Friend WithEvents GenerarDocumentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GenerarConsnetimientoToolStripMenuItem As ToolStripMenuItem
 End Class

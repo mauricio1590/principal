@@ -944,6 +944,13 @@ Public Class Clientes
     End Sub
 
     Private Sub FirmarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FirmarToolStripMenuItem.Click
-        Principal.AbrirFormularios(Of firmar)()
+        ' Principal.AbrirFormularios(Of firmar)()
+        Dim cong As New firmar()
+        cong.ShowDialog()
+    End Sub
+
+    Private Sub FirmaDelAcompañanteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FirmaDelAcompañanteToolStripMenuItem.Click
+        Dim cong As New firmaAcompañante()
+        cong.ShowDialog()
     End Sub
 End Class
