@@ -208,31 +208,7 @@ Public Class reportes
         Me.Close()
     End Sub
 
-    Private Sub lsttarifas_MouseClick(sender As Object, e As MouseEventArgs) Handles lstreporte.MouseClick, txtReporte.MouseMove
-        If lstreporte.SelectedItems.Count = 0 Then Exit Sub
-        lsttag = lstreporte.SelectedItems(0).Tag
-        If lsttag = 7 Then
-            Principal.intValidar = 5
-            Dim validar As New VALIDAR
-            validar.ShowDialog()
-            If Principal.booReporte Then
-                txtReporte.Text = lstreporte.SelectedItems(0).Text
-                reporte = lstreporte.SelectedItems(0).Text
-                lstreporte.Visible = False
-                buscarDatos()
-            End If
-        Else
-            txtReporte.Text = lstreporte.SelectedItems(0).Text
-            reporte = lstreporte.SelectedItems(0).Text
-            lstreporte.Visible = False
-            buscarDatos()
-            If lsttag = 1 Or lsttag = 12 Then
-                chkTarjeta.Visible = True
-            Else
-                chkTarjeta.Visible = False
-            End If
-        End If
-    End Sub
+
 
     Private Sub PanelCabecera_Paint(sender As Object, e As PaintEventArgs) Handles PanelCabecera.Paint
 
@@ -287,5 +263,35 @@ Public Class reportes
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles chkM.CheckedChanged
         buscarDatos()
 
+    End Sub
+
+    Private Sub txtReporte_MouseClick(sender As Object, e As MouseEventArgs) 
+
+    End Sub
+
+    Private Sub lstreporte_MouseClick(sender As Object, e As MouseEventArgs) Handles lstreporte.MouseClick
+        If lstreporte.SelectedItems.Count = 0 Then Exit Sub
+        lsttag = lstreporte.SelectedItems(0).Tag
+        If lsttag = 7 Then
+            Principal.intValidar = 5
+            Dim validar As New VALIDAR
+            validar.ShowDialog()
+            If Principal.booReporte Then
+                txtReporte.Text = lstreporte.SelectedItems(0).Text
+                reporte = lstreporte.SelectedItems(0).Text
+                lstreporte.Visible = False
+                buscarDatos()
+            End If
+        Else
+            txtReporte.Text = lstreporte.SelectedItems(0).Text
+            reporte = lstreporte.SelectedItems(0).Text
+            lstreporte.Visible = False
+            buscarDatos()
+            If lsttag = 1 Or lsttag = 12 Then
+                chkTarjeta.Visible = True
+            Else
+                chkTarjeta.Visible = False
+            End If
+        End If
     End Sub
 End Class

@@ -52,7 +52,7 @@ Partial Class AjusteDeInventario
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(327, 81)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 16)
+        Me.Label1.Size = New System.Drawing.Size(73, 16)
         Me.Label1.TabIndex = 51
         Me.Label1.Text = "Cantidad:"
         '
@@ -72,7 +72,7 @@ Partial Class AjusteDeInventario
         Me.lstEncontrados.HideSelection = False
         Me.lstEncontrados.Location = New System.Drawing.Point(6, 122)
         Me.lstEncontrados.Name = "lstEncontrados"
-        Me.lstEncontrados.Size = New System.Drawing.Size(211, 97)
+        Me.lstEncontrados.Size = New System.Drawing.Size(416, 112)
         Me.lstEncontrados.TabIndex = 49
         Me.lstEncontrados.UseCompatibleStateImageBehavior = False
         Me.lstEncontrados.View = System.Windows.Forms.View.Details
@@ -81,12 +81,12 @@ Partial Class AjusteDeInventario
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Articulo"
-        Me.ColumnHeader1.Width = 109
+        Me.ColumnHeader1.Width = 228
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Precio"
-        Me.ColumnHeader2.Width = 187
+        Me.ColumnHeader2.Width = 100
         '
         'ColumnHeader3
         '
@@ -125,12 +125,12 @@ Partial Class AjusteDeInventario
         '
         'Valor
         '
-        Me.Valor.Text = "Valor"
+        Me.Valor.Text = "Existencia"
         Me.Valor.Width = 102
         '
         'Total
         '
-        Me.Total.Text = "Total"
+        Me.Total.Text = "Nueva Existencia"
         '
         'Label6
         '
@@ -140,15 +140,15 @@ Partial Class AjusteDeInventario
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label6.Location = New System.Drawing.Point(295, 7)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(147, 16)
+        Me.Label6.Size = New System.Drawing.Size(146, 16)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Ajuste De Inventario"
         '
         'PanelCabecera
         '
         Me.PanelCabecera.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.PanelCabecera.Controls.Add(Me.Label6)
         Me.PanelCabecera.Controls.Add(Me.btncerrar)
+        Me.PanelCabecera.Controls.Add(Me.Label6)
         Me.PanelCabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelCabecera.Location = New System.Drawing.Point(0, 0)
         Me.PanelCabecera.Name = "PanelCabecera"
@@ -158,16 +158,16 @@ Partial Class AjusteDeInventario
         'btncerrar
         '
         Me.btncerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        '  Me.btncerrar.BackgroundImage = Global.Principal.My.Resources.Resources.cerrar
+        Me.btncerrar.BackgroundImage = Global.Principal.My.Resources.Resources.cerrar
         Me.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btncerrar.FlatAppearance.BorderSize = 0
         Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncerrar.Location = New System.Drawing.Point(645, 0)
+        Me.btncerrar.Location = New System.Drawing.Point(660, 0)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Size = New System.Drawing.Size(30, 30)
-        Me.btncerrar.TabIndex = 0
+        Me.btncerrar.TabIndex = 3
         Me.btncerrar.UseVisualStyleBackColor = True
         '
         'txtTotal
@@ -254,11 +254,11 @@ Partial Class AjusteDeInventario
     Friend WithEvents Valor As System.Windows.Forms.ColumnHeader
     Friend WithEvents Total As System.Windows.Forms.ColumnHeader
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents btncerrar As System.Windows.Forms.Button
     Friend WithEvents PanelCabecera As System.Windows.Forms.Panel
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
     Friend WithEvents chkReferencia As System.Windows.Forms.CheckBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents chkNombre As System.Windows.Forms.CheckBox
     Friend WithEvents txtRegistrar As System.Windows.Forms.Button
+    Friend WithEvents btncerrar As Button
 End Class

@@ -55,6 +55,7 @@ Partial Class Principal
         Me.ConfiguracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RutaDeFotosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DescargarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArqueoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArqueoVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -71,6 +72,7 @@ Partial Class Principal
         Me.btncerrar = New System.Windows.Forms.Button()
         Me.TimerMostrar = New System.Windows.Forms.Timer(Me.components)
         Me.Panelmenu = New System.Windows.Forms.Panel()
+        Me.logosistem = New System.Windows.Forms.PictureBox()
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnReporte = New System.Windows.Forms.Button()
@@ -89,10 +91,10 @@ Partial Class Principal
         Me.timerLog = New System.Windows.Forms.Timer(Me.components)
         Me.timerCongelados = New System.Windows.Forms.Timer(Me.components)
         Me.timerDescongelados = New System.Windows.Forms.Timer(Me.components)
-        Me.DescargarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         Me.Panelmenu.SuspendLayout()
+        CType(Me.logosistem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Bntmenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelContenedor.SuspendLayout()
@@ -297,6 +299,12 @@ Partial Class Principal
         Me.RutaDeFotosToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
         Me.RutaDeFotosToolStripMenuItem.Text = "Ruta de fotos"
         '
+        'DescargarToolStripMenuItem
+        '
+        Me.DescargarToolStripMenuItem.Name = "DescargarToolStripMenuItem"
+        Me.DescargarToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.DescargarToolStripMenuItem.Text = "Descargar Actualizacion"
+        '
         'CajaToolStripMenuItem
         '
         Me.CajaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArqueoToolStripMenuItem, Me.ArqueoVentasToolStripMenuItem, Me.ArqueoSpaToolStripMenuItem})
@@ -438,6 +446,7 @@ Partial Class Principal
         'Panelmenu
         '
         Me.Panelmenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(104, Byte), Integer))
+        Me.Panelmenu.Controls.Add(Me.logosistem)
         Me.Panelmenu.Controls.Add(Me.lblVersion)
         Me.Panelmenu.Controls.Add(Me.GroupBox1)
         Me.Panelmenu.Controls.Add(Me.Bntmenu)
@@ -447,14 +456,24 @@ Partial Class Principal
         Me.Panelmenu.Size = New System.Drawing.Size(220, 668)
         Me.Panelmenu.TabIndex = 3
         '
+        'logosistem
+        '
+        Me.logosistem.Location = New System.Drawing.Point(6, 529)
+        Me.logosistem.Name = "logosistem"
+        Me.logosistem.Size = New System.Drawing.Size(211, 82)
+        Me.logosistem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logosistem.TabIndex = 19
+        Me.logosistem.TabStop = False
+        '
         'lblVersion
         '
         Me.lblVersion.AutoSize = True
-        Me.lblVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lblVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVersion.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblVersion.Location = New System.Drawing.Point(72, 632)
+        Me.lblVersion.Location = New System.Drawing.Point(0, 655)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(48, 16)
+        Me.lblVersion.Size = New System.Drawing.Size(39, 13)
         Me.lblVersion.TabIndex = 1
         Me.lblVersion.Text = "Label1"
         '
@@ -688,12 +707,6 @@ Partial Class Principal
         '
         Me.timerDescongelados.Interval = 10000
         '
-        'DescargarToolStripMenuItem
-        '
-        Me.DescargarToolStripMenuItem.Name = "DescargarToolStripMenuItem"
-        Me.DescargarToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
-        Me.DescargarToolStripMenuItem.Text = "Descargar Actualizacion"
-        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -714,6 +727,7 @@ Partial Class Principal
         Me.PanelCabecera.ResumeLayout(False)
         Me.Panelmenu.ResumeLayout(False)
         Me.Panelmenu.PerformLayout()
+        CType(Me.logosistem, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.Bntmenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelContenedor.ResumeLayout(False)
@@ -789,4 +803,5 @@ Partial Class Principal
     Friend WithEvents InasistenciaDeUsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistorialDeSaldoDeVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DescargarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents logosistem As PictureBox
 End Class

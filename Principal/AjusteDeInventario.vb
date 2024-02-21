@@ -5,7 +5,11 @@
     Dim intfacturaregistrada As Integer = 0
     Dim con As New conexion()
     Dim idcliente As Integer = 22
-    Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+    Dim idproducto As String
+    Dim booclic As Boolean = False
+    Dim nombre As String = ""
+    Dim existencia As Integer = 0
+    Private Sub btncerrar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
     Public Sub recorrerListview(list As ListView, total As TextBox, columna As Integer)
@@ -101,13 +105,14 @@
     End Sub
 
     Private Sub txtProducto_TextChanged(sender As Object, e As EventArgs) Handles txtProducto.TextChanged
+        If booclic = True Then Exit Sub
         Dim vector As Array
         Dim cadena As String = ""
         If (txtProducto.Text.Contains(" ")) Then
             vector = txtProducto.Text.Split(" ")
             cadena = "SELECT id,pro_nombre,pro_precioventa,pro_cantidad FROM PRODUCTO WHERE pro_nombre like '%" & vector(0) & "%% " & vector(1) & "%'"
         Else
-            cadena = "SELECT id,pro_nombre,pro_precioventa,pro_cantidad FROM PRODUCTO WHERE pro_nombre like '%" & txtProducto.Text & "%'"
+            cadena = "SELECT id,pro_nombre,pro_precioventa,pro_cantidad FROM PRODUCTO WHERE pro_nombre like '%" & txtProducto.Text & "%' or pro_referencia like '%" & txtProducto.Text & "%'"
         End If
         If chkNombre.Checked Then
             intBusqueda = 1
@@ -136,6 +141,7 @@
     End Sub
 
     Private Sub txtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCantidad.KeyPress
+        booclic = False
         If Asc(e.KeyChar) = 13 Then
             If lstEncontrados.SelectedItems.Count = 0 Then
                 MessageBox.Show("Ingrese un articulo antes de continuar", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -145,9 +151,8 @@
             Select Case intBusqueda
                 Case 1
                     If lstEncontrados.SelectedItems.Count = 0 Then Exit Sub
-                    Dim idproducto = lstEncontrados.SelectedItems(0).Tag
-                    Dim nombre As String = ""
-                    Dim existencia As Integer
+
+                    idproducto = lstEncontrados.SelectedItems(0).Tag
                     datosArticuloAjuste(idproducto, nombre, existencia)
                     If ExisteEnLista(idproducto) Then
                         adicionarCantidad(idproducto, nombre, existencia, txtCantidad.Text)
@@ -166,7 +171,7 @@
 
             End Select
         End If
-       
+
 
     End Sub
 
@@ -236,5 +241,23 @@
             item.Remove()
         Next
         txtTotal.Text = 0
+    End Sub
+
+    Private Sub btncerrar_Click_1(sender As Object, e As EventArgs) Handles btncerrar.Click
+        Me.Close()
+    End Sub
+
+
+
+
+
+    Private Sub lstEncontrados_MouseClick(sender As Object, e As MouseEventArgs) Handles lstEncontrados.MouseClick
+        If lstEncontrados.SelectedItems.Count = 0 Then Exit Sub
+        booclic = True
+        idproducto = lstEncontrados.SelectedItems(0).Tag
+        txtProducto.Text = lstEncontrados.SelectedItems(0).Text
+
+        txtCantidad.Focus()
+
     End Sub
 End Class

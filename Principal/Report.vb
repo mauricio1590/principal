@@ -1419,17 +1419,17 @@ Public Class Report
         }
         tabla.AddCell(cell)
 
-        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
-        fotoPDF.ScaleAbsolute(100, 30)
-        cell = New PdfPCell(fotoPDF) With {
-            .VerticalAlignment = Element.ALIGN_CENTER,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .PaddingTop = 10,
-            .PaddingBottom = 5,
-            .Border = 0,
-            .BorderWidthBottom = 1
-        }
-        tabla.AddCell(cell)
+        'fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
+        'fotoPDF.ScaleAbsolute(100, 30)
+        'cell = New PdfPCell(fotoPDF) With {
+        '    .VerticalAlignment = Element.ALIGN_CENTER,
+        '    .HorizontalAlignment = Element.ALIGN_CENTER,
+        '    .PaddingTop = 10,
+        '    .PaddingBottom = 5,
+        '    .Border = 0,
+        '    .BorderWidthBottom = 1
+        '}
+        'tabla.AddCell(cell)
 
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
@@ -1462,19 +1462,19 @@ Public Class Report
         }
         tabla.AddCell(cell)
 
-        cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_TOP,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .Border = 0
-        }
+        'cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_TOP,
+        '    .HorizontalAlignment = Element.ALIGN_CENTER,
+        '    .Border = 0
+        '}
         tabla.AddCell(cell)
 
-        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_TOP,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .PaddingTop = 10,
-            .Border = 0
-        }
+        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_TOP,
+        '    .HorizontalAlignment = Element.ALIGN_CENTER,
+        '    .PaddingTop = 10,
+        '    .Border = 0
+        '}
         tabla.AddCell(cell)
 
         docPDF.Add(tabla)
@@ -1805,8 +1805,8 @@ Public Class Report
         }
         tabla.AddCell(cell)
 
-        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
-        fotoPDF.ScaleAbsolute(100, 30)
+        'fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
+        'fotoPDF.ScaleAbsolute(100, 30)
         cell = New PdfPCell(fotoPDF) With {
             .VerticalAlignment = Element.ALIGN_CENTER,
             .HorizontalAlignment = Element.ALIGN_CENTER,
@@ -1848,19 +1848,19 @@ Public Class Report
         }
         tabla.AddCell(cell)
 
-        cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_TOP,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .Border = 0
-        }
+        'cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_TOP,
+        '    .HorizontalAlignment = Element.ALIGN_CENTER,
+        '    .Border = 0
+        '}
         tabla.AddCell(cell)
 
-        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_TOP,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .PaddingTop = 10,
-            .Border = 0
-        }
+        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_TOP,
+        '    .HorizontalAlignment = Element.ALIGN_CENTER,
+        '    .PaddingTop = 10,
+        '    .Border = 0
+        '}
         tabla.AddCell(cell)
 
         docPDF.Add(tabla)

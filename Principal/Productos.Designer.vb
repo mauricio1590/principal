@@ -53,7 +53,7 @@ Partial Class Productos
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(776, 25)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1031, 25)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -83,9 +83,9 @@ Partial Class Productos
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(338, 7)
+        Me.Label6.Location = New System.Drawing.Point(465, 7)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(155, 16)
+        Me.Label6.Size = New System.Drawing.Size(154, 16)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Control De Productos"
         '
@@ -98,7 +98,7 @@ Partial Class Productos
         Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncerrar.Location = New System.Drawing.Point(731, 0)
+        Me.btncerrar.Location = New System.Drawing.Point(986, 0)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Size = New System.Drawing.Size(30, 30)
         Me.btncerrar.TabIndex = 0
@@ -112,7 +112,7 @@ Partial Class Productos
         Me.PanelCabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelCabecera.Location = New System.Drawing.Point(0, 25)
         Me.PanelCabecera.Name = "PanelCabecera"
-        Me.PanelCabecera.Size = New System.Drawing.Size(776, 30)
+        Me.PanelCabecera.Size = New System.Drawing.Size(1031, 30)
         Me.PanelCabecera.TabIndex = 28
         '
         'Label1
@@ -121,7 +121,7 @@ Partial Class Productos
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(23, 87)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 16)
+        Me.Label1.Size = New System.Drawing.Size(87, 16)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Referencia:"
         '
@@ -138,7 +138,7 @@ Partial Class Productos
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(23, 131)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 16)
+        Me.Label2.Size = New System.Drawing.Size(66, 16)
         Me.Label2.TabIndex = 31
         Me.Label2.Text = "Nombre:"
         '
@@ -155,7 +155,7 @@ Partial Class Productos
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(23, 186)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(123, 16)
+        Me.Label4.Size = New System.Drawing.Size(122, 16)
         Me.Label4.TabIndex = 35
         Me.Label4.Text = "Precio de Venta:"
         '
@@ -172,7 +172,7 @@ Partial Class Productos
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(23, 237)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(95, 16)
+        Me.Label5.Size = New System.Drawing.Size(94, 16)
         Me.Label5.TabIndex = 37
         Me.Label5.Text = "Descripcion:"
         '
@@ -188,9 +188,10 @@ Partial Class Productos
         Me.lstArticulos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
         Me.lstArticulos.FullRowSelect = True
         Me.lstArticulos.GridLines = True
+        Me.lstArticulos.HideSelection = False
         Me.lstArticulos.Location = New System.Drawing.Point(414, 86)
         Me.lstArticulos.Name = "lstArticulos"
-        Me.lstArticulos.Size = New System.Drawing.Size(348, 275)
+        Me.lstArticulos.Size = New System.Drawing.Size(586, 449)
         Me.lstArticulos.TabIndex = 39
         Me.lstArticulos.UseCompatibleStateImageBehavior = False
         Me.lstArticulos.View = System.Windows.Forms.View.Details
@@ -198,21 +199,22 @@ Partial Class Productos
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Referencia"
-        Me.ColumnHeader1.Width = 89
+        Me.ColumnHeader1.Width = 125
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Nombre"
-        Me.ColumnHeader2.Width = 102
+        Me.ColumnHeader2.Width = 255
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Existencia"
-        Me.ColumnHeader3.Width = 97
+        Me.ColumnHeader3.Width = 102
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Valor"
+        Me.ColumnHeader4.Width = 98
         '
         'btnRegistrar
         '
@@ -238,7 +240,7 @@ Partial Class Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(776, 485)
+        Me.ClientSize = New System.Drawing.Size(1031, 581)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.lstArticulos)

@@ -63,7 +63,7 @@ Partial Class Gastos
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label5.Location = New System.Drawing.Point(253, 7)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 16)
+        Me.Label5.Size = New System.Drawing.Size(141, 16)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Registro de Gastos"
         '
@@ -115,6 +115,7 @@ Partial Class Gastos
         Me.lstgastos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstgastos.FullRowSelect = True
         Me.lstgastos.GridLines = True
+        Me.lstgastos.HideSelection = False
         Me.lstgastos.Location = New System.Drawing.Point(15, 182)
         Me.lstgastos.Name = "lstgastos"
         Me.lstgastos.Size = New System.Drawing.Size(648, 256)
@@ -153,7 +154,7 @@ Partial Class Gastos
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(293, 94)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 16)
+        Me.Label2.Size = New System.Drawing.Size(82, 16)
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "Descripción:"
         '
@@ -163,7 +164,7 @@ Partial Class Gastos
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(449, 69)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 16)
+        Me.Label3.Size = New System.Drawing.Size(42, 16)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Valor:"
         '

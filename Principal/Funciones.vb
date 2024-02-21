@@ -540,9 +540,71 @@ Module Funciones
             MessageBox.Show("La Deuda Fue Creada", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         End If
     End Sub
+
+    Public Sub AdicioneDias()
+        Dim strCedula As String = InputBox("Ingrese el Documento", "Mensaje del Sistema")
+        If Not ValideCedulaExistente(strCedula, "Cliente") Then : MessageBox.Show("La Cedula no Existe en la Base de Datos", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub : End If
+        Dim intDias As Integer = InputBox("Ingrese el numero de Dias", "Mensaje del Sistema")
+        Dim intValor As Integer = InputBox("Ingrese el valor Total", "Mensaje del Sistema")
+        Dim fechafinal As Date
+        fechafinal = DateAdd(DateInterval.Day, intDias, Now.Date)
+        Dim strCadena As String = "UPDATE PAGO SET fecha_corte='" & Format(fechafinal, "yyyy-MM-dd") & "' WHERE cedula ='" & strCedula & "'"
+        If con.registreDatos(strCadena) Then : Else Exit Sub : End If
+        strCadena = "INSERT INTO detalles (cedula,fecha_pago,fecha_fin,tiempo,valor,tarjeta,banco) VALUES " & vbCrLf &
+                             "('" & strCedula & "',now(),'" & Format(fechafinal, "yyyy-MM-dd") & "','DIA','" & intValor & "','2','0')"
+        registreMovimiento(1, 0, intValor, Principal.intidusuario)
+        If con.registreDatos(strCadena) Then
+            MessageBox.Show("Registro Correcto", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        Else Exit Sub : End If
+    End Sub
+
+    Sub ponercheck(huella1 As PictureBox, huella2 As PictureBox, huella3 As PictureBox, huella4 As PictureBox)
+
+        Dim chexk As String = Principal.strunidad & ":\SISTEMGYM_DATOS\Imagenes\checkdes.png"
+
+        If My.Computer.FileSystem.FileExists(chexk) Then
+            Dim Imagen As New Bitmap(chexk)
+            huella1.Image = Imagen
+            huella2.Image = Imagen
+            huella3.Image = Imagen
+            huella4.Image = Imagen
+            huella1.Enabled = False
+        End If
+
+
+
+    End Sub
+
+    Sub ponerhuella(huella As String, huella1 As PictureBox, huella2 As PictureBox, huella3 As PictureBox, huella4 As PictureBox)
+        Dim chexk As String = Principal.strunidad & ":\SISTEMGYM_DATOS\Imagenes\check.png"
+        Select Case huella
+            Case 0
+                If My.Computer.FileSystem.FileExists(chexk) Then
+                    Dim Imagen As New Bitmap(chexk)
+                    huella4.Image = Imagen
+                End If
+            Case 1
+                If My.Computer.FileSystem.FileExists(chexk) Then
+                    Dim Imagen As New Bitmap(chexk)
+                    huella3.Image = Imagen
+                End If
+            Case 2
+                If My.Computer.FileSystem.FileExists(chexk) Then
+                    Dim Imagen As New Bitmap(chexk)
+                    huella2.Image = Imagen
+                End If
+            Case 3
+                If My.Computer.FileSystem.FileExists(chexk) Then
+                    Dim Imagen As New Bitmap(chexk)
+                    huella1.Image = Imagen
+                End If
+
+
+        End Select
+    End Sub
     Public Sub EliminarFactura(id As String)
 
-        If con.registreDatos("DELETE FROM detalle_producto WHERE detpro_idfactura= '" & id & "';DELETE FROM factura WHERE id_factura='" & id & "';") Then
+        If con.registreDatos("DELETE FROM detalle_producto WHERE detpro_idfactura= '" & id & "';DELETE FROM factura WHERE id_factura='" & id & "';") = 0 Then
             MessageBox.Show("La factura fue eliminada", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         Else
             MessageBox.Show("La factura NO fue eliminada", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -681,9 +743,19 @@ Module Funciones
         End If
         Return booSaber
     End Function
-    Function ElimineValorCaja(intValor As Integer) As Boolean
+    Function ElimineValorcaja(intValor As Integer) As Boolean
         Dim booSaber As Boolean = False
-        Dim arlCoincidencias As ArrayList = Gestor1.DatosDeConsulta("SELECT id FROM caja WHERE valor='" & intValor & "' AND usuario='" & Principal.intidusuario & "' order by id desc limit 1", , Principal.cadenadeconexion)
+        Dim arlCoincidencias As ArrayList = Gestor1.DatosDeConsulta("SELECT id FROM caja WHERE valor='" & intValor & "' AND usuario='" & Principal.intidusuario & "' and escredito=0 order by id desc limit 1", , Principal.cadenadeconexion)
+        If Not arlCoincidencias.Count = 0 Then
+            For Each congelado As ArrayList In arlCoincidencias
+                con.registreDatos("DELETE FROM CAJA where id ='" & congelado(0) & "'")
+            Next
+        End If
+        Return booSaber
+    End Function
+    Function ElimineValorCajagasto(intValor As Integer) As Boolean
+        Dim booSaber As Boolean = False
+        Dim arlCoincidencias As ArrayList = Gestor1.DatosDeConsulta("SELECT id FROM caja WHERE valor='" & intValor & "' AND usuario='" & Principal.intidusuario & "' and escredito=1 order by id desc limit 1", , Principal.cadenadeconexion)
         If Not arlCoincidencias.Count = 0 Then
             For Each congelado As ArrayList In arlCoincidencias
                 con.registreDatos("DELETE FROM CAJA where id ='" & congelado(0) & "'")
@@ -693,7 +765,7 @@ Module Funciones
     End Function
     Public Sub listaArticulos(lstArticulos As ListView)
 
-        Dim arlCoincidencias = Gestor1.DatosDeConsulta("SELECT id,pro_referencia,UPPER(pro_nombre),IFNULL((SELECT k.scantidad from kardex k where k.idproducto=p.id order by k.id desc limit 1),0),pro_precioventa FROM producto p order by pro_nombre", , Principal.cadenadeconexion)
+        Dim arlCoincidencias = Gestor1.DatosDeConsulta("SELECT id,pro_referencia,UPPER(pro_nombre),IFNULL((SELECT k.scantidad from kardex k where k.idproducto=p.id order by k.id desc limit 1),0),pro_precioventa FROM producto p order by pro_referencia", , Principal.cadenadeconexion)
         If Not arlCoincidencias.Count = 0 Then lstArticulos.Visible = True
         lstArticulos.Items.Clear()
         lstArticulos.BeginUpdate()
@@ -764,11 +836,11 @@ Module Funciones
         Return totalgrasa
 
     End Function
-    Public Function registreMovimiento(movimiento As String, escredito As Integer, valor As Integer, usuario As Integer, Optional tabla As Integer = 0) As Boolean
+    Public Function registreMovimiento(movimiento As String, escredito As Integer, valor As Integer, usuario As Integer, Optional tabla As Integer = 0, Optional tipopago As Integer = 0) As Boolean
         Dim booRegistrado As Boolean = False
         Dim consulta As String = ""
         If tabla = 0 Then
-            consulta = "INSERT INTO caja (movimiento,escredito,valor,usuario) VALUES ('" & movimiento & "','" & escredito & "','" & valor & "','" & usuario & "')"
+            consulta = "INSERT INTO caja (movimiento,escredito,valor,usuario,tipopago) VALUES ('" & movimiento & "','" & escredito & "','" & valor & "','" & usuario & "','" & tipopago & "')"
         ElseIf tabla = 1 Then
             consulta = "INSERT INTO caja1 (movimiento,escredito,valor,usuario) VALUES ('" & movimiento & "','" & escredito & "','" & valor & "','" & usuario & "')"
         ElseIf tabla = 2 Then
@@ -1138,11 +1210,11 @@ Module Funciones
         Dim total As Integer = 0
         Select Case intIdTipo
             Case 1
-                Consulta = " SELECT tp.nombre,g.descripcion,g.valor FROM gastos g,tipogasto tp where g.idtipo=tp.id  AND g.fecha = current_date "
-                FilasEtiquetas = {0, 1, 2}
-                ColumnasEsNumero = {False, False, False}
-                ColumnasJustificaciones = {0, 0, 1}
-                ColumnasAmplitudes = {200, 250, 150}
+                Consulta = " SELECT tp.nombre,g.descripcion,g.valor,g.id FROM gastos g,tipogasto tp where g.idtipo=tp.id  AND g.fecha = current_date "
+                FilasEtiquetas = {0, 1, 2, 3}
+                ColumnasEsNumero = {False, False, False, True}
+                ColumnasJustificaciones = {0, 0, 1, 2}
+                ColumnasAmplitudes = {200, 250, 150, 0}
                 Dim arlDatos1 As ArrayList = Gestor1.DatosDeConsulta(Consulta, True, Principal.cadenadeconexion)
                 Dim douSaldoEx As Double = 0
                 For i As Integer = 1 To arlDatos1.Count - 1
@@ -1590,4 +1662,55 @@ Module Funciones
         mmMensaje.Dispose()
         smtp.Dispose()
     End Sub
+
+
+    Public Class Logger
+        Property HoraOcurrencia As String = ""
+        Property Titulo As String = ""
+        Property Evento As String = ""
+        Property Datos As New List(Of String)
+        Property ErrorIdentificado As String = ""
+        Property ErrorDelEx As String = ""
+        Property UbicacionDelLogger As String = "SOLTEC/logger"
+        Property PropuestaDeSolucion As String = ""
+
+        Public Sub New(Titulo As String, Evento As String, ErrorIdentificado As String,
+                       Optional ErrorDelEx As String = "", Optional Datos As List(Of String) = Nothing,
+                       Optional PropuestaDeSolucion As String = "")
+            MyBase.New
+            Me.HoraOcurrencia = Now.ToString("yyyy-MM-dd hh:mm:ss")
+            Me.Titulo = Titulo
+            Me.Evento = Evento
+            Me.ErrorIdentificado = ErrorIdentificado
+            Me.ErrorDelEx = ErrorDelEx
+            Me.Datos = Datos
+            Me.PropuestaDeSolucion = PropuestaDeSolucion
+            Dim strDatos As String = "Datos Adicionales del evento:" & vbCrLf
+            If Not IsNothing(Me.Datos) Then
+                For Each Dato As String In Me.Datos
+                    strDatos &= Dato & vbCrLf
+                Next
+            End If
+            Dim strTexto As String = "Hora del sucento: " & Me.HoraOcurrencia & vbCrLf &
+                                     "Versión del sistema: " & Application.ProductVersion & vbCrLf &
+                                     "Título descriptivo: " & Me.Titulo & vbCrLf &
+                                     "Evento que causa el suceso: " & Me.Evento & vbCrLf &
+                                     "Datos adicionales reportados: " & strDatos & vbCrLf &
+                                     "Error descrito por el desarrollador: " & Me.ErrorIdentificado & vbCrLf &
+                                     "Error descrito por el controlador de excepciones: " & Me.ErrorDelEx & vbCrLf & vbCrLf &
+                                     "Ubicación del logger: " & Me.UbicacionDelLogger & vbCrLf &
+                                     "Propuesta de solúción: " & Me.PropuestaDeSolucion
+            Try
+                If Not My.Computer.FileSystem.DirectoryExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SACC\logs") Then My.Computer.FileSystem.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SACC\logs")
+                Dim strCarpetaDestino = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SACC\logs\"
+                Using sw As New StreamWriter(strCarpetaDestino & Me.Titulo & " " & Me.HoraOcurrencia.Replace(":", " ") & ".txt", False, Encoding.UTF8)
+                    sw.WriteLine(strTexto)
+                    sw.Close()
+                End Using
+            Catch ex As Exception
+            End Try
+        End Sub
+    End Class
+
+
 End Module

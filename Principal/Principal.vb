@@ -16,7 +16,7 @@ Public Class Principal
     Public passwordOnline As String = "QmNzK6qVC@Y"
     Public databaseOnline As String = "sistemgym"
     Public strCedulaGeneral As String = ""
-    Public strNombreAplicacion As String = "SISTEMGYM 5.1"
+    Public strNombreAplicacion As String = "SISTEMGYM 5.2"
     Public validado As Boolean = False
     Public strunidad As String = ""
     Public intEnviarEmail As Integer = 0
@@ -78,6 +78,7 @@ Public Class Principal
     'Public cadenadeconexion As String = "Server=207.244.241.129;Uid=root;Pwd=QmNzK6qVC@Y;Database=gym"
     Public cadenadeconexionOnline As String = "Server=207.244.241.129;Uid=root;Pwd=QmNzK6qVC@Y;Database=sistemgym"
     Public Logo As String = ""
+    Public logosistema As String = ""
     Public intValidar As Integer = 0
     Dim con As conexion = New conexion()
     Public intdiascngelados As Integer = 0
@@ -124,9 +125,10 @@ Public Class Principal
                 Exit Sub
             End If
         End If
-        lblVersion.Text = "SISTEMGYM " & My.Application.Info.Version.ToString
+        lblVersion.Text = "© ING MAURICIO PEÑA 2018 " & vbCr & "  __VERSION " & My.Application.Info.Version.ToString
         Logo = strunidad & ":\SISTEMGYM_DATOS\Imagenes\logo.jpg"
-        con.ponerFoto(Logo, piclogo)
+        logosistema = strunidad & ":\sistemgym_datos\imagenes\logosistema.png"
+        con.ponerFoto(Logo, piclogo, logosistema, logosistem)
         If intCongelarCliente = 2 Then
             mnCongelar.Visible = False
         End If

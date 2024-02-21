@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("PROGYM_ADMIN")> 
+<Assembly: AssemblyTitle("SISTEMGYM_ADMIN")>
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Progym Datos 2")> 
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("sistemgym 5.2")>
 <Assembly: AssemblyCopyright("Copyright ©  2018")> 
 <Assembly: AssemblyTrademark("")> 
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' mediante el asterisco ('*'), como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("5.2.0.265")>
-<Assembly: AssemblyFileVersion("5.2.0.265")>
+<Assembly: AssemblyVersion("5.2.0.275")>
+<Assembly: AssemblyFileVersion("5.2.0.275")>

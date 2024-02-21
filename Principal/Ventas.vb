@@ -17,7 +17,7 @@ Public Class Ventas
             vector = txtProducto.Text.Split(" ")
             cadena = "SELECT p.id,p.pro_nombre,p.pro_precioventa,IFNULL((select k.scantidad from kardex k where k.idproducto=p.id order by id desc limit 1),0) FROM PRODUCTO p WHERE pro_nombre like '%" & vector(0) & "%% " & vector(1) & "%' "
         Else
-            cadena = "SELECT p.id,p.pro_nombre,p.pro_precioventa,IFNULL((select k.scantidad from kardex k where k.idproducto=p.id order by id desc limit 1),0) FROM PRODUCTO p WHERE  pro_nombre like '%" & txtProducto.Text & "%'"
+            cadena = "SELECT p.id,p.pro_nombre,p.pro_precioventa,IFNULL((select k.scantidad from kardex k where k.idproducto=p.id order by id desc limit 1),0) FROM PRODUCTO p WHERE  pro_nombre like '%" & txtProducto.Text & "%' or pro_referencia like '%" & txtProducto.Text & "%'"
         End If
         If chkNombre.Checked Then
             intBusqueda = 1

@@ -64,6 +64,11 @@
                         validado = True
                         Principal.booReporte = True
                     End If
+                Case 12
+                    If validarContraseña2(txtpass.Text, 4) Then
+                        validado = True
+                        Principal.booReporte = True
+                    End If
             End Select
             If Not validado Then
                 MessageBox.Show("Contraseña incorrecta", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)

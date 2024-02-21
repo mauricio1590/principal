@@ -12,6 +12,7 @@
         End If
 
         mostrarBancosCuentas(lstBancos)
+        txtAbono.Focus()
     End Sub
 
     Private Sub PagarSaldo_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -29,12 +30,12 @@
         End If
         saberidAbono(txtCedula.Text)
         If con.registreDatos("INSERT INTO detalles (cedula,fecha_pago,fecha_fin,tiempo,valor,tarjeta,banco)VALUES " & vbCrLf &
-                             "('" & txtCedula.Text & "',CURRENT_DATE,'" & Now.Date & "','SALDO','" & txtAbono.Text & "'," & tarjeta & ",'" & idbanco & "')") Then
+                             "('" & txtCedula.Text & "',now(),'" & Now.Date & "','SALDO','" & txtAbono.Text & "'," & tarjeta & ",'" & idbanco & "')") Then
             Dim strCadena As String = "UPDATE abonos set abono=(abono +" & txtAbono.Text & ") ,saldo= (saldo -" & txtAbono.Text & "),tipo=(tipo+1) WHERE idabonos='" & strId & "' "
 
             con.registreDatos(strCadena)
             con.registreDatos("UPDATE abonos SET dia=5 WHERE cedula='" & txtCedula.Text & "'")
-            registreMovimiento(2, 0, txtSaldo.Text, Principal.intidusuario)
+            registreMovimiento(2, 0, txtSaldo.Text, Principal.intidusuario,, idbanco)
             con.registreDatos("DELETE FROM abonos WHERE saldo =0")
             MessageBox.Show("El pago se Acturalizo Exitosamente", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             Me.Dispose()

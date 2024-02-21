@@ -50,10 +50,18 @@ Partial Class Empleados
         Me.btncerrar = New System.Windows.Forms.Button()
         Me.PanelCabecera = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.huella4 = New System.Windows.Forms.PictureBox()
+        Me.huella3 = New System.Windows.Forms.PictureBox()
+        Me.huella2 = New System.Windows.Forms.PictureBox()
+        Me.huella1 = New System.Windows.Forms.PictureBox()
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imagenfoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
+        CType(Me.huella4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.huella3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.huella2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.huella1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btLimpiar
@@ -114,9 +122,9 @@ Partial Class Empleados
         'imagenHuella
         '
         Me.imagenHuella.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.imagenHuella.Location = New System.Drawing.Point(523, 78)
+        Me.imagenHuella.Location = New System.Drawing.Point(525, 82)
         Me.imagenHuella.Name = "imagenHuella"
-        Me.imagenHuella.Size = New System.Drawing.Size(220, 178)
+        Me.imagenHuella.Size = New System.Drawing.Size(235, 197)
         Me.imagenHuella.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imagenHuella.TabIndex = 29
         Me.imagenHuella.TabStop = False
@@ -129,15 +137,16 @@ Partial Class Empleados
         Me.vecesDedo.Name = "vecesDedo"
         Me.vecesDedo.Size = New System.Drawing.Size(0, 16)
         Me.vecesDedo.TabIndex = 35
+        Me.vecesDedo.Visible = False
         '
         'WebCam1
         '
         Me.WebCam1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.WebCam1.Imagen = Nothing
-        Me.WebCam1.Location = New System.Drawing.Point(521, 303)
+        Me.WebCam1.Location = New System.Drawing.Point(523, 307)
         Me.WebCam1.MilisegundosCaptura = 100
         Me.WebCam1.Name = "WebCam1"
-        Me.WebCam1.Size = New System.Drawing.Size(222, 175)
+        Me.WebCam1.Size = New System.Drawing.Size(237, 194)
         Me.WebCam1.TabIndex = 36
         '
         'imagenfoto
@@ -152,7 +161,7 @@ Partial Class Empleados
         '
         'btnCapturar
         '
-        Me.btnCapturar.Location = New System.Drawing.Point(613, 274)
+        Me.btnCapturar.Location = New System.Drawing.Point(613, 282)
         Me.btnCapturar.Name = "btnCapturar"
         Me.btnCapturar.Size = New System.Drawing.Size(75, 23)
         Me.btnCapturar.TabIndex = 39
@@ -161,7 +170,7 @@ Partial Class Empleados
         '
         'btnIniciarCam
         '
-        Me.btnIniciarCam.Location = New System.Drawing.Point(521, 274)
+        Me.btnIniciarCam.Location = New System.Drawing.Point(523, 282)
         Me.btnIniciarCam.Name = "btnIniciarCam"
         Me.btnIniciarCam.Size = New System.Drawing.Size(75, 23)
         Me.btnIniciarCam.TabIndex = 38
@@ -174,7 +183,7 @@ Partial Class Empleados
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(25, 230)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 16)
+        Me.Label4.Size = New System.Drawing.Size(73, 16)
         Me.Label4.TabIndex = 47
         Me.Label4.Text = "Telefono:"
         '
@@ -192,7 +201,7 @@ Partial Class Empleados
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(25, 176)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 16)
+        Me.Label3.Size = New System.Drawing.Size(77, 16)
         Me.Label3.TabIndex = 46
         Me.Label3.Text = "Apellidos:"
         '
@@ -210,7 +219,7 @@ Partial Class Empleados
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(25, 127)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 16)
+        Me.Label2.Size = New System.Drawing.Size(74, 16)
         Me.Label2.TabIndex = 45
         Me.Label2.Text = "Nombres:"
         '
@@ -220,7 +229,7 @@ Partial Class Empleados
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(29, 88)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 16)
+        Me.Label1.Size = New System.Drawing.Size(60, 16)
         Me.Label1.TabIndex = 44
         Me.Label1.Text = "Cedula:"
         '
@@ -270,7 +279,7 @@ Partial Class Empleados
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(757, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(841, 24)
         Me.MenuStrip1.TabIndex = 49
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -297,7 +306,7 @@ Partial Class Empleados
         Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncerrar.Location = New System.Drawing.Point(712, 0)
+        Me.btncerrar.Location = New System.Drawing.Point(796, 0)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Size = New System.Drawing.Size(30, 30)
         Me.btncerrar.TabIndex = 0
@@ -311,7 +320,7 @@ Partial Class Empleados
         Me.PanelCabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelCabecera.Location = New System.Drawing.Point(0, 24)
         Me.PanelCabecera.Name = "PanelCabecera"
-        Me.PanelCabecera.Size = New System.Drawing.Size(757, 30)
+        Me.PanelCabecera.Size = New System.Drawing.Size(841, 30)
         Me.PanelCabecera.TabIndex = 50
         '
         'Label5
@@ -320,17 +329,57 @@ Partial Class Empleados
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(288, 9)
+        Me.Label5.Location = New System.Drawing.Point(330, 9)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 16)
+        Me.Label5.Size = New System.Drawing.Size(171, 16)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Registro de Empleados"
+        '
+        'huella4
+        '
+        Me.huella4.Location = New System.Drawing.Point(762, 240)
+        Me.huella4.Name = "huella4"
+        Me.huella4.Size = New System.Drawing.Size(33, 31)
+        Me.huella4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.huella4.TabIndex = 51
+        Me.huella4.TabStop = False
+        '
+        'huella3
+        '
+        Me.huella3.Location = New System.Drawing.Point(762, 178)
+        Me.huella3.Name = "huella3"
+        Me.huella3.Size = New System.Drawing.Size(33, 31)
+        Me.huella3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.huella3.TabIndex = 52
+        Me.huella3.TabStop = False
+        '
+        'huella2
+        '
+        Me.huella2.Location = New System.Drawing.Point(762, 118)
+        Me.huella2.Name = "huella2"
+        Me.huella2.Size = New System.Drawing.Size(33, 31)
+        Me.huella2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.huella2.TabIndex = 53
+        Me.huella2.TabStop = False
+        '
+        'huella1
+        '
+        Me.huella1.Location = New System.Drawing.Point(762, 60)
+        Me.huella1.Name = "huella1"
+        Me.huella1.Size = New System.Drawing.Size(33, 31)
+        Me.huella1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.huella1.TabIndex = 54
+        Me.huella1.TabStop = False
         '
         'Empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(757, 483)
+        Me.ClientSize = New System.Drawing.Size(841, 522)
+        Me.Controls.Add(Me.huella4)
+        Me.Controls.Add(Me.huella3)
+        Me.Controls.Add(Me.huella2)
+        Me.Controls.Add(Me.huella1)
         Me.Controls.Add(Me.PanelCabecera)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txttelefono)
@@ -362,6 +411,10 @@ Partial Class Empleados
         Me.MenuStrip1.PerformLayout()
         Me.PanelCabecera.ResumeLayout(False)
         Me.PanelCabecera.PerformLayout()
+        CType(Me.huella4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.huella3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.huella2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.huella1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -394,4 +447,8 @@ Partial Class Empleados
     Friend WithEvents btncerrar As System.Windows.Forms.Button
     Friend WithEvents PanelCabecera As System.Windows.Forms.Panel
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents huella4 As PictureBox
+    Friend WithEvents huella3 As PictureBox
+    Friend WithEvents huella2 As PictureBox
+    Friend WithEvents huella1 As PictureBox
 End Class

@@ -172,6 +172,7 @@ Partial Class consentimientofacial
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
         Me.rbPielgrasano = New System.Windows.Forms.RadioButton()
         Me.rbPielgrasasi = New System.Windows.Forms.RadioButton()
+        Me.EnvieFacturaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         Me.panelContenedor.SuspendLayout()
@@ -217,7 +218,7 @@ Partial Class consentimientofacial
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarPorDocumentoToolStripMenuItem, Me.GenerarDocumentoToolStripMenuItem, Me.ConsentimientoHidrafacialToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarPorDocumentoToolStripMenuItem, Me.GenerarDocumentoToolStripMenuItem, Me.ConsentimientoHidrafacialToolStripMenuItem, Me.EnvieFacturaToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -366,7 +367,7 @@ Partial Class consentimientofacial
         Me.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelContenedor.Location = New System.Drawing.Point(0, 54)
         Me.panelContenedor.Name = "panelContenedor"
-        Me.panelContenedor.Size = New System.Drawing.Size(987, 598)
+        Me.panelContenedor.Size = New System.Drawing.Size(987, 603)
         Me.panelContenedor.TabIndex = 34
         '
         'btnLimpiar
@@ -1829,7 +1830,7 @@ Partial Class consentimientofacial
         'txtDocumento
         '
         Me.txtDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDocumento.Location = New System.Drawing.Point(121, 17)
+        Me.txtDocumento.Location = New System.Drawing.Point(122, 17)
         Me.txtDocumento.Name = "txtDocumento"
         Me.txtDocumento.Size = New System.Drawing.Size(214, 21)
         Me.txtDocumento.TabIndex = 42
@@ -1877,11 +1878,17 @@ Partial Class consentimientofacial
         Me.rbPielgrasasi.Text = "Si"
         Me.rbPielgrasasi.UseVisualStyleBackColor = True
         '
+        'EnvieFacturaToolStripMenuItem
+        '
+        Me.EnvieFacturaToolStripMenuItem.Name = "EnvieFacturaToolStripMenuItem"
+        Me.EnvieFacturaToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
+        Me.EnvieFacturaToolStripMenuItem.Text = "envie factura"
+        '
         'consentimientofacial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(987, 652)
+        Me.ClientSize = New System.Drawing.Size(987, 657)
         Me.Controls.Add(Me.panelContenedor)
         Me.Controls.Add(Me.PanelCabecera)
         Me.Controls.Add(Me.MenuStrip1)
@@ -2107,4 +2114,5 @@ Partial Class consentimientofacial
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents GenerarDocumentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsentimientoHidrafacialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnvieFacturaToolStripMenuItem As ToolStripMenuItem
 End Class

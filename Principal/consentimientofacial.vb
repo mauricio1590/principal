@@ -481,4 +481,8 @@ Public Class consentimientofacial
         PDF = New Report
         PDF.ConsentimientoHidrafacialPDF(img, img2, img3, Datos)
     End Sub
+
+    Private Sub EnvieFacturaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnvieFacturaToolStripMenuItem.Click
+
+    End Sub
 End Class

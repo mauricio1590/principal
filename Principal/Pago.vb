@@ -228,35 +228,192 @@ Public Class Pago
                                 "VALUES ('" & txtCedula.Text & "', '" & Format(fecha, "yyyy-MM-dd") & "', CURDATE()," & vbCrLf &
                                 " '" & lstTarifas.SelectedItems(0).Tag & "') ") Then
 
-                If Not ValideCedulaExistente(txtCedula.Text.ToString, "pago") Then
-                    MessageBox.Show("La cedula no corresponde a un Usuario Inscrito en Pagos", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Exit Sub
-                End If
-                con.registreDatos("INSERT INTO detalles (cedula,fecha_pago,fecha_fin,tiempo,valor,tarjeta,banco) VALUES " & vbCrLf &
-                              "('" & txtCedula.Text & "',current_date,'" & txtFecha.Text & "','" & txttarifa.Text & "','" & txtValor.Text & "','" & intPagoTarjeta & "','" & intBanco & "')")
-                If booabono Then
-                    con.registreDatos("INSERT INTO abonos (cedula,abono,saldo,estado,dia)VALUES" & vbCrLf &
-                                    "('" & txtCedula.Text & "','" & intAbono & "','" & intSaldo & "',1,0)")
-                End If
-                registreMovimiento(1, 0, txtValor.Text, Principal.intidusuario)
-                Select Case (Principal.intTipoImpresion)
-                    Case 0
-
-                    Case 1
-                        Dim res = MessageBox.Show("Desea Imprimir la factura ", "Informacion Del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
-                        If res = Windows.Forms.DialogResult.Yes Then
-                            imp.GenereImpresion(txtNombre.Text, txtCedula.Text, txttarifa.Text, txtValor.Text)
-                        End If
-                    Case 2
-                        imp.GenereImpresion(txtNombre.Text, txtCedula.Text, txttarifa.Text, txtValor.Text)
-                End Select
-
-
-
-                limipar()
-                MessageBox.Show("El pago se Registro Exitosamente", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+            If Not ValideCedulaExistente(txtCedula.Text.ToString, "pago") Then
+                MessageBox.Show("La cedula no corresponde a un Usuario Inscrito en Pagos", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
             End If
-            End Sub
+            con.registreDatos("INSERT INTO detalles (cedula,fecha_pago,fecha_fin,tiempo,valor,tarjeta,banco) VALUES " & vbCrLf &
+                              "('" & txtCedula.Text & "',now(),'" & txtFecha.Text & "','" & txttarifa.Text & "','" & txtValor.Text & "','" & intPagoTarjeta & "','" & intBanco & "')")
+            If booabono Then
+                con.registreDatos("INSERT INTO abonos (cedula,abono,saldo,estado,dia)VALUES" & vbCrLf &
+                                "('" & txtCedula.Text & "','" & intAbono & "','" & intSaldo & "',1,0)")
+            End If
+            registreMovimiento(1, 0, txtValor.Text, Principal.intidusuario,, intBanco)
+            Select Case (Principal.intTipoImpresion)
+                Case 0
+
+                Case 1
+                    Dim res = MessageBox.Show("Desea Imprimir la factura ", "Informacion Del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                    If res = Windows.Forms.DialogResult.Yes Then
+                        imp.GenereImpresion(txtNombre.Text, txtCedula.Text, txttarifa.Text, txtValor.Text)
+                    End If
+                Case 2
+                    imp.GenereImpresion(txtNombre.Text, txtCedula.Text, txttarifa.Text, txtValor.Text)
+            End Select
+
+
+
+            limipar()
+            MessageBox.Show("El pago se Registro Exitosamente", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        End If
+
+
+        If GestioneFacturaElectronica() Then
+            MsgBox("factura generada")
+        End If
+
+
+    End Sub
+
+
+    Private Function GestioneFacturaElectronica() As Boolean
+
+        'Encender inicio de proceso
+        '''''CONFORME EL DOCUMENTO
+
+        Dim intAmbienteVal As Integer = 2
+        Dim strOFERENTE As String = "VICTOR JULIAN RODRIGUEZ REY"
+
+
+        Dim Oferente As New Conta.DocumentosElectronicos.Persona(1, 31, 88241564, strOFERENTE,
+                                                                 54001, "kdx 50 brr Galan", "318560936", "julian_impacto@hotmail.com", 2,
+                                                                 "CODEXGYM", "54001", "4711;8299",
+                                                                 "O-49;O-52",
+                                                                 , False)
+        Dim Adquiriente As New Conta.DocumentosElectronicos.Persona(15, 13, "1090425939", "MIGUEL MAURICIO PEÑA VARON",
+                                                                    54001, "CLL 2A 11 16 BRR SAN MARTIN", "3103461213", "MAURICIO590@HOTMAIL.COM")
+
+
+
+
+        Dim Lineas As New Conta.DocumentosElectronicos.Lineas()
+        Dim Iva As New Conta.DocumentosElectronicos.IVA(0.19)
+        Dim Linea As New Conta.DocumentosElectronicos.Linea(1, 1, 2, "Mensualidad", "15", 14, Iva)
+        Lineas.Coleccione(Linea)
+
+        Dim Software As New Conta.DocumentosElectronicos.Software("12d5fe74-4a71-40a2-8612-84c4e2bac3ef", "01234", "SOLTEC2")
+        Dim Resolucion As New Conta.DocumentosElectronicos.Resolucion(18760000001, "SETP", 990000000, 995000000, "2019-01-19", "2030-01-19", "fc8eac422eba16e22ffd8c6f94b3f40a6e38162c")
+
+        Dim FacturaX As New Conta.DocumentosElectronicos.Factura(990000150, Now.ToString("yyyy-MM-dd"), Now.ToString("HH:mm:ss-05:00"),
+                                                                 Oferente, Adquiriente, Lineas, Software, Resolucion, intAmbienteVal)
+
+
+        Dim GestorX As New Conta.DocumentosElectronicos.GestorElectronico
+
+        GestorX.DocumentoElectronico = FacturaX
+        GestorX.DocumentoElectronico.Firma.Certificado = New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE)
+
+        If Not GestorX.FirmeDocumento() Then
+            Dim strEventosDelGestor As String = "Los mensajes que devuelve el Gestor: " & vbCrLf & vbCrLf
+            For Each Mensaje As String In GestorX.Eventos
+                strEventosDelGestor &= Mensaje & vbCrLf
+            Next
+            Dim Logger1 As New Logger("Fallo al firmar un documento", "GestorElectronico/FirmeDocumento", "El firmador de Soltec, falló en su intento de firmar un documento.", strEventosDelGestor & vbCrLf & vbCrLf & GestorX.DocumentoElectronico.XML.OuterXml, , "No hay sugerencias.")
+            MsgBox("Fallo al firmar un documento.")
+            'desaprobado
+            Return False
+        End If
+
+        'Aprobado la generación del documento
+
+        Dim intDiasVencimiento As Integer = DateDiff(DateInterval.Day, Today, GestorX.DocumentoElectronico.Firma.Certificado.Expiracion)
+        If intDiasVencimiento < 20 Then MsgBox("El certificado de firma digital, tiene una vigencia máxima de " & intDiasVencimiento & " días más. Por favor, solicite la expedición de uno nuevo.")
+
+        ''''VALIDE EL DOCUMENTO
+        'Encienda ícono de la DIAN
+        If GestorX.ValideDocumento Then
+
+            If Not My.Computer.FileSystem.DirectoryExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\") Then My.Computer.FileSystem.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\")
+            GestorX.DocumentoElectronico.XML.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+            GestorX.RespuestaDeSolicitud.XMLApplicationResponse.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\AppResponse " & GestorX.DocumentoElectronico.CUDE & ".xml")
+            MsgBox("Factura validada correctamnte.")
+            'Encienda validación aprobado
+
+        Else
+            Dim strRespuestas As String = ""
+            Dim hi As Integer = 1
+            strRespuestas &= "Falló la validación del documento" & vbCrLf & vbCrLf
+            For Each sEvento As String In GestorX.Eventos
+                strRespuestas &= hi & " - " & sEvento & vbCrLf
+                hi += 1
+                If sEvento.Contains("procesado anteriormente") Then
+                    strRespuestas = sEvento
+                    Exit For
+                End If
+            Next
+
+            strRespuestas &= "Errores del documento:" & vbCrLf
+            For Each ErrorEnDocumento As String In GestorX.DocumentoElectronico.Errores
+                strRespuestas &= ErrorEnDocumento & vbCrLf
+            Next
+            Dim Logger1 As New Logger("Fallo en validacion de documento electronico", "SoltecTiendas/Funciones2/RegistreDE", "El Gestor Electrónico, no pudo validar un documento XML", "No hay error del ex. Pero el siguiente es el compilado del Gestor: " & vbCrLf & vbCrLf & strRespuestas, , "En seguida el XML por observar." & vbCrLf & vbCrLf & GestorX.DocumentoElectronico.XML.OuterXml)
+            MsgBox("No se validó el documento")
+            'Enciaenda validación falla
+            Return False
+        End If
+
+
+
+
+        '''''ENVIE EL DOCUMENTO
+        '''
+        If Not GestorX.DocumentoElectronico.Adquiriente.NIT = 222222222222 Then Return True
+
+        Dim strCUFE As String = FacturaX.CUDE
+        Dim intTipoDocumento As Integer = 1 '1 factura electronica,  
+        Select Case intTipoDocumento
+            Case 1
+                Dim GestorCorreoX As New Conta.DocumentosElectronicos.GestorElectronico
+                Dim DEXML As New Xml.XmlDocument
+                If My.Computer.FileSystem.FileExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml") Then
+                    DEXML.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                Else
+                    DEXML = GestorCorreoX.DescargueXMLDeDocumento(strCUFE, intAmbienteVal, New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE))
+                    DEXML.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                End If
+                If Not GestorCorreoX.ConviertaXMLEnDocumentoElectronico(DEXML) Then
+                    MsgBox("Ocurrió un problema, obteniendo el documento electrónico que se enviará.")
+                    Return False
+                End If
+                GestorCorreoX.DocumentoElectronico.AmbienteDeValidacion = intAmbienteVal
+                GestorCorreoX.DocumentoElectronico.DocumentoValidado = True
+                DEXML = New Xml.XmlDocument
+                If My.Computer.FileSystem.FileExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml") Then
+                    DEXML.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                Else
+                    DEXML = GestorCorreoX.DescargueXMLDeDocumento(strCUFE, intAmbienteVal, New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE))
+                    DEXML.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                End If
+                If IsNothing(GestorCorreoX.ObtengaAppResponseDeDocumento(strCUFE, strOFERENTE, intAmbienteVal)) Then
+                    MsgBox("Ocurrió un problema, obteniendo la validez del documento electrónico que se enviará.")
+                    Return False
+                End If
+                If Not GestorCorreoX.ConformeContenedorElectronico() Then
+                    MsgBox("Ocurrió un problema, conformando el contendor electrónico.")
+                    Return False
+                End If
+
+                AddHandler GestorCorreoX.CorreoEnviado, AddressOf CorreoEnviado
+                AddHandler GestorCorreoX.FalloAlEnviarElCorreo, AddressOf FalloAlEnviarElCorreo
+                GestorCorreoX.EnvieCorreoElectronico("mauricio590hotmail.com",
+                                                     "1Maxpo@.23", ,
+                                                     "archivo.png",
+                                                     "archivo2.png",
+                                                     "archivo3.png")
+        End Select
+
+
+
+        Return True
+    End Function
+
+    Private Sub CorreoEnviado(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub FalloAlEnviarElCorreo(sender As Object, e As EventArgs)
+
+    End Sub
 
     Private Sub Pago_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         Timer2.Enabled = True
@@ -523,12 +680,12 @@ Public Class Pago
                 Exit Sub
             End If
             con.registreDatos("INSERT INTO detalles (cedula,fecha_pago,fecha_fin,tiempo,valor,tarjeta,banco) VALUES " & vbCrLf &
-                             "('" & txtCedula.Text & "',current_date,'" & txtFecha.Text & "','" & txttarifa.Text & "','" & txtValor.Text & "','" & intPagoTarjeta & "','" & intBanco & "')")
+                             "('" & txtCedula.Text & "',now(),'" & txtFecha.Text & "','" & txttarifa.Text & "','" & txtValor.Text & "','" & intPagoTarjeta & "','" & intBanco & "')")
             If booabono Then
                 con.registreDatos("INSERT INTO abonos (cedula,abono,saldo,estado,dia)VALUES" & vbCrLf &
                                   "('" & txtCedula.Text & "','" & intAbono & "','" & intSaldo & "',1,0)")
             End If
-            registreMovimiento(1, 0, txtValor.Text, Principal.intidusuario)
+            registreMovimiento(1, 0, txtValor.Text, Principal.intidusuario,, intBanco)
             MessageBox.Show("El pago se Acturalizo Exitosamente", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             Select Case (Principal.intTipoImpresion)
                 Case 0
@@ -642,7 +799,10 @@ Public Class Pago
         End If
         If dias = 0 Then dias = 1
         Dim intFormatoDia As Integer = Principal.intFormatoDias
-
+        Dim diasdelmes As Integer = DateTime.DaysInMonth(Now.Year, Now.Month)
+        If diasdelmes = 31 Then
+            dias = dias - 1
+        End If
         Select Case intFormatoDia
 
             Case 1
@@ -667,10 +827,10 @@ Public Class Pago
                 txtFecha.Text = fecha.Date
                 lstTarifas.Visible = False
             Case 2
-                Dim diasDelMes As Integer = Date.DaysInMonth(Now.Year, Now.Month)
+
                 If (diasDelMes = 30 OrElse diasDelMes = 31) AndAlso dias < 5 Then dias = dias - 1
                 If (diasDelMes = 28 And dias < 4) Then dias = dias - 1
-                If (diasDelMes = 28 OrElse diasDelMes = 29) AndAlso dias > 15 Then dias = dias - 3
+                If (diasDelMes = 28 OrElse diasDelMes = 29) AndAlso dias > 15 Then dias = dias - 2
                 If diasDelMes = 30 AndAlso dias = 30 Then dias = dias - 1
                 diastotal = dias
                 Select Case diastotal
@@ -789,6 +949,30 @@ Public Class Pago
         Else
             creeSaldo()
 
+        End If
+    End Sub
+
+    Private Sub AdicionarDiasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdicionarDiasToolStripMenuItem.Click
+
+
+        If Not Principal.intNivelUsuario = 4 Then
+            Principal.intValidar = 12
+            Dim validar As New VALIDAR()
+            validar.ShowDialog()
+            If Principal.booReporte Then
+                AdicioneDias()
+            End If
+
+        Else
+
+            AdicioneDias()
+
+        End If
+    End Sub
+
+    Private Sub FEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FEToolStripMenuItem.Click
+        If GestioneFacturaElectronica() Then
+            MsgBox("exito")
         End If
     End Sub
 End Class

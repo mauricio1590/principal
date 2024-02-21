@@ -311,13 +311,13 @@ Public Class Consentimientocorporal
         Dim img2 As Image = Image.FromFile(Titulo)
         Dim S_N As Image = Image.FromFile(si_no)
         Dim img3 As Image = Image.FromFile(Anatomia)
-        Dim acompañante As String = InputBox("Escriba el nombre del acopañante")
-        Dim cedacompañante As String = InputBox("Escriba la cedula del acopañante")
+        '    Dim acompañante As String = InputBox("Escriba el nombre del acopañante")
+        '  Dim cedacompañante As String = InputBox("Escriba la cedula del acopañante")
         Dim Datos As New AutorizacionFacialVO(lblCliente.Text,
-                                               acompañante,
-                                                cedacompañante,
+                                               "",
+                                                "",
                                                 Date.Now,
-                                               acompañante,
+                                               "",
                                                 traerCampo(txtDocumento.Text, "ruta"),
                                                 traerCampo(txtDocumento.Text, "instructor"))
         PDF = New Report

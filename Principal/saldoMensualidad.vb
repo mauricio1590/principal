@@ -26,11 +26,22 @@
             If con.registreDatos(strCadena) Then
                 '  MessageBox.Show("El abono fue registrado exitosamente", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 con.registreDatos("INSERT INTO detalles (cedula,fecha_pago,fecha_fin,tiempo,valor)VALUES " & vbCrLf &
-                            "('" & cedula & "',CURRENT_DATE,'" & Now.Date & "','SALDO','" & intAbonoNuevo & "')")
-                Dim res2 = MessageBox.Show("Desea Imprimir la factura ", "Informacion Del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
-                If res2 = Windows.Forms.DialogResult.Yes Then
-                    imp.GenereImpresion(nombre, cedula, "Saldo Pendiente", intAbonoNuevo)
-                End If
+                            "('" & cedula & "',now(),'" & Now.Date & "','SALDO','" & intAbonoNuevo & "')")
+
+
+
+                Select Case (Principal.intTipoImpresion)
+                    Case 0
+
+                    Case 1
+                        Dim res3 = MessageBox.Show("Desea Imprimir la factura ", "Informacion Del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                        If res = Windows.Forms.DialogResult.Yes Then
+                            imp.GenereImpresion(nombre, cedula, "SALDO", intAbonoNuevo)
+                        End If
+                    Case 2
+                        imp.GenereImpresion(nombre, cedula, "SALDO", intAbonoNuevo)
+                End Select
+
 
                 con.registreDatos("UPDATE abonos SET dia=5 WHERE cedula='" & cedula & "'")
 

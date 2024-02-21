@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>266</ApplicationRevision>
+    <ApplicationRevision>276</ApplicationRevision>
     <ApplicationVersion>5.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -102,6 +102,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="Conta">
+      <HintPath>..\..\..\ContaDLL\Conta.dll</HintPath>
+    </Reference>
     <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPDevNET.dll</HintPath>
@@ -145,6 +148,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -243,6 +248,11 @@
     </Compile>
     <Compile Include="Congelar.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connected Services\DIAN\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Consentimientocorporal.Designer.vb">
       <DependentUpon>Consentimientocorporal.vb</DependentUpon>
@@ -649,6 +659,40 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices.wsdl" />
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DIAN\WcfDianCustomerServices9.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="MauricioNuevo.pfx" />
     <None Include="maurofirma.pfx" />
     <None Include="maximiliano.pfx" />
@@ -774,6 +818,12 @@
     <None Include="Resources\producto1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\DIAN\configuration91.svcinfo" />
+    <None Include="Connected Services\DIAN\configuration.svcinfo" />
+    <None Include="Connected Services\DIAN\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="logoadmon.ico" />
     <Content Include="logoicono.ico" />
     <Content Include="mipagina.html" />
@@ -812,6 +862,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DIAN\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

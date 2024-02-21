@@ -150,4 +150,36 @@
         lstTipo.Visible = False
         txtValor.Focus()
     End Sub
+
+    Private Sub lstgastos_MouseClick(sender As Object, e As MouseEventArgs) Handles lstgastos.MouseClick
+        If lstgastos.SelectedItems.Count > 0 Then
+            Dim strId As String = ""
+            Dim strCedula As String = ""
+            Dim intValor As Integer = -1
+            Principal.intValidar = 6
+            Dim valide As New VALIDAR
+            valide.ShowDialog()
+            strId = lstgastos.SelectedItems(0).SubItems(3).Text
+            intValor = lstgastos.SelectedItems(0).SubItems(2).Text
+
+
+
+            If Principal.booEliminarDetalle = True Then
+                Dim res = MessageBox.Show("Esta seguro de eliminar la factura '" & strId & "' ", "Informacion Del Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                If res = Windows.Forms.DialogResult.Yes Then
+                    Dim fechaantigua = DateAdd(DateInterval.Day, -1, Now.Date)
+                    con.registreDatos("DELETE FROM gastos where id='" & strId & "'")
+                    ElimineValorCajagasto(intValor)
+                    MessageBox.Show("la factura  se Elimino correctamente", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+                    Principal.booEliminarDetalle = False
+                Else : Exit Sub
+                End If
+            End If
+        End If
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub lstgastos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstgastos.SelectedIndexChanged
+
+    End Sub
 End Class

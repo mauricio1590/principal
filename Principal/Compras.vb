@@ -17,7 +17,7 @@
             vector = txtProducto.Text.Split(" ")
             cadena = "SELECT id,pro_nombre,pro_precioventa,pro_cantidad FROM PRODUCTO WHERE pro_nombre like '%" & vector(0) & "%% " & vector(1) & "%'"
         Else
-            cadena = "SELECT id,pro_nombre,pro_precioventa,pro_cantidad FROM PRODUCTO WHERE pro_nombre like '%" & txtProducto.Text & "%'"
+            cadena = "SELECT id,pro_nombre,pro_precioventa,pro_cantidad FROM PRODUCTO WHERE pro_nombre like '%" & txtProducto.Text & "%' or pro_referencia like '%" & txtProducto.Text & "%'"
         End If
         If chkNombre.Checked Then
             intBusqueda = 1

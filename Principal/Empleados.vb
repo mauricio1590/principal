@@ -37,6 +37,7 @@ Public Class Empleados
             Me.Invoke(deleg, New Object() {texto})
         Else
             vecesDedo.Text = texto
+            ponerhuella(texto.ToString, huella1, huella2, huella3, huella4)
         End If
     End Sub
 
@@ -49,7 +50,7 @@ Public Class Empleados
                     Case 1
                         Enroller = New DPFP.Processing.Enrollment()
                         Dim texto As New StringBuilder()
-                        texto.AppendFormat("Necesitas pasar el dedo {0} veces", Enroller.FeaturesNeeded)
+                        texto.AppendFormat("{0}", Enroller.FeaturesNeeded)
                         vecesDedo.Text = texto.ToString
                     Case 2
                         verificador = New Verification.Verification()
@@ -107,7 +108,7 @@ Public Class Empleados
                 Enroller.AddFeatures(caracteristicas)
             Finally
                 Dim texto As New StringBuilder()
-                texto.AppendFormat("Necesitas pasar el dedo {0} veces", Enroller.FeaturesNeeded)
+                texto.AppendFormat("{0}", Enroller.FeaturesNeeded)
                 mostrarVeces(texto.ToString)
                 Select Case Enroller.TemplateStatus
                     Case DPFP.Processing.Enrollment.Status.Ready
@@ -180,8 +181,17 @@ Public Class Empleados
             MessageBox.Show("El sistema no esta confurado para hacer el control con huella", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
+        If Not Enroller Is Nothing Then
+            Enroller.Clear()
+            Dim texto As New StringBuilder()
+            texto.AppendFormat("Necesitas pasar el dedo {0} veces", Enroller.FeaturesNeeded)
+            mostrarVeces(texto.ToString)
+        End If
+        imagenHuella.Image = Nothing
+
         Init()
         iniciarCaptura()
+        ponercheck(huella1, huella2, huella3, huella4)
     End Sub
 
     Private Sub txtcedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcedula.KeyPress

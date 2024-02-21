@@ -14,7 +14,7 @@
         Dim arlCoincidencias As ArrayList = gestor.DatosDeConsulta("SELECT COUNT(*) FROM REPORTE", , Principal.cadenadeconexion)
         If Not arlCoincidencias.Count = 0 Then
             For Each reporte As ArrayList In arlCoincidencias
-                If Not reporte(0) = 37 Then
+                If Not reporte(0) = 38 Then
                     con.registreDatos("DROP TABLE REPORTE")
                     examineTabla("reporte")
                 End If
@@ -38,6 +38,14 @@
         Select Case strTabla
 
             Case "abonos"
+                If Not existeColumna("movimiento", "caja") Then : con.registreDatos("ALTER TABLE caja ADD COLUMN movimiento INT NOT NULL DEFAULT 1 AFTER id") : End If
+                If Not existeColumna("escredito", "caja") Then : con.registreDatos("ALTER TABLE caja ADD COLUMN escredito INT NOT NULL DEFAULT 0 AFTER movimiento") : End If
+                If Not existeColumna("valor", "caja") Then : con.registreDatos("ALTER TABLE caja ADD COLUMN valor INT NOT NULL DEFAULT 0 AFTER escredito") : End If
+                If Not existeColumna("usuario", "caja") Then : con.registreDatos("ALTER TABLE caja ADD COLUMN usuario VARCHAR(45) NOT NULL DEFAULT 1 AFTER valor") : End If
+                If Not existeColumna("tipopago", "caja") Then : con.registreDatos("ALTER TABLE caja ADD COLUMN tipopago INT NOT NULL DEFAULT 0 AFTER usuario") : End If
+                If Not existeColumna("fecha", "caja") Then : con.registreDatos("ALTER TABLE caja ADD COLUMN mo TIMESTAMP  DEFAULT CURRENT_TIMESTAMP AFTER tipopago") : End If
+
+            Case "caja"
                 If Not existeColumna("cedula", "abonos") Then : con.registreDatos("ALTER TABLE abonos ADD COLUMN cedula VARCHAR(45) NOT NULL DEFAULT 0 AFTER idabonos") : End If
                 If Not existeColumna("abono", "abonos") Then : con.registreDatos("ALTER TABLE abonos ADD COLUMN abono VARCHAR(45) NOT NULL DEFAULT 0 AFTER cedula") : End If
                 If Not existeColumna("saldo", "abonos") Then : con.registreDatos("ALTER TABLE abonos ADD COLUMN saldo VARCHAR(45) NOT NULL DEFAULT 0 AFTER abono") : End If
@@ -45,7 +53,6 @@
                 If Not existeColumna("dia", "abonos") Then : con.registreDatos("ALTER TABLE abonos ADD COLUMN dia int(11) NOT NULL DEFAULT 0 AFTER estado") : End If
                 If Not existeColumna("tipo", "abonos") Then : con.registreDatos("ALTER TABLE abonos ADD COLUMN tipo int(1) NOT NULL DEFAULT 1 AFTER dia") : End If
                 If Not existeColumna("mo", "abonos") Then : con.registreDatos("ALTER TABLE abonos ADD COLUMN mo TIMESTAMP  DEFAULT CURRENT_TIMESTAMP AFTER tipo") : End If
-
             Case "cliente"
                 If Not existeColumna("cedula", "cliente") Then : con.registreDatos("ALTER TABLE cliente ADD COLUMN cedula VARCHAR(45) NOT NULL DEFAULT 0 AFTER id") : End If
                 If Not existeColumna("nombre", "cliente") Then : con.registreDatos("ALTER TABLE cliente ADD COLUMN nombre VARCHAR(45) NOT NULL DEFAULT NULL AFTER cedula") : End If
@@ -366,7 +373,7 @@
                 Case "conf"
                     strcadena = "CREATE TABLE `conf` ( " & vbCrLf &
                       "`id` int(11) NOT NULL AUTO_INCREMENT," & vbCrLf &
-                      "`unidad` varchar(1) NOT NULL DEFAULT 'E'," & vbCrLf &
+                      "`unidad` varchar(1) NOT NULL DEFAULT 'D'," & vbCrLf &
                       "`enco` varchar(1) NOT NULL DEFAULT '2'," & vbCrLf &
                       "`inem` varchar(1) DEFAULT '1'," & vbCrLf &
                       "`incl` varchar(1) DEFAULT '1'," & vbCrLf &
@@ -396,7 +403,7 @@
                       "PRIMARY KEY (`id`) " & vbCrLf &
                      ")"
                     booinserte = True
-                    strInsert = "INSERT conf (id,unidad,enco,inem,incl,vaen,nuen,paab,cocl,nuco,numaco)VALUES(1,'e',2,1,1,1,8,1,1,8,60)"
+                    strInsert = "INSERT conf (id,unidad,enco,inem,incl,vaen,nuen,paab,cocl,nuco,numaco)VALUES(1,'D',2,1,1,1,8,1,1,8,60)"
                 Case "congelado"
                     strcadena = " CREATE TABLE `congelado` ( " & vbCrLf &
                       "`serial` int(11) NOT NULL AUTO_INCREMENT," & vbCrLf &
@@ -466,7 +473,7 @@
                     strcadena = " CREATE TABLE `detalles` (" & vbCrLf &
                       "`id` int(11) unsigned NOT NULL AUTO_INCREMENT," & vbCrLf &
                       "`cedula` varchar(45) NOT NULL," & vbCrLf &
-                      "`fecha_pago` date DEFAULT NULL," & vbCrLf &
+                      "`fecha_pago` DATETIME DEFAULT NULL," & vbCrLf &
                       "`fecha_fin` varchar(45) NOT NULL," & vbCrLf &
                       "`tiempo` varchar(45) NOT NULL," & vbCrLf &
                       "`valor` varchar(45) NOT NULL," & vbCrLf &
@@ -778,7 +785,8 @@
                                                                     ('Historial de Mensualidades',1),('Reporte de  Ventas',1),('Informe de Valoraciones',9),
                                                                     ('Clientes nuevos año calendario',2),('Historial de Actividad de Usuario',2),('Personalizados',10),
                                                                     ('Historial de congelados por mes',2),('Inasistenia de Usuarios',2),('Informe General',1)
-                                                                    ,('Reporte De Ingresos Cosolidado',1)"
+                                                                    ,('Reporte De Ingresos Cosolidado',1)
+                                                                    ,('Cambios de Fecha',2)"
                 Case "reporte_empleado"
                     strcadena = " CREATE TABLE `reporte_empleado` (" & vbCrLf &
                                   "`id` int(11) NOT NULL AUTO_INCREMENT," & vbCrLf &
@@ -941,6 +949,7 @@
 
         verifiqueColumna("cliente")
         verifiqueColumna("clientespa")
+        verifiqueColumna("caja")
         verifiqueColumna("conf")
         verifiqueColumna("detalles")
         verifiqueColumna("entrada")
@@ -956,8 +965,9 @@
             inserteEfectivoEnBanco()
         End If
         Dim version As Array = My.Application.Info.Version.ToString.Split(".")
-        If version(3) <= "229" Then
-            con.registreDatos("alter table pago drop column id; ALTER TABLE `gym`.`pago` ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT FIRST,ADD PRIMARY KEY (`id`);")
+        If version(3) < "271" Then
+            '  con.registreDatos("alter table pago drop column id; ALTER TABLE `gym`.`pago` ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT FIRST,ADD PRIMARY KEY (`id`);")
+            con.registreDatos("ALTER TABLE detalles CHANGE COLUMN fecha_pago fecha_pago DATETIME NOT NULL")
         End If
 
         '  verifiqueColumna("factura")

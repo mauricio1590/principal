@@ -80,7 +80,7 @@ Public Class Clientes
             Me.Invoke(deleg, New Object() {texto})
         Else
             vecesDedo.Text = texto
-            ponerhuella(texto.ToString)
+            ponerhuella(texto.ToString, huella1, huella2, huella3, huella4)
         End If
     End Sub
 
@@ -163,49 +163,8 @@ Public Class Clientes
 
     End Sub
 
-    Sub ponerhuella(huella As String)
-        Dim chexk As String = Principal.strunidad & ":\SISTEMGYM_DATOS\Imagenes\check.png"
-        Select Case huella
-            Case 0
-                If My.Computer.FileSystem.FileExists(chexk) Then
-                    Dim Imagen As New Bitmap(chexk)
-                    huella4.Image = Imagen
-                End If
-            Case 1
-                If My.Computer.FileSystem.FileExists(chexk) Then
-                    Dim Imagen As New Bitmap(chexk)
-                    huella3.Image = Imagen
-                End If
-            Case 2
-                If My.Computer.FileSystem.FileExists(chexk) Then
-                    Dim Imagen As New Bitmap(chexk)
-                    huella2.Image = Imagen
-                End If
-            Case 3
-                If My.Computer.FileSystem.FileExists(chexk) Then
-                    Dim Imagen As New Bitmap(chexk)
-                    huella1.Image = Imagen
-                End If
 
 
-        End Select
-    End Sub
-    Sub ponercheck()
-
-        Dim chexk As String = Principal.strunidad & ":\SISTEMGYM_DATOS\Imagenes\checkdes.png"
-
-        If My.Computer.FileSystem.FileExists(chexk) Then
-            Dim Imagen As New Bitmap(chexk)
-            huella1.Image = Imagen
-            huella2.Image = Imagen
-            huella3.Image = Imagen
-            huella4.Image = Imagen
-            huella1.Enabled = False
-        End If
-
-
-
-    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtcedula.Focus()
         If My.Computer.FileSystem.FileExists(Principal.Logo) Then
@@ -303,7 +262,7 @@ Public Class Clientes
         If Not Enroller Is Nothing Then
             Enroller.Clear()
             Dim texto As New StringBuilder()
-            ponercheck()
+            ponercheck(huella1, huella2, huella3, huella4)
             texto.AppendFormat("{0}", Enroller.FeaturesNeeded)
             mostrarVeces(texto.ToString)
         End If
@@ -377,7 +336,7 @@ Public Class Clientes
         imagenHuella.Image = Nothing
         Init()
         iniciarCaptura()
-        ponercheck()
+        ponercheck(huella1, huella2, huella3, huella4)
         'pararCaptura()
         'Dim ventanaPago As New Pago
         'ventanaPago.ShowDialog()

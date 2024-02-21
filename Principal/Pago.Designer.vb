@@ -36,8 +36,10 @@ Partial Class Pago
         Me.mnSaldo = New System.Windows.Forms.ToolStripMenuItem()
         Me.variosAbonos = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarAbonoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearDeudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpcionesAdminiatrativasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarFechaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdicionarDiasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCedula = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -65,7 +67,7 @@ Partial Class Pago
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.txtBanco = New System.Windows.Forms.TextBox()
-        Me.CrearDeudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +99,7 @@ Partial Class Pago
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarTarifaToolStripMenuItem, Me.BuscarPorHuellla, Me.RegistrarToolStripMenuItem, Me.TarifasEspecialesToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarTarifaToolStripMenuItem, Me.BuscarPorHuellla, Me.RegistrarToolStripMenuItem, Me.TarifasEspecialesToolStripMenuItem, Me.FEToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -165,9 +167,15 @@ Partial Class Pago
         Me.EliminarAbonoToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.EliminarAbonoToolStripMenuItem.Text = "Eliminar Abono"
         '
+        'CrearDeudaToolStripMenuItem
+        '
+        Me.CrearDeudaToolStripMenuItem.Name = "CrearDeudaToolStripMenuItem"
+        Me.CrearDeudaToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
+        Me.CrearDeudaToolStripMenuItem.Text = "Crear Deuda "
+        '
         'OpcionesAdminiatrativasToolStripMenuItem
         '
-        Me.OpcionesAdminiatrativasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModificarFechaToolStripMenuItem})
+        Me.OpcionesAdminiatrativasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModificarFechaToolStripMenuItem, Me.AdicionarDiasToolStripMenuItem})
         Me.OpcionesAdminiatrativasToolStripMenuItem.Name = "OpcionesAdminiatrativasToolStripMenuItem"
         Me.OpcionesAdminiatrativasToolStripMenuItem.Size = New System.Drawing.Size(153, 20)
         Me.OpcionesAdminiatrativasToolStripMenuItem.Text = "Opciones adminiatrativas"
@@ -176,8 +184,14 @@ Partial Class Pago
         '
         Me.ModificarFechaToolStripMenuItem.Name = "ModificarFechaToolStripMenuItem"
         Me.ModificarFechaToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5
-        Me.ModificarFechaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarFechaToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ModificarFechaToolStripMenuItem.Text = "Modificar fecha"
+        '
+        'AdicionarDiasToolStripMenuItem
+        '
+        Me.AdicionarDiasToolStripMenuItem.Name = "AdicionarDiasToolStripMenuItem"
+        Me.AdicionarDiasToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.AdicionarDiasToolStripMenuItem.Text = "Adicionar Dias"
         '
         'Label1
         '
@@ -426,11 +440,11 @@ Partial Class Pago
         Me.txtBanco.TabIndex = 31
         Me.txtBanco.Visible = False
         '
-        'CrearDeudaToolStripMenuItem
+        'FEToolStripMenuItem
         '
-        Me.CrearDeudaToolStripMenuItem.Name = "CrearDeudaToolStripMenuItem"
-        Me.CrearDeudaToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
-        Me.CrearDeudaToolStripMenuItem.Text = "Crear Deuda "
+        Me.FEToolStripMenuItem.Name = "FEToolStripMenuItem"
+        Me.FEToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
+        Me.FEToolStripMenuItem.Text = "FE"
         '
         'Pago
         '
@@ -516,4 +530,6 @@ Partial Class Pago
     Friend WithEvents txtBanco As System.Windows.Forms.TextBox
     Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
     Friend WithEvents CrearDeudaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdicionarDiasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FEToolStripMenuItem As ToolStripMenuItem
 End Class

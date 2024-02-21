@@ -77,14 +77,15 @@ Partial Class PagarSaldo
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(32, 130)
+        Me.Label3.Location = New System.Drawing.Point(6, 130)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 16)
+        Me.Label3.Size = New System.Drawing.Size(110, 16)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Saldo:"
+        Me.Label3.Text = "Saldo Pendiente:"
         '
         'txtSaldo
         '
+        Me.txtSaldo.Enabled = False
         Me.txtSaldo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSaldo.Location = New System.Drawing.Point(120, 127)
         Me.txtSaldo.Name = "txtSaldo"
@@ -103,11 +104,11 @@ Partial Class PagarSaldo
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(32, 177)
+        Me.Label4.Location = New System.Drawing.Point(6, 177)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 16)
+        Me.Label4.Size = New System.Drawing.Size(90, 16)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Valor abono:"
+        Me.Label4.Text = "Nuevo Abono"
         '
         'btnguardar
         '
