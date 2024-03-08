@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Pago
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Pago
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -67,7 +67,6 @@ Partial Class Pago
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.txtBanco = New System.Windows.Forms.TextBox()
-        Me.FEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,7 +98,7 @@ Partial Class Pago
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarTarifaToolStripMenuItem, Me.BuscarPorHuellla, Me.RegistrarToolStripMenuItem, Me.TarifasEspecialesToolStripMenuItem, Me.FEToolStripMenuItem})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarTarifaToolStripMenuItem, Me.BuscarPorHuellla, Me.RegistrarToolStripMenuItem, Me.TarifasEspecialesToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -440,12 +439,6 @@ Partial Class Pago
         Me.txtBanco.TabIndex = 31
         Me.txtBanco.Visible = False
         '
-        'FEToolStripMenuItem
-        '
-        Me.FEToolStripMenuItem.Name = "FEToolStripMenuItem"
-        Me.FEToolStripMenuItem.Size = New System.Drawing.Size(184, 22)
-        Me.FEToolStripMenuItem.Text = "FE"
-        '
         'Pago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -531,5 +524,4 @@ Partial Class Pago
     Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
     Friend WithEvents CrearDeudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AdicionarDiasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FEToolStripMenuItem As ToolStripMenuItem
 End Class

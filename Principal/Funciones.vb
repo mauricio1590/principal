@@ -81,7 +81,22 @@ Module Funciones
 
 
     End Sub
+    Function saberTipoDato(strTabla As String) As String
+        Dim strcadena As String = "SELECT DATA_TYPE,CHARACTER_MAXIMUM_LENGTH
+  FROM information_schema.COLUMNS
+  WHERE TABLE_SCHEMA='gym'
+  AND TABLE_NAME='" & strTabla & "'
+  AND COLUMN_NAME='fecha_pago';"
+        Dim dato As String = ""
 
+        Dim arlCoincidencias As ArrayList = Gestor1.DatosDeConsulta(strcadena,, Principal.cadenadeconexion)
+        If Not arlCoincidencias.Count = 0 Then
+            dato = arlCoincidencias(0)(0)
+
+        End If
+        Return dato
+
+    End Function
     Function saberSigno(mes As Integer, dia As Integer) As String
         Dim strCadena As String = ""
 

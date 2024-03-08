@@ -485,4 +485,8 @@ Public Class consentimientofacial
     Private Sub EnvieFacturaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnvieFacturaToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub PanelCabecera_Paint(sender As Object, e As PaintEventArgs) Handles PanelCabecera.Paint
+
+    End Sub
 End Class

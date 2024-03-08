@@ -28,6 +28,7 @@ Partial Class consentimientofacial
         Me.BuscarPorDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerarDocumentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsentimientoHidrafacialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnvieFacturaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PanelCabecera = New System.Windows.Forms.Panel()
         Me.btncerrar = New System.Windows.Forms.Button()
@@ -172,7 +173,6 @@ Partial Class consentimientofacial
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
         Me.rbPielgrasano = New System.Windows.Forms.RadioButton()
         Me.rbPielgrasasi = New System.Windows.Forms.RadioButton()
-        Me.EnvieFacturaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         Me.panelContenedor.SuspendLayout()
@@ -240,6 +240,12 @@ Partial Class consentimientofacial
         Me.ConsentimientoHidrafacialToolStripMenuItem.Name = "ConsentimientoHidrafacialToolStripMenuItem"
         Me.ConsentimientoHidrafacialToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
         Me.ConsentimientoHidrafacialToolStripMenuItem.Text = "Consentimiento Hidrafacial"
+        '
+        'EnvieFacturaToolStripMenuItem
+        '
+        Me.EnvieFacturaToolStripMenuItem.Name = "EnvieFacturaToolStripMenuItem"
+        Me.EnvieFacturaToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
+        Me.EnvieFacturaToolStripMenuItem.Text = "envie factura"
         '
         'Label7
         '
@@ -1877,12 +1883,6 @@ Partial Class consentimientofacial
         Me.rbPielgrasasi.TabStop = True
         Me.rbPielgrasasi.Text = "Si"
         Me.rbPielgrasasi.UseVisualStyleBackColor = True
-        '
-        'EnvieFacturaToolStripMenuItem
-        '
-        Me.EnvieFacturaToolStripMenuItem.Name = "EnvieFacturaToolStripMenuItem"
-        Me.EnvieFacturaToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.EnvieFacturaToolStripMenuItem.Text = "envie factura"
         '
         'consentimientofacial
         '

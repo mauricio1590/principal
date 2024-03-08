@@ -88,7 +88,7 @@ Public Class conexion
                     'tarjeta='" & intTarjeta & "'
                     Consulta = "SELECT d.id,d.cedula AS Cedula,CONCAT(UPPER(c.nombre),' ',UPPER(c.apellido)) as Cliente,UPPER(tiempo) AS Descripcion,Valor,LEFT(d.fecha_pago,10)AS Fecha, bc.no as Banco" & vbCrLf &
                                                            "FROM detalles d,cliente c,bancoscuentas bc WHERE c.cedula=d.cedula AND tarjeta='" & intTarjeta & "' and bc.id=d.banco  and d.fecha_pago  " & vbCrLf &
-                                                           " >= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND d.fecha_pago<= STR_TO_DATE('" & fhasta & "','%d/%m/%Y') and hour(d.fecha_pago)" & strhorafac & " order by d.id "
+                                                           " >= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND d.fecha_pago< STR_TO_DATE('" & fhasta & "','%d/%m/%Y') and hour(d.fecha_pago)" & strhorafac & " order by d.id "
                     FilasEtiquetas = {0, 1, 2, 3, 4, 5, 6}
                     ColumnasEsNumero = {False, False, False, False, True, False, False}
                     ColumnasJustificaciones = {0, 0, 0, 1, 1, 1, 1}
@@ -96,7 +96,7 @@ Public Class conexion
                 Else
                     Consulta = "SELECT d.id,d.cedula AS Cedula,CONCAT(UPPER(c.nombre),' ',UPPER(c.apellido)) as Cliente,UPPER(tiempo) AS Descripcion,Valor,LEFT(d.fecha_pago,10)AS Fecha" & vbCrLf &
                                                            "FROM detalles d,cliente c WHERE c.cedula=d.cedula AND tarjeta='" & intTarjeta & "' and d.fecha_pago  " & vbCrLf &
-                                                            " >= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND d.fecha_pago<= STR_TO_DATE('" & fhasta & "','%d/%m/%Y') and hour(d.fecha_pago)" & strhorafac & " order by d.id "
+                                                            " >= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND d.fecha_pago< STR_TO_DATE('" & fhasta & "','%d/%m/%Y') and hour(d.fecha_pago)" & strhorafac & " order by d.id "
 
                     FilasEtiquetas = {0, 1, 2, 3, 4, 5}
                     ColumnasEsNumero = {False, False, False, False, True, False}
@@ -928,7 +928,7 @@ Public Class conexion
                 fhasta = DateAdd(DateInterval.Day, 1, fhasta)
                 Consulta = "SELECT d.id,d.cedula AS Cedula,CONCAT(UPPER(c.nombre),' ',UPPER(c.apellido)) as Cliente,UPPER(tiempo) AS Descripcion,Valor,LEFT(d.fecha_pago,10)AS Fecha, bc.no as Banco" & vbCrLf &
                                                         "FROM detalles d,cliente c,bancoscuentas bc WHERE c.cedula=d.cedula AND  bc.id=d.banco  and d.fecha_pago  " & vbCrLf &
-                                                            " >= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND d.fecha_pago<= STR_TO_DATE('" & fhasta & "','%d/%m/%Y') order by d.id "
+                                                            " >= STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND d.fecha_pago< STR_TO_DATE('" & fhasta & "','%d/%m/%Y') order by d.id "
                 FilasEtiquetas = {0, 1, 2, 3, 4, 5, 6}
                 ColumnasEsNumero = {False, False, False, False, True, False, False}
                 ColumnasJustificaciones = {0, 0, 0, 1, 1, 1, 1}

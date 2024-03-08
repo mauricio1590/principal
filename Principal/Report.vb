@@ -1419,17 +1419,17 @@ Public Class Report
         }
         tabla.AddCell(cell)
 
-        'fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
-        'fotoPDF.ScaleAbsolute(100, 30)
-        'cell = New PdfPCell(fotoPDF) With {
-        '    .VerticalAlignment = Element.ALIGN_CENTER,
-        '    .HorizontalAlignment = Element.ALIGN_CENTER,
-        '    .PaddingTop = 10,
-        '    .PaddingBottom = 5,
-        '    .Border = 0,
-        '    .BorderWidthBottom = 1
-        '}
-        'tabla.AddCell(cell)
+        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
+        fotoPDF.ScaleAbsolute(100, 30)
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 10,
+            .PaddingBottom = 5,
+            .Border = 0,
+            .BorderWidthBottom = 1
+        }
+        tabla.AddCell(cell)
 
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
@@ -1462,19 +1462,19 @@ Public Class Report
         }
         tabla.AddCell(cell)
 
-        'cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_TOP,
-        '    .HorizontalAlignment = Element.ALIGN_CENTER,
-        '    .Border = 0
-        '}
+        cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_TOP,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .Border = 0
+        }
         tabla.AddCell(cell)
 
-        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_TOP,
-        '    .HorizontalAlignment = Element.ALIGN_CENTER,
-        '    .PaddingTop = 10,
-        '    .Border = 0
-        '}
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_TOP,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 10,
+            .Border = 0
+        }
         tabla.AddCell(cell)
 
         docPDF.Add(tabla)
@@ -1494,7 +1494,7 @@ Public Class Report
 
         docPDF.Add(tabla)
 
-        docPDF.Close()
+        '   docPDF.Close()
 
         MsgBox("Documento generado")
         'Dim Proc As New System.Diagnostics.Process
@@ -1882,10 +1882,11 @@ Public Class Report
 
         docPDF.Close()
         docPDF.Dispose()
-        MsgBox("Documento generado")
-        Dim Proc As New System.Diagnostics.Process
-        Proc.StartInfo.FileName = ruta
-        Proc.Start()
+        MsgBox("siii")
+        Dim msgBoxResult = MsgBox("Documento prueba generado")
+        'Dim Proc As New System.Diagnostics.Process
+        'Proc.StartInfo.FileName = ruta
+        'Proc.Start()
 
 
     End Sub

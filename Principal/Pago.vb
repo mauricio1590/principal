@@ -258,9 +258,9 @@ Public Class Pago
         End If
 
 
-        If GestioneFacturaElectronica() Then
-            MsgBox("factura generada")
-        End If
+        'If GestioneFacturaElectronica() Then
+        '    MsgBox("factura generada")
+        'End If
 
 
     End Sub
@@ -288,20 +288,41 @@ Public Class Pago
 
         Dim Lineas As New Conta.DocumentosElectronicos.Lineas()
         Dim Iva As New Conta.DocumentosElectronicos.IVA(0.19)
-        Dim Linea As New Conta.DocumentosElectronicos.Linea(1, 1, 2, "Mensualidad", "15", 14, Iva)
+
+        Dim Linea As New Conta.DocumentosElectronicos.Linea(1, 1, 150000, "Mensualidad", "15")
         Lineas.Coleccione(Linea)
+
+
 
         Dim Software As New Conta.DocumentosElectronicos.Software("12d5fe74-4a71-40a2-8612-84c4e2bac3ef", "01234", "SOLTEC2")
         Dim Resolucion As New Conta.DocumentosElectronicos.Resolucion(18760000001, "SETP", 990000000, 995000000, "2019-01-19", "2030-01-19", "fc8eac422eba16e22ffd8c6f94b3f40a6e38162c")
 
-        Dim FacturaX As New Conta.DocumentosElectronicos.Factura(990000150, Now.ToString("yyyy-MM-dd"), Now.ToString("HH:mm:ss-05:00"),
-                                                                 Oferente, Adquiriente, Lineas, Software, Resolucion, intAmbienteVal)
+        'Dim FacturaX As New Conta.DocumentosElectronicos.Factura(990000155,
+        'Now.ToString("yyyy-MM-dd"),
+        'Now.ToString("HH:mm:ss-05:00"),
+        'Oferente,
+        'Adquiriente,
+        'Lineas,
+        'Software,
+        'Resolucion,
+        'intAmbienteVal)
 
+
+        Dim NotaCreditoX As New Conta.DocumentosElectronicos.NotaCredito(150,
+                                                                         strOFERENTE,
+                                                                         "c65ee599027c7263b3f6435be9151082e5ac811bdfd4a062d5b3b476ffc2ff173531320b271a50778b2c93a3460411c1",
+                                                                         Lineas, "No recibido", Software,,,, 2)
 
         Dim GestorX As New Conta.DocumentosElectronicos.GestorElectronico
 
-        GestorX.DocumentoElectronico = FacturaX
+        'GestorX.DocumentoElectronico = FacturaX
+        'GestorX.DocumentoElectronico.Firma.Certificado = New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE)
+
+        GestorX.DocumentoElectronico = NotaCreditoX
         GestorX.DocumentoElectronico.Firma.Certificado = New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE)
+
+
+
 
         If Not GestorX.FirmeDocumento() Then
             Dim strEventosDelGestor As String = "Los mensajes que devuelve el Gestor: " & vbCrLf & vbCrLf
@@ -357,50 +378,52 @@ Public Class Pago
 
         '''''ENVIE EL DOCUMENTO
         '''
-        If Not GestorX.DocumentoElectronico.Adquiriente.NIT = 222222222222 Then Return True
+        If Not GestorX.DocumentoElectronico.Adquiriente.NIT = 222222222222 Then
+            Dim strCUFE As String = GestorX.DocumentoElectronico.CUDE
+            Dim intTipoDocumento As Integer = 1 '1 factura electronica,  
+            Select Case intTipoDocumento
+                Case 1, 91
+                    Dim GestorCorreoX As New Conta.DocumentosElectronicos.GestorElectronico
+                    Dim DEXML As New Xml.XmlDocument
+                    If My.Computer.FileSystem.FileExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml") Then
+                        DEXML.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                    Else
+                        DEXML = GestorCorreoX.DescargueXMLDeDocumento(strCUFE, intAmbienteVal, New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE))
+                        DEXML.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                    End If
+                    If Not GestorCorreoX.ConviertaXMLEnDocumentoElectronico(DEXML) Then
+                        MsgBox("Ocurrió un problema, obteniendo el documento electrónico que se enviará.")
+                        Return False
+                    End If
+                    GestorCorreoX.DocumentoElectronico.AmbienteDeValidacion = intAmbienteVal
+                    GestorCorreoX.DocumentoElectronico.DocumentoValidado = True
+                    DEXML = New Xml.XmlDocument
+                    If My.Computer.FileSystem.FileExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml") Then
+                        DEXML.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                    Else
+                        DEXML = GestorCorreoX.DescargueXMLDeDocumento(strCUFE, intAmbienteVal, New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE))
+                        DEXML.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
+                    End If
+                    If IsNothing(GestorCorreoX.ObtengaAppResponseDeDocumento(strCUFE, strOFERENTE, intAmbienteVal)) Then
+                        MsgBox("Ocurrió un problema, obteniendo la validez del documento electrónico que se enviará.")
+                        Return False
+                    End If
+                    If Not GestorCorreoX.ConformeContenedorElectronico() Then
+                        MsgBox("Ocurrió un problema, conformando el contendor electrónico.")
+                        Return False
+                    End If
 
-        Dim strCUFE As String = FacturaX.CUDE
-        Dim intTipoDocumento As Integer = 1 '1 factura electronica,  
-        Select Case intTipoDocumento
-            Case 1
-                Dim GestorCorreoX As New Conta.DocumentosElectronicos.GestorElectronico
-                Dim DEXML As New Xml.XmlDocument
-                If My.Computer.FileSystem.FileExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml") Then
-                    DEXML.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
-                Else
-                    DEXML = GestorCorreoX.DescargueXMLDeDocumento(strCUFE, intAmbienteVal, New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE))
-                    DEXML.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
-                End If
-                If Not GestorCorreoX.ConviertaXMLEnDocumentoElectronico(DEXML) Then
-                    MsgBox("Ocurrió un problema, obteniendo el documento electrónico que se enviará.")
-                    Return False
-                End If
-                GestorCorreoX.DocumentoElectronico.AmbienteDeValidacion = intAmbienteVal
-                GestorCorreoX.DocumentoElectronico.DocumentoValidado = True
-                DEXML = New Xml.XmlDocument
-                If My.Computer.FileSystem.FileExists(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml") Then
-                    DEXML.Load(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
-                Else
-                    DEXML = GestorCorreoX.DescargueXMLDeDocumento(strCUFE, intAmbienteVal, New Conta.CertificadoDeFirma(strOFERENTE, strOFERENTE))
-                    DEXML.Save(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\SISTEMGYM\XMLs\" & GestorX.DocumentoElectronico.CUDE & ".xml")
-                End If
-                If IsNothing(GestorCorreoX.ObtengaAppResponseDeDocumento(strCUFE, strOFERENTE, intAmbienteVal)) Then
-                    MsgBox("Ocurrió un problema, obteniendo la validez del documento electrónico que se enviará.")
-                    Return False
-                End If
-                If Not GestorCorreoX.ConformeContenedorElectronico() Then
-                    MsgBox("Ocurrió un problema, conformando el contendor electrónico.")
-                    Return False
-                End If
-
-                AddHandler GestorCorreoX.CorreoEnviado, AddressOf CorreoEnviado
-                AddHandler GestorCorreoX.FalloAlEnviarElCorreo, AddressOf FalloAlEnviarElCorreo
-                GestorCorreoX.EnvieCorreoElectronico("mauricio590hotmail.com",
+                    AddHandler GestorCorreoX.CorreoEnviado, AddressOf CorreoEnviado
+                    AddHandler GestorCorreoX.FalloAlEnviarElCorreo, AddressOf FalloAlEnviarElCorreo
+                    GestorCorreoX.EnvieCorreoElectronico("mauricio590@hotmail.com",
                                                      "1Maxpo@.23", ,
                                                      "archivo.png",
                                                      "archivo2.png",
                                                      "archivo3.png")
-        End Select
+            End Select
+
+        End If
+
 
 
 
@@ -800,7 +823,7 @@ Public Class Pago
         If dias = 0 Then dias = 1
         Dim intFormatoDia As Integer = Principal.intFormatoDias
         Dim diasdelmes As Integer = DateTime.DaysInMonth(Now.Year, Now.Month)
-        If diasdelmes = 31 Then
+        If diasdelmes = 30 Or diasdelmes = 28 Or diasdelmes = 29 And dias > 15 Then
             dias = dias - 1
         End If
         Select Case intFormatoDia
@@ -970,7 +993,7 @@ Public Class Pago
         End If
     End Sub
 
-    Private Sub FEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FEToolStripMenuItem.Click
+    Private Sub FEToolStripMenuItem_Click(sender As Object, e As EventArgs)
         If GestioneFacturaElectronica() Then
             MsgBox("exito")
         End If

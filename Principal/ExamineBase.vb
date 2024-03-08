@@ -965,7 +965,7 @@
             inserteEfectivoEnBanco()
         End If
         Dim version As Array = My.Application.Info.Version.ToString.Split(".")
-        If version(3) < "271" Then
+        If saberTipoDato("detalles") <> "datetime" Then
             '  con.registreDatos("alter table pago drop column id; ALTER TABLE `gym`.`pago` ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT FIRST,ADD PRIMARY KEY (`id`);")
             con.registreDatos("ALTER TABLE detalles CHANGE COLUMN fecha_pago fecha_pago DATETIME NOT NULL")
         End If
