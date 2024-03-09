@@ -26,7 +26,8 @@ Public Class firmar
     Sub iniciar()
 
         bm = New Bitmap(pic.Width, pic.Height)
-        'bm = New Bitmap(300, 50)
+    
+        MsgBox("hola")
         g = Graphics.FromImage(bm)
         g.Clear(Color.Red)
 

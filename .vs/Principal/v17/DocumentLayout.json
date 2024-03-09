@@ -63,7 +63,7 @@
               "RelativeDocumentMoniker": "Principal\\firmar.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\firmar.vb",
               "RelativeToolTip": "Principal\\firmar.vb",
-              "ViewState": "AQIAACEAAAAAAAAAAAAgwCcAAAAZAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAowB8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-08T19:44:22.689Z",
               "EditorCaption": ""
@@ -89,7 +89,8 @@
               "RelativeToolTip": "Principal\\Funciones.vb",
               "ViewState": "AQIAAKsFAAAAAAAAAAAowL4FAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:41.968Z"
+              "WhenOpened": "2024-03-08T19:32:41.968Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -113,7 +114,8 @@
               "RelativeToolTip": "Principal\\conexion.vb",
               "ViewState": "AQIAAIoDAAAAAAAAAAAMwJ4DAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.226Z"
+              "WhenOpened": "2024-03-08T19:32:42.226Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,7 +127,8 @@
               "RelativeToolTip": "Principal\\Report.vb",
               "ViewState": "AQIAAFIHAAAAAAAAAAAgwF4HAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.228Z"
+              "WhenOpened": "2024-03-08T19:32:42.228Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -137,7 +140,8 @@
               "RelativeToolTip": "Principal\\consentimientofacial.vb",
               "ViewState": "AQIAAAsAAAAAAAAAAIAwwCEAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.23Z"
+              "WhenOpened": "2024-03-08T19:32:42.23Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -148,7 +152,8 @@
               "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\consentimientofacial.vb [Dise\u00F1o]",
               "RelativeToolTip": "Principal\\consentimientofacial.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.233Z"
+              "WhenOpened": "2024-03-08T19:32:42.233Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -171,7 +176,8 @@
               "RelativeToolTip": "Principal\\Pago.vb",
               "ViewState": "AQIAADEDAAAAAAAAAAAewD4DAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.239Z"
+              "WhenOpened": "2024-03-08T19:32:42.239Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -182,7 +188,8 @@
               "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Pago.vb [Dise\u00F1o]",
               "RelativeToolTip": "Principal\\Pago.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.241Z"
+              "WhenOpened": "2024-03-08T19:32:42.241Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
