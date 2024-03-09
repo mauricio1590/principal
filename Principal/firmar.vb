@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports MySql.Data
 Public Class firmar
     Dim con As New conexion
 
@@ -16,7 +15,7 @@ Public Class firmar
     Public Declare Function DestroyWindow Lib "user32" (ByVal hndw As Integer) As Boolean
     Dim strCedulaCliente As String = ""
     Dim strFirma As String
-    Private firmaRectangle As New Rectangle(10, 10, 300, 200) ' Rectángulo que limita el área de firma
+    Private firmaRectangle As New Rectangle(10, 10, 300, 80) ' Rectángulo que limita el área de firma X,Y, ANCHO, ALTO
     Private Sub firmar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Bounds = Screen.FromPoint(MousePosition).Bounds
@@ -26,11 +25,8 @@ Public Class firmar
     Sub iniciar()
 
         bm = New Bitmap(pic.Width, pic.Height)
-    
-        MsgBox("hola")
         g = Graphics.FromImage(bm)
-        g.Clear(Color.Red)
-
+        g.Clear(Color.White)
         pic.Image = bm
 
     End Sub
@@ -39,28 +35,26 @@ Public Class firmar
         'py = e.Location
         If firmaRectangle.Contains(e.Location) Then
             paintd = True
-            py = e.Location
+            px = e.Location
         End If
     End Sub
 
     Private Sub pic_MouseMove(sender As Object, e As MouseEventArgs) Handles pic.MouseMove
         If paintd = True Then
-            If index = 1 Then
-
-
-                'g.DrawLine(p, px, py)
-                'py = px
-                ' Dibuja una línea dentro del rectángulo de firma
-                Dim currentPoint As Point = e.Location
+            'If index = 1 Then
+            'g.DrawLine(p, px, py)
+            'py = px
+            ' Dibuja una línea dentro del rectángulo de firma
+            Dim currentPoint As Point = e.Location
                 currentPoint.X = Math.Max(firmaRectangle.Left, Math.Min(firmaRectangle.Right, currentPoint.X))
                 currentPoint.Y = Math.Max(firmaRectangle.Top, Math.Min(firmaRectangle.Bottom, currentPoint.Y))
 
-                g.DrawLine(p, py, currentPoint)
+                g.DrawLine(p, px, currentPoint)
 
                 pic.Invalidate()
                 px = currentPoint
 
-            End If
+            'End If
         End If
         pic.Refresh()
     End Sub

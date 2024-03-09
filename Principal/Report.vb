@@ -1,13 +1,9 @@
 ﻿'Imports iTextSharp.text.Table
+Imports System.IO
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
-Imports System.IO
-Imports System.Runtime.InteropServices
 'Imports WebSupergoo.ABCpdf11.Elements
 'Imports Element = iTextSharp.text.Element
-Imports Org.BouncyCastle.Utilities
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
-Imports iTextSharp.text.pdf.qrcode
 'Imports DocumentFormat.OpenXml.Bibliography
 'Imports DocumentFormat.OpenXml.Drawing
 'Imports System.Buffers

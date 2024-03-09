@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
 Imports System.Runtime.InteropServices
 
 ' La información general sobre un ensamblado se controla mediante el siguiente 
@@ -9,11 +8,11 @@ Imports System.Runtime.InteropServices
 ' Revisar los valores de los atributos del ensamblado
 
 <Assembly: AssemblyTitle("SISTEMGYM_ADMIN")>
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("sistemgym 5.2")>
-<Assembly: AssemblyCopyright("Copyright ©  2018")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyCopyright("Copyright ©  2018")>
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 

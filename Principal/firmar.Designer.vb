@@ -46,7 +46,7 @@ Partial Class firmar
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(705, 82)
+        Me.Panel1.Size = New System.Drawing.Size(790, 82)
         Me.Panel1.TabIndex = 0
         '
         'btnLimpiar
@@ -66,12 +66,13 @@ Partial Class firmar
         'btncerrar
         '
         Me.btncerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btncerrar.BackgroundImage = CType(resources.GetObject("btncerrar.BackgroundImage"), System.Drawing.Image)
         Me.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btncerrar.FlatAppearance.BorderSize = 0
         Me.btncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncerrar.Location = New System.Drawing.Point(672, 3)
+        Me.btncerrar.Location = New System.Drawing.Point(757, 3)
         Me.btncerrar.Name = "btncerrar"
         Me.btncerrar.Size = New System.Drawing.Size(30, 30)
         Me.btncerrar.TabIndex = 0
@@ -118,18 +119,17 @@ Partial Class firmar
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 300)
+        Me.Panel2.Location = New System.Drawing.Point(0, 449)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(705, 31)
+        Me.Panel2.Size = New System.Drawing.Size(790, 31)
         Me.Panel2.TabIndex = 1
         '
         'pic
         '
         Me.pic.BackColor = System.Drawing.Color.IndianRed
-        Me.pic.Location = New System.Drawing.Point(192, 154)
+        Me.pic.Location = New System.Drawing.Point(254, 211)
         Me.pic.Name = "pic"
-        Me.pic.Size = New System.Drawing.Size(309, 69)
-        Me.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.pic.Size = New System.Drawing.Size(320, 100)
         Me.pic.TabIndex = 2
         Me.pic.TabStop = False
         '
@@ -138,7 +138,7 @@ Partial Class firmar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(705, 331)
+        Me.ClientSize = New System.Drawing.Size(790, 480)
         Me.Controls.Add(Me.pic)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -148,7 +148,6 @@ Partial Class firmar
         Me.Panel1.ResumeLayout(False)
         CType(Me.pic, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 

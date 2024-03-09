@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SISTEMGYM 5.1.exe.manifest" size="28565">
+    <dependentAssembly dependencyType="install" codebase="SISTEMGYM 5.1.exe.manifest" size="27254">
       <assemblyIdentity name="SISTEMGYM 5.1.exe" version="5.2.0.279" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4fAjU+XVIjaxjWgHDUnFIQo3i0vO8Xtq1CUi4IyimUc=</dsig:DigestValue>
+        <dsig:DigestValue>hbM37lDONrdngkGX2NyZXmOqbBKc5TiXn8S+oeHQqPo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

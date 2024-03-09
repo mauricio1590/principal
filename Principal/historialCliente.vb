@@ -86,7 +86,7 @@
                     strValor = lstreportes.SelectedItems(0).SubItems(4).Text
                     imp.GenereImpresion(strNombre, strCedula, strTarifa, strValor)
                 Case 4
-                 
+
                     Principal.intValidar = 6
                     Dim valide As New VALIDAR
                     valide.ShowDialog()
@@ -106,7 +106,7 @@
                     End If
             End Select
 
-            
+
         End If
     End Sub
 

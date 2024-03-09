@@ -47,7 +47,7 @@
 
     Private Sub txtname_TextChanged(sender As Object, e As EventArgs) Handles txtname.TextChanged
         If txtname.Text = "" Then Exit Sub
-        
+
 
         ''STR_TO_DATE('" & fdesde & "','%d/%m/%Y') AND STR_TO_DATE('" & fhasta & "','%d/%m/%Y')" & vbCrLf &"
         Dim arlCoincidencias = Gestor1.DatosDeConsulta("SELECT id, nombre ,apellido FROM cliente WHERE nombre LIKE '%" & txtname.Text & "%' ORDER BY nombre LIMIT 30", , Principal.cadenadeconexion)

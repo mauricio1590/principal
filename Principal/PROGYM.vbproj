@@ -368,6 +368,11 @@
     <Compile Include="InasistenciaUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Report.vb" />
     <Compile Include="VentasDetallado.Designer.vb">
       <DependentUpon>VentasDetallado.vb</DependentUpon>
@@ -424,11 +429,6 @@
     </Compile>
     <Compile Include="MensajesWhatsap.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="MySqlBackup.vb" />
     <Compile Include="pagoSpa.Designer.vb">

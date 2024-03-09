@@ -1,10 +1,8 @@
-﻿Imports Soltec
+﻿Imports System.IO
+Imports System.Text
 Imports DPFP
 Imports DPFP.Capture
-Imports System.Text
 Imports MySql.Data.MySqlClient
-Imports MySql.Data
-Imports System.IO
 Public Class Empleados
     Implements DPFP.Capture.EventHandler
     Dim intIdPago = 0
@@ -400,7 +398,7 @@ Public Class Empleados
         Else : Return False
         End If
     End Function
-   
+
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If validarCampos() Then
             Dim Builderconex As New MySqlConnectionStringBuilder()
@@ -494,7 +492,7 @@ Public Class Empleados
         End If
     End Sub
 
- 
+
 
     Private Sub btnIniciarCam_Click(sender As Object, e As EventArgs) Handles btnIniciarCam.Click
         WebCam1.Start()
