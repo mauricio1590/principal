@@ -16,33 +16,49 @@ Public Class firmar
     Public Declare Function DestroyWindow Lib "user32" (ByVal hndw As Integer) As Boolean
     Dim strCedulaCliente As String = ""
     Dim strFirma As String
+    Private firmaRectangle As New Rectangle(10, 10, 300, 200) ' Rectángulo que limita el área de firma
     Private Sub firmar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-        Bounds = Screen.FromPoint(MousePosition).Bounds
+        'Bounds = Screen.FromPoint(MousePosition).Bounds
         iniciar()
 
     End Sub
     Sub iniciar()
 
         bm = New Bitmap(pic.Width, pic.Height)
+        'bm = New Bitmap(300, 50)
         g = Graphics.FromImage(bm)
-        g.Clear(Color.White)
+        g.Clear(Color.Red)
 
         pic.Image = bm
 
     End Sub
     Private Sub pic_MouseDown(sender As Object, e As MouseEventArgs) Handles pic.MouseDown
-        paintd = True
-        py = e.Location
+        'paintd = True
+        'py = e.Location
+        If firmaRectangle.Contains(e.Location) Then
+            paintd = True
+            py = e.Location
+        End If
     End Sub
 
     Private Sub pic_MouseMove(sender As Object, e As MouseEventArgs) Handles pic.MouseMove
         If paintd = True Then
             If index = 1 Then
-                px = e.Location
-                g.DrawLine(p, px, py)
-                py = px
+
+
+                'g.DrawLine(p, px, py)
+                'py = px
+                ' Dibuja una línea dentro del rectángulo de firma
+                Dim currentPoint As Point = e.Location
+                currentPoint.X = Math.Max(firmaRectangle.Left, Math.Min(firmaRectangle.Right, currentPoint.X))
+                currentPoint.Y = Math.Max(firmaRectangle.Top, Math.Min(firmaRectangle.Bottom, currentPoint.Y))
+
+                g.DrawLine(p, py, currentPoint)
+
+                pic.Invalidate()
+                px = currentPoint
+
             End If
         End If
         pic.Refresh()
@@ -63,6 +79,7 @@ Public Class firmar
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        pic.SizeMode = PictureBoxSizeMode.StretchImage
         Dim foto As Image = pic.Image
         If foto Is Nothing Then
 
