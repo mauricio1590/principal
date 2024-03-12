@@ -1384,13 +1384,15 @@ Public Class Report
         tabla.AddCell(cell)
         docPDF.Add(tabla)
 
-        tabla = New PdfPTable(New Single() {10.0F, 35.0F, 10.0F, 35.0F, 10.0F})
+        'seccion de firma
+
+        tabla = New PdfPTable(New Single() {30.0F, 40.0F, 30.0F})
         tabla.WidthPercentage = 100.0F
 
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
             .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
+            .PaddingTop = 5,
             .Border = 0
         }
         tabla.AddCell(cell)
@@ -1410,35 +1412,18 @@ Public Class Report
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
             .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
+            .PaddingTop = 5,
             .Border = 0
         }
         tabla.AddCell(cell)
 
-        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
-        fotoPDF.ScaleAbsolute(100, 30)
-        cell = New PdfPCell(fotoPDF) With {
-            .VerticalAlignment = Element.ALIGN_CENTER,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .PaddingTop = 10,
-            .PaddingBottom = 5,
-            .Border = 0,
-            .BorderWidthBottom = 1
-        }
-        tabla.AddCell(cell)
+
+        'SEGUNDA LINEA TEXTO FIRMA PACIENTE
 
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
             .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
-            .Border = 0
-        }
-        tabla.AddCell(cell)
-
-        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
-            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
+            .PaddingTop = 5,
             .Border = 0
         }
         tabla.AddCell(cell)
@@ -1446,6 +1431,7 @@ Public Class Report
         cell = New PdfPCell(New Phrase("Firma del Paciente", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_TOP,
             .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 5,
             .Border = 0
         }
         tabla.AddCell(cell)
@@ -1453,22 +1439,7 @@ Public Class Report
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
             .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
-            .Border = 0
-        }
-        tabla.AddCell(cell)
-
-        cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_TOP,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .Border = 0
-        }
-        tabla.AddCell(cell)
-
-        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_TOP,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .PaddingTop = 10,
+            .PaddingTop = 5,
             .Border = 0
         }
         tabla.AddCell(cell)
@@ -1489,13 +1460,12 @@ Public Class Report
         tabla.AddCell(cell)
 
         docPDF.Add(tabla)
-
-        '   docPDF.Close()
+        docPDF.Close()
 
         MsgBox("Documento generado")
-        'Dim Proc As New System.Diagnostics.Process
-        'Proc.StartInfo.FileName = ruta
-        'Proc.Start()
+        Dim Proc As New System.Diagnostics.Process
+        Proc.StartInfo.FileName = ruta
+        Proc.Start()
 
     End Sub
     Public Sub ConsentimientoHidrafacialPDF(Logo As Bitmap, Titulo As Bitmap, Anatomia As Bitmap, Datos As HidraFacialVO)
@@ -1770,7 +1740,7 @@ Public Class Report
 
         ''parte de las firmas 
 
-        tabla = New PdfPTable(New Single() {10.0F, 35.0F, 10.0F, 35.0F, 10.0F})
+        tabla = New PdfPTable(New Single() {30.0F, 40.0F, 30.0F})
         tabla.WidthPercentage = 100.0F
 
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
@@ -1801,30 +1771,12 @@ Public Class Report
         }
         tabla.AddCell(cell)
 
-        'fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaAcomp1)
-        'fotoPDF.ScaleAbsolute(100, 30)
-        cell = New PdfPCell(fotoPDF) With {
-            .VerticalAlignment = Element.ALIGN_CENTER,
-            .HorizontalAlignment = Element.ALIGN_CENTER,
-            .PaddingTop = 10,
-            .PaddingBottom = 5,
-            .Border = 0,
-            .BorderWidthBottom = 1
-        }
-        tabla.AddCell(cell)
+        'SEGUNDA LINEA TEXTO FIRMA DEL PACIENTE
 
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
             .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
-            .Border = 0
-        }
-        tabla.AddCell(cell)
-
-        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
-            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
+            .PaddingTop = 5,
             .Border = 0
         }
         tabla.AddCell(cell)
@@ -1832,6 +1784,7 @@ Public Class Report
         cell = New PdfPCell(New Phrase("Firma del Paciente", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_TOP,
             .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 5,
             .Border = 0
         }
         tabla.AddCell(cell)
@@ -1839,24 +1792,9 @@ Public Class Report
         cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
             .VerticalAlignment = Element.ALIGN_JUSTIFIED,
             .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-            .PaddingTop = 10,
+            .PaddingTop = 5,
             .Border = 0
         }
-        tabla.AddCell(cell)
-
-        'cell = New PdfPCell(New Phrase("Firma Acompañante", fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_TOP,
-        '    .HorizontalAlignment = Element.ALIGN_CENTER,
-        '    .Border = 0
-        '}
-        tabla.AddCell(cell)
-
-        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_TOP,
-        '    .HorizontalAlignment = Element.ALIGN_CENTER,
-        '    .PaddingTop = 10,
-        '    .Border = 0
-        '}
         tabla.AddCell(cell)
 
         docPDF.Add(tabla)
@@ -1878,11 +1816,11 @@ Public Class Report
 
         docPDF.Close()
         docPDF.Dispose()
-        MsgBox("siii")
+        'MsgBox("siii")
         Dim msgBoxResult = MsgBox("Documento prueba generado")
-        'Dim Proc As New System.Diagnostics.Process
-        'Proc.StartInfo.FileName = ruta
-        'Proc.Start()
+        Dim Proc As New System.Diagnostics.Process
+        Proc.StartInfo.FileName = ruta
+        Proc.Start()
 
 
     End Sub
