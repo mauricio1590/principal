@@ -120,7 +120,7 @@
         If Asc(e.KeyChar) = 13 Then
             txtvalor.Focus()
         End If
-        
+
     End Sub
 
     Private Sub chkDetalle_CheckedChanged(sender As Object, e As EventArgs) Handles chkDetalle.CheckedChanged

@@ -1,48 +1,104 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DATOS\\Desktop\\SPA\\principal\\",
+  "WorkspaceRootPath": "D:\\DATOS\\Desktop\\SPA 2\\principal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa\\principal\\principal\\firmar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\firmar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\firmar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\clientesspa.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientesspa.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\ventasdetallado.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\ventasdetallado.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\reportesmes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\reportesmes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\reportes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\reportes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\medidas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\medidas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\leerconsentimiento.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\leerconsentimiento.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\funciones-mauricio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\funciones-mauricio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\firmar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\firmar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\examinebase.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\examinebase.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\firmaacompa\u00F1ante.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\firmaacompa\u00F1ante.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\fichafacialvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\fichafacialvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\fichacorporalvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\fichacorporalvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\firmar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\firmar.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\conexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\conexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\my project\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\my project\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PROGYM||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\examinebase.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\examinebase.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\conexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\conexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA\\principal\\principal\\pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\pago.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
@@ -53,64 +109,238 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "firmar.vb",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\firmar.vb",
-              "RelativeDocumentMoniker": "Principal\\firmar.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\firmar.vb",
-              "RelativeToolTip": "Principal\\firmar.vb",
-              "ViewState": "AQIAABYAAAAAAAAAAAAowB8AAAAIAAAA",
+              "DocumentIndex": 5,
+              "Title": "ClientesSpa.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ClientesSpa.vb",
+              "RelativeDocumentMoniker": "Principal\\ClientesSpa.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ClientesSpa.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\ClientesSpa.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:44:22.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "firmar.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\firmar.vb",
-              "RelativeDocumentMoniker": "Principal\\firmar.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\firmar.vb [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\firmar.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:42:39.596Z"
+              "WhenOpened": "2024-03-12T21:32:56.524Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Funciones.vb",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Funciones.vb",
-              "RelativeDocumentMoniker": "Principal\\Funciones.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Funciones.vb",
-              "RelativeToolTip": "Principal\\Funciones.vb",
-              "ViewState": "AQIAAKsFAAAAAAAAAAAowL4FAAAcAAAA",
+              "Title": "Principal.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Principal.vb",
+              "RelativeDocumentMoniker": "Principal\\Principal.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Principal.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\Principal.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:41.968Z",
+              "WhenOpened": "2024-03-12T21:33:55.818Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "consentimientofacial.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb",
+              "RelativeDocumentMoniker": "Principal\\consentimientofacial.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\consentimientofacial.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-08T19:32:42.233Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "reportes.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\reportes.vb",
+              "RelativeDocumentMoniker": "Principal\\reportes.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\reportes.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\reportes.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:34:02.707Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "consentimientofacial.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb",
+              "RelativeDocumentMoniker": "Principal\\consentimientofacial.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb",
+              "RelativeToolTip": "Principal\\consentimientofacial.vb",
+              "ViewState": "AQIAAOsBAAAAAAAAAAAvwPkBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-08T19:32:42.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ExamineBase.vb",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\ExamineBase.vb",
-              "RelativeDocumentMoniker": "Principal\\ExamineBase.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\ExamineBase.vb",
-              "RelativeToolTip": "Principal\\ExamineBase.vb",
-              "ViewState": "AQIAAMMDAAAAAAAAAAAgwMcDAAAIAAAA",
+              "Title": "Clientes.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
+              "RelativeDocumentMoniker": "Principal\\Clientes.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
+              "RelativeToolTip": "Principal\\Clientes.vb",
+              "ViewState": "AQIAAG8DAAAAAAAAAAAlwH8DAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.223Z"
+              "WhenOpened": "2024-03-12T21:37:23.788Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "ReportesMes.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ReportesMes.vb",
+              "RelativeDocumentMoniker": "Principal\\ReportesMes.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ReportesMes.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\ReportesMes.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:34:05.704Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Clientes.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
+              "RelativeDocumentMoniker": "Principal\\Clientes.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\Clientes.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:35:19.188Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VentasDetallado.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\VentasDetallado.vb",
+              "RelativeDocumentMoniker": "Principal\\VentasDetallado.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\VentasDetallado.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\VentasDetallado.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:34:13.281Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Medidas.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Medidas.vb",
+              "RelativeDocumentMoniker": "Principal\\Medidas.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Medidas.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\Medidas.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:33:46.899Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "leerConsentimiento.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\leerConsentimiento.vb",
+              "RelativeDocumentMoniker": "Principal\\leerConsentimiento.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\leerConsentimiento.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\leerConsentimiento.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:33:41.604Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Funciones-MAURICIO.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Funciones-MAURICIO.vb",
+              "RelativeDocumentMoniker": "Principal\\Funciones-MAURICIO.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Funciones-MAURICIO.vb",
+              "RelativeToolTip": "Principal\\Funciones-MAURICIO.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:33:32.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "firmaAcompa\u00F1ante.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmaAcompa\u00F1ante.vb",
+              "RelativeDocumentMoniker": "Principal\\firmaAcompa\u00F1ante.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmaAcompa\u00F1ante.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\firmaAcompa\u00F1ante.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:33:27.358Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FichaCorporalVO.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\FichaCorporalVO.vb",
+              "RelativeDocumentMoniker": "Principal\\FichaCorporalVO.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\FichaCorporalVO.vb",
+              "RelativeToolTip": "Principal\\FichaCorporalVO.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:07:57.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FichaFacialVO.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\FichaFacialVO.vb",
+              "RelativeDocumentMoniker": "Principal\\FichaFacialVO.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\FichaFacialVO.vb",
+              "RelativeToolTip": "Principal\\FichaFacialVO.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:32:24.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "firmar.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmar.vb",
+              "RelativeDocumentMoniker": "Principal\\firmar.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmar.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\firmar.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-09T02:38:51.397Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "firmar.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmar.vb",
+              "RelativeDocumentMoniker": "Principal\\firmar.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmar.vb",
+              "RelativeToolTip": "Principal\\firmar.vb",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAlwIEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-09T02:38:57.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\My Project\\Resources.resx",
+              "RelativeDocumentMoniker": "Principal\\My Project\\Resources.resx",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\My Project\\Resources.resx",
+              "RelativeToolTip": "Principal\\My Project\\Resources.resx",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAOoAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-03-09T02:52:03.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "conexion.vb",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\conexion.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\conexion.vb",
               "RelativeDocumentMoniker": "Principal\\conexion.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\conexion.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\conexion.vb",
               "RelativeToolTip": "Principal\\conexion.vb",
               "ViewState": "AQIAAIoDAAAAAAAAAAAMwJ4DAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -119,60 +349,60 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "Report.vb",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Report.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Report.vb",
               "RelativeDocumentMoniker": "Principal\\Report.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Report.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Report.vb",
               "RelativeToolTip": "Principal\\Report.vb",
-              "ViewState": "AQIAAFIHAAAAAAAAAAAgwF4HAAAzAAAA",
+              "ViewState": "AQIAAI0HAAAAAAAAAAAgwKoHAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-08T19:32:42.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "consentimientofacial.vb",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\consentimientofacial.vb",
-              "RelativeDocumentMoniker": "Principal\\consentimientofacial.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\consentimientofacial.vb",
-              "RelativeToolTip": "Principal\\consentimientofacial.vb",
-              "ViewState": "AQIAAAsAAAAAAAAAAIAwwCEAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "consentimientofacial.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\consentimientofacial.vb",
-              "RelativeDocumentMoniker": "Principal\\consentimientofacial.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\consentimientofacial.vb [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\consentimientofacial.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.233Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "PROGYM",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\PROGYM.vbproj",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\PROGYM.vbproj",
               "RelativeDocumentMoniker": "Principal\\PROGYM.vbproj",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\PROGYM.vbproj",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\PROGYM.vbproj",
               "RelativeToolTip": "Principal\\PROGYM.vbproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
               "WhenOpened": "2024-04-27T20:35:25.143Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
+              "Title": "Funciones.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Funciones.vb",
+              "RelativeDocumentMoniker": "Principal\\Funciones.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Funciones.vb",
+              "RelativeToolTip": "Principal\\Funciones.vb",
+              "ViewState": "AQIAAKgFAAAAAAAAAAAowK4FAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-08T19:32:41.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ExamineBase.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ExamineBase.vb",
+              "RelativeDocumentMoniker": "Principal\\ExamineBase.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ExamineBase.vb",
+              "RelativeToolTip": "Principal\\ExamineBase.vb",
+              "ViewState": "AQIAAMMDAAAAAAAAAAAgwMcDAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-08T19:32:42.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Pago.vb",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Pago.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Pago.vb",
               "RelativeDocumentMoniker": "Principal\\Pago.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Pago.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Pago.vb",
               "RelativeToolTip": "Principal\\Pago.vb",
               "ViewState": "AQIAADEDAAAAAAAAAAAewD4DAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -181,11 +411,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 24,
               "Title": "Pago.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Pago.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Pago.vb",
               "RelativeDocumentMoniker": "Principal\\Pago.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA\\principal\\Principal\\Pago.vb [Dise\u00F1o]",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Pago.vb [Dise\u00F1o]",
               "RelativeToolTip": "Principal\\Pago.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-08T19:32:42.241Z",

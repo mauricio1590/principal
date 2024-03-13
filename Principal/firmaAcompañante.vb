@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports MySql.Data
 
 Public Class firmaAcompañante
     Dim con As New conexion

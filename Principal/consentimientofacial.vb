@@ -489,4 +489,20 @@ Public Class consentimientofacial
     Private Sub PanelCabecera_Paint(sender As Object, e As PaintEventArgs) Handles PanelCabecera.Paint
 
     End Sub
+
+    Private Sub Label14_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub rbPresionno_CheckedChanged(sender As Object, e As EventArgs) Handles rbPresionno.CheckedChanged
+
+    End Sub
+
+    Private Sub rbPresionsi_CheckedChanged(sender As Object, e As EventArgs) Handles rbPresionsi.CheckedChanged
+
+    End Sub
+
+    Private Sub GroupBox16_Enter(sender As Object, e As EventArgs) Handles GroupBox16.Enter
+
+    End Sub
 End Class

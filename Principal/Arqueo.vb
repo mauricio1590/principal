@@ -34,7 +34,7 @@
             If res1 = Windows.Forms.DialogResult.Yes Then
                 strcadena = "DELETE FROM CAJA WHERE usuario = " & intIdDeLaPersona & ""
             End If
-            End If
+        End If
         If Not strcadena.Equals("") Then
             con.registreDatos(strcadena)
             MessageBox.Show("registro correcto ", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)

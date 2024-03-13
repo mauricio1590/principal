@@ -3,7 +3,7 @@
     Dim strTag As Integer
     Dim intIDarticuloCambio As Integer = 0
     Dim gestor1 As New Soltec.Gestor
-   
+
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         If validarcampos() Then
             Dim cadena As String = ""
@@ -31,7 +31,7 @@
         Return saber
     End Function
 
-   
+
     Private Sub txtReferencia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtReferencia.KeyPress
         If Asc(e.KeyChar) = 13 Then
             If Not verifiqueReferencia(txtReferencia.Text) Then
@@ -47,7 +47,7 @@
             txtVenta.Focus()
 
         End If
-       
+
     End Sub
     Sub limpiar()
         txtReferencia.Text = ""
@@ -130,7 +130,7 @@
 
     Public Sub llenar(id As Integer)
         Dim arlDatos As ArrayList = gestor1.DatosDeConsulta("SELECT pro_referencia,pro_nombre,pro_preciocosto,pro_precioventa,pro_cantidad,pro_descripcion FROM producto WHERE id=" & id & "", , Principal.cadenadeconexion)
-        If Not  arlDatos.Count = 0 Then
+        If Not arlDatos.Count = 0 Then
             For Each articulo As ArrayList In arlDatos
                 txtReferencia.Text = articulo(0)
                 txtNombre.Text = articulo(1)
@@ -164,5 +164,5 @@
         limpiar()
     End Sub
 
-    
+
 End Class

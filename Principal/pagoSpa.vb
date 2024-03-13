@@ -1,10 +1,8 @@
-﻿Imports DPFP
-Imports DPFP.Capture
-Imports System.Text
-Imports MySql.Data.MySqlClient
-Imports MySql.Data
+﻿Imports System.Globalization
 Imports System.IO
-Imports System.Globalization
+Imports DPFP
+Imports DPFP.Capture
+Imports MySql.Data.MySqlClient
 
 Public Class pagoSpa
     Implements DPFP.Capture.EventHandler
@@ -192,7 +190,7 @@ Public Class pagoSpa
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim valorcaja As Integer = 0
-        
+
         'Captura.StopCapture()
         'Captura.Dispose()
         If Not validarCampos() AndAlso cedulaEnCliente(txtCedula.Text) Then Exit Sub
@@ -317,7 +315,7 @@ Public Class pagoSpa
                 pg.ShowDialog()
             End If
 
-          
+
 
         End If
         If Char.IsNumber(e.KeyChar) Then
@@ -377,7 +375,7 @@ Public Class pagoSpa
         Dim booSaber As Boolean = False
         If Not txtCedula.Text.Equals("") Then
             If Not txtValor.Text.Equals("") Then
-                    booSaber = True
+                booSaber = True
 
             Else
                 MessageBox.Show("Ingrese una Tarifa antes de continuar", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -584,5 +582,5 @@ Public Class pagoSpa
 
     End Sub
 
-  
+
 End Class

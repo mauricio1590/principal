@@ -42,7 +42,6 @@ Partial Class consentimientofacial
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -51,24 +50,19 @@ Partial Class consentimientofacial
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox26 = New System.Windows.Forms.GroupBox()
         Me.rbStandarno = New System.Windows.Forms.RadioButton()
         Me.rbStandarsi = New System.Windows.Forms.RadioButton()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox25 = New System.Windows.Forms.GroupBox()
         Me.rbHidratadano = New System.Windows.Forms.RadioButton()
         Me.rbHidratadasi = New System.Windows.Forms.RadioButton()
@@ -145,7 +139,6 @@ Partial Class consentimientofacial
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.rbRenalesno = New System.Windows.Forms.RadioButton()
         Me.rbRenalessi = New System.Windows.Forms.RadioButton()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.txtFracturafacial = New System.Windows.Forms.TextBox()
         Me.txtProblemaspiel = New System.Windows.Forms.TextBox()
         Me.txtPresion = New System.Windows.Forms.TextBox()
@@ -153,26 +146,33 @@ Partial Class consentimientofacial
         Me.txtObeservacionesPiel = New System.Windows.Forms.TextBox()
         Me.txtObservaciones1 = New System.Windows.Forms.TextBox()
         Me.txtMedicamento = New System.Windows.Forms.TextBox()
-        Me.txtCirculatorias = New System.Windows.Forms.TextBox()
         Me.txtCirugias = New System.Windows.Forms.TextBox()
         Me.txtDentales = New System.Windows.Forms.TextBox()
         Me.txtCremas = New System.Windows.Forms.TextBox()
         Me.txtLcontacto = New System.Windows.Forms.TextBox()
         Me.txtConvulsiones = New System.Windows.Forms.TextBox()
-        Me.txtDigestivas = New System.Windows.Forms.TextBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.rbAlergiasno = New System.Windows.Forms.RadioButton()
         Me.rbAlergiassi = New System.Windows.Forms.RadioButton()
-        Me.txtRenales = New System.Windows.Forms.TextBox()
         Me.txtAlergias = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.rbCardiacano = New System.Windows.Forms.RadioButton()
         Me.rbCardiacasi = New System.Windows.Forms.RadioButton()
         Me.txtDocumento = New System.Windows.Forms.TextBox()
-        Me.txtcardiacas = New System.Windows.Forms.TextBox()
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
         Me.rbPielgrasano = New System.Windows.Forms.RadioButton()
         Me.rbPielgrasasi = New System.Windows.Forms.RadioButton()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtcardiacas = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtRenales = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtDigestivas = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtCirculatorias = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         Me.panelContenedor.SuspendLayout()
@@ -287,7 +287,18 @@ Partial Class consentimientofacial
         '
         'panelContenedor
         '
+        Me.panelContenedor.BackColor = System.Drawing.Color.White
         Me.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelContenedor.Controls.Add(Me.grouppiel)
+        Me.panelContenedor.Controls.Add(Me.GroupBox16)
+        Me.panelContenedor.Controls.Add(Me.GroupBox17)
+        Me.panelContenedor.Controls.Add(Me.GroupBox3)
+        Me.panelContenedor.Controls.Add(Me.GroupBox1)
+        Me.panelContenedor.Controls.Add(Me.GroupBox2)
+        Me.panelContenedor.Controls.Add(Me.GroupBox4)
+        Me.panelContenedor.Controls.Add(Me.GroupBox5)
+        Me.panelContenedor.Controls.Add(Me.GroupBox6)
+        Me.panelContenedor.Controls.Add(Me.GroupBox7)
         Me.panelContenedor.Controls.Add(Me.btnLimpiar)
         Me.panelContenedor.Controls.Add(Me.btnModificar)
         Me.panelContenedor.Controls.Add(Me.btnGuardar)
@@ -295,9 +306,6 @@ Partial Class consentimientofacial
         Me.panelContenedor.Controls.Add(Me.lblDocumento)
         Me.panelContenedor.Controls.Add(Me.Label10)
         Me.panelContenedor.Controls.Add(Me.Label9)
-        Me.panelContenedor.Controls.Add(Me.Label8)
-        Me.panelContenedor.Controls.Add(Me.Label6)
-        Me.panelContenedor.Controls.Add(Me.Label5)
         Me.panelContenedor.Controls.Add(Me.Label30)
         Me.panelContenedor.Controls.Add(Me.Label17)
         Me.panelContenedor.Controls.Add(Me.Label24)
@@ -306,22 +314,14 @@ Partial Class consentimientofacial
         Me.panelContenedor.Controls.Add(Me.Label31)
         Me.panelContenedor.Controls.Add(Me.Label26)
         Me.panelContenedor.Controls.Add(Me.Label25)
-        Me.panelContenedor.Controls.Add(Me.Label20)
         Me.panelContenedor.Controls.Add(Me.Label23)
-        Me.panelContenedor.Controls.Add(Me.Label19)
         Me.panelContenedor.Controls.Add(Me.Label22)
         Me.panelContenedor.Controls.Add(Me.Label21)
-        Me.panelContenedor.Controls.Add(Me.Label18)
-        Me.panelContenedor.Controls.Add(Me.Label16)
         Me.panelContenedor.Controls.Add(Me.Label29)
         Me.panelContenedor.Controls.Add(Me.Label15)
-        Me.panelContenedor.Controls.Add(Me.Label4)
         Me.panelContenedor.Controls.Add(Me.Label13)
-        Me.panelContenedor.Controls.Add(Me.Label3)
         Me.panelContenedor.Controls.Add(Me.Label12)
-        Me.panelContenedor.Controls.Add(Me.Label2)
         Me.panelContenedor.Controls.Add(Me.GroupBox26)
-        Me.panelContenedor.Controls.Add(Me.Label1)
         Me.panelContenedor.Controls.Add(Me.GroupBox25)
         Me.panelContenedor.Controls.Add(Me.GroupBox22)
         Me.panelContenedor.Controls.Add(Me.GroupBox28)
@@ -332,43 +332,24 @@ Partial Class consentimientofacial
         Me.panelContenedor.Controls.Add(Me.GroupBox18)
         Me.panelContenedor.Controls.Add(Me.GroupBox21)
         Me.panelContenedor.Controls.Add(Me.GroupBox9)
-        Me.panelContenedor.Controls.Add(Me.GroupBox17)
         Me.panelContenedor.Controls.Add(Me.GroupBox20)
         Me.panelContenedor.Controls.Add(Me.GroupBox8)
-        Me.panelContenedor.Controls.Add(Me.GroupBox16)
-        Me.panelContenedor.Controls.Add(Me.GroupBox7)
-        Me.panelContenedor.Controls.Add(Me.grouppiel)
         Me.panelContenedor.Controls.Add(Me.GroupBox27)
-        Me.panelContenedor.Controls.Add(Me.GroupBox6)
         Me.panelContenedor.Controls.Add(Me.GroupBox14)
-        Me.panelContenedor.Controls.Add(Me.GroupBox5)
         Me.panelContenedor.Controls.Add(Me.GroupBox13)
-        Me.panelContenedor.Controls.Add(Me.GroupBox4)
         Me.panelContenedor.Controls.Add(Me.GroupBox12)
-        Me.panelContenedor.Controls.Add(Me.GroupBox2)
         Me.panelContenedor.Controls.Add(Me.Label11)
-        Me.panelContenedor.Controls.Add(Me.GroupBox1)
-        Me.panelContenedor.Controls.Add(Me.Label14)
         Me.panelContenedor.Controls.Add(Me.txtFracturafacial)
         Me.panelContenedor.Controls.Add(Me.txtProblemaspiel)
-        Me.panelContenedor.Controls.Add(Me.txtPresion)
-        Me.panelContenedor.Controls.Add(Me.txtAzucar)
         Me.panelContenedor.Controls.Add(Me.txtObeservacionesPiel)
         Me.panelContenedor.Controls.Add(Me.txtObservaciones1)
         Me.panelContenedor.Controls.Add(Me.txtMedicamento)
-        Me.panelContenedor.Controls.Add(Me.txtCirculatorias)
         Me.panelContenedor.Controls.Add(Me.txtCirugias)
-        Me.panelContenedor.Controls.Add(Me.txtDentales)
         Me.panelContenedor.Controls.Add(Me.txtCremas)
-        Me.panelContenedor.Controls.Add(Me.txtLcontacto)
         Me.panelContenedor.Controls.Add(Me.txtConvulsiones)
-        Me.panelContenedor.Controls.Add(Me.txtDigestivas)
         Me.panelContenedor.Controls.Add(Me.GroupBox11)
-        Me.panelContenedor.Controls.Add(Me.txtRenales)
         Me.panelContenedor.Controls.Add(Me.txtAlergias)
-        Me.panelContenedor.Controls.Add(Me.GroupBox3)
         Me.panelContenedor.Controls.Add(Me.txtDocumento)
-        Me.panelContenedor.Controls.Add(Me.txtcardiacas)
         Me.panelContenedor.Controls.Add(Me.GroupBox19)
         Me.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelContenedor.Location = New System.Drawing.Point(0, 54)
@@ -406,20 +387,20 @@ Partial Class consentimientofacial
         'lblCliente
         '
         Me.lblCliente.AutoSize = True
-        Me.lblCliente.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCliente.Location = New System.Drawing.Point(438, 20)
+        Me.lblCliente.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCliente.Location = New System.Drawing.Point(362, 10)
         Me.lblCliente.Name = "lblCliente"
-        Me.lblCliente.Size = New System.Drawing.Size(42, 13)
+        Me.lblCliente.Size = New System.Drawing.Size(71, 23)
         Me.lblCliente.TabIndex = 44
         Me.lblCliente.Text = "Usuario"
         '
         'lblDocumento
         '
         Me.lblDocumento.AutoSize = True
-        Me.lblDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDocumento.Location = New System.Drawing.Point(11, 20)
+        Me.lblDocumento.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDocumento.Location = New System.Drawing.Point(13, 14)
         Me.lblDocumento.Name = "lblDocumento"
-        Me.lblDocumento.Size = New System.Drawing.Size(65, 13)
+        Me.lblDocumento.Size = New System.Drawing.Size(93, 19)
         Me.lblDocumento.TabIndex = 44
         Me.lblDocumento.Text = "Documento:"
         '
@@ -446,32 +427,22 @@ Partial Class consentimientofacial
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(11, 381)
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(3, 10)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(107, 13)
+        Me.Label8.Size = New System.Drawing.Size(149, 19)
         Me.Label8.TabIndex = 43
         Me.Label8.Text = "Problemas de presión"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(11, 330)
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(3, 10)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(103, 13)
+        Me.Label6.Size = New System.Drawing.Size(148, 19)
         Me.Label6.TabIndex = 43
-        Me.Label6.Text = "Problemas de Azucar"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(11, 290)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(132, 13)
-        Me.Label5.TabIndex = 43
-        Me.Label5.Text = "Enfermedades circulatorias"
+        Me.Label6.Text = "Problemas de Azucar:"
         '
         'Label30
         '
@@ -497,7 +468,7 @@ Partial Class consentimientofacial
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(296, 560)
+        Me.Label24.Location = New System.Drawing.Point(336, 569)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(72, 13)
         Me.Label24.TabIndex = 43
@@ -553,21 +524,11 @@ Partial Class consentimientofacial
         Me.Label25.TabIndex = 43
         Me.Label25.Text = "Desvitalizada"
         '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(30, 560)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(69, 13)
-        Me.Label20.TabIndex = 43
-        Me.Label20.Text = "Piel muy seca"
-        '
         'Label23
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(296, 521)
+        Me.Label23.Location = New System.Drawing.Point(336, 543)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(123, 13)
         Me.Label23.TabIndex = 43
@@ -576,18 +537,18 @@ Partial Class consentimientofacial
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(30, 521)
+        Me.Label19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(3, 8)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(120, 13)
+        Me.Label19.Size = New System.Drawing.Size(172, 19)
         Me.Label19.TabIndex = 43
-        Me.Label19.Text = "Piel medianamente seca"
+        Me.Label19.Text = "Piel medianamente seca:"
         '
         'Label22
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(296, 486)
+        Me.Label22.Location = New System.Drawing.Point(336, 515)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(103, 13)
         Me.Label22.TabIndex = 43
@@ -597,31 +558,21 @@ Partial Class consentimientofacial
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(296, 450)
+        Me.Label21.Location = New System.Drawing.Point(336, 485)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(50, 13)
         Me.Label21.TabIndex = 43
         Me.Label21.Text = "Piel grasa"
         '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(30, 486)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(100, 13)
-        Me.Label18.TabIndex = 43
-        Me.Label18.Text = "Piel levemente seca"
-        '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(30, 450)
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(6, 12)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(47, 13)
+        Me.Label16.Size = New System.Drawing.Size(71, 19)
         Me.Label16.TabIndex = 43
-        Me.Label16.Text = "Piel seca"
+        Me.Label16.Text = "Piel seca:"
         '
         'Label29
         '
@@ -646,12 +597,12 @@ Partial Class consentimientofacial
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(11, 243)
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 10)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 13)
+        Me.Label4.Size = New System.Drawing.Size(137, 19)
         Me.Label4.TabIndex = 43
-        Me.Label4.Text = "Implantes dentales"
+        Me.Label4.Text = "Implantes dentales:"
         '
         'Label13
         '
@@ -663,16 +614,6 @@ Partial Class consentimientofacial
         Me.Label13.TabIndex = 43
         Me.Label13.Text = "Cremas de uso actual"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(11, 190)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 13)
-        Me.Label3.TabIndex = 43
-        Me.Label3.Text = "Lentes de contacto"
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -682,16 +623,6 @@ Partial Class consentimientofacial
         Me.Label12.Size = New System.Drawing.Size(93, 13)
         Me.Label12.TabIndex = 43
         Me.Label12.Text = "Sufre convulsiones"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(11, 144)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 13)
-        Me.Label2.TabIndex = 43
-        Me.Label2.Text = "Enfermedades digestivas"
         '
         'GroupBox26
         '
@@ -727,16 +658,6 @@ Partial Class consentimientofacial
         Me.rbStandarsi.TabStop = True
         Me.rbStandarsi.Text = "Si"
         Me.rbStandarsi.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(11, 97)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 13)
-        Me.Label1.TabIndex = 43
-        Me.Label1.Text = "Enfermedades renales"
         '
         'GroupBox25
         '
@@ -778,7 +699,7 @@ Partial Class consentimientofacial
         Me.GroupBox22.Controls.Add(Me.rbPielmuyGrasano)
         Me.GroupBox22.Controls.Add(Me.rbPielMuyGrasasi)
         Me.GroupBox22.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox22.Location = New System.Drawing.Point(446, 547)
+        Me.GroupBox22.Location = New System.Drawing.Point(475, 556)
         Me.GroupBox22.Name = "GroupBox22"
         Me.GroupBox22.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox22.TabIndex = 41
@@ -985,22 +906,23 @@ Partial Class consentimientofacial
         '
         'GroupBox18
         '
+        Me.GroupBox18.Controls.Add(Me.Label20)
         Me.GroupBox18.Controls.Add(Me.rbPielMuysecano)
         Me.GroupBox18.Controls.Add(Me.rbPielmuySecasi)
         Me.GroupBox18.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox18.Location = New System.Drawing.Point(183, 547)
+        Me.GroupBox18.Location = New System.Drawing.Point(17, 554)
         Me.GroupBox18.Name = "GroupBox18"
-        Me.GroupBox18.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox18.Size = New System.Drawing.Size(279, 35)
         Me.GroupBox18.TabIndex = 41
         Me.GroupBox18.TabStop = False
         '
         'rbPielMuysecano
         '
         Me.rbPielMuysecano.AutoSize = True
-        Me.rbPielMuysecano.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPielMuysecano.Location = New System.Drawing.Point(12, 9)
+        Me.rbPielMuysecano.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPielMuysecano.Location = New System.Drawing.Point(188, 10)
         Me.rbPielMuysecano.Name = "rbPielMuysecano"
-        Me.rbPielMuysecano.Size = New System.Drawing.Size(41, 17)
+        Me.rbPielMuysecano.Size = New System.Drawing.Size(45, 23)
         Me.rbPielMuysecano.TabIndex = 43
         Me.rbPielMuysecano.TabStop = True
         Me.rbPielMuysecano.Text = "No"
@@ -1009,10 +931,10 @@ Partial Class consentimientofacial
         'rbPielmuySecasi
         '
         Me.rbPielmuySecasi.AutoSize = True
-        Me.rbPielmuySecasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPielmuySecasi.Location = New System.Drawing.Point(61, 9)
+        Me.rbPielmuySecasi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPielmuySecasi.Location = New System.Drawing.Point(238, 10)
         Me.rbPielmuySecasi.Name = "rbPielmuySecasi"
-        Me.rbPielmuySecasi.Size = New System.Drawing.Size(36, 17)
+        Me.rbPielmuySecasi.Size = New System.Drawing.Size(38, 23)
         Me.rbPielmuySecasi.TabIndex = 44
         Me.rbPielmuySecasi.TabStop = True
         Me.rbPielmuySecasi.Text = "Si"
@@ -1023,7 +945,7 @@ Partial Class consentimientofacial
         Me.GroupBox21.Controls.Add(Me.rbPielMediagrasano)
         Me.GroupBox21.Controls.Add(Me.rbPielMediaGrasasi)
         Me.GroupBox21.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox21.Location = New System.Drawing.Point(446, 508)
+        Me.GroupBox21.Location = New System.Drawing.Point(475, 531)
         Me.GroupBox21.Name = "GroupBox21"
         Me.GroupBox21.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox21.TabIndex = 41
@@ -1090,22 +1012,23 @@ Partial Class consentimientofacial
         '
         'GroupBox17
         '
+        Me.GroupBox17.Controls.Add(Me.Label19)
         Me.GroupBox17.Controls.Add(Me.rbPielMediasecano)
         Me.GroupBox17.Controls.Add(Me.rbPielMediasecasi)
         Me.GroupBox17.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox17.Location = New System.Drawing.Point(183, 508)
+        Me.GroupBox17.Location = New System.Drawing.Point(17, 527)
         Me.GroupBox17.Name = "GroupBox17"
-        Me.GroupBox17.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox17.Size = New System.Drawing.Size(279, 35)
         Me.GroupBox17.TabIndex = 41
         Me.GroupBox17.TabStop = False
         '
         'rbPielMediasecano
         '
         Me.rbPielMediasecano.AutoSize = True
-        Me.rbPielMediasecano.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPielMediasecano.Location = New System.Drawing.Point(12, 9)
+        Me.rbPielMediasecano.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPielMediasecano.Location = New System.Drawing.Point(188, 10)
         Me.rbPielMediasecano.Name = "rbPielMediasecano"
-        Me.rbPielMediasecano.Size = New System.Drawing.Size(41, 17)
+        Me.rbPielMediasecano.Size = New System.Drawing.Size(45, 23)
         Me.rbPielMediasecano.TabIndex = 43
         Me.rbPielMediasecano.TabStop = True
         Me.rbPielMediasecano.Text = "No"
@@ -1114,10 +1037,10 @@ Partial Class consentimientofacial
         'rbPielMediasecasi
         '
         Me.rbPielMediasecasi.AutoSize = True
-        Me.rbPielMediasecasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPielMediasecasi.Location = New System.Drawing.Point(61, 9)
+        Me.rbPielMediasecasi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPielMediasecasi.Location = New System.Drawing.Point(238, 10)
         Me.rbPielMediasecasi.Name = "rbPielMediasecasi"
-        Me.rbPielMediasecasi.Size = New System.Drawing.Size(36, 17)
+        Me.rbPielMediasecasi.Size = New System.Drawing.Size(38, 23)
         Me.rbPielMediasecasi.TabIndex = 44
         Me.rbPielMediasecasi.TabStop = True
         Me.rbPielMediasecasi.Text = "Si"
@@ -1128,7 +1051,7 @@ Partial Class consentimientofacial
         Me.GroupBox20.Controls.Add(Me.rbPielleveGrasano)
         Me.GroupBox20.Controls.Add(Me.rbPielLeveGrasasi)
         Me.GroupBox20.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox20.Location = New System.Drawing.Point(446, 473)
+        Me.GroupBox20.Location = New System.Drawing.Point(475, 505)
         Me.GroupBox20.Name = "GroupBox20"
         Me.GroupBox20.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox20.TabIndex = 41
@@ -1162,20 +1085,22 @@ Partial Class consentimientofacial
         '
         Me.GroupBox8.Controls.Add(Me.rbPresionno)
         Me.GroupBox8.Controls.Add(Me.rbPresionsi)
+        Me.GroupBox8.Controls.Add(Me.Label8)
+        Me.GroupBox8.Controls.Add(Me.txtPresion)
         Me.GroupBox8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox8.Location = New System.Drawing.Point(11, 392)
+        Me.GroupBox8.Location = New System.Drawing.Point(17, 413)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox8.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox8.TabIndex = 41
         Me.GroupBox8.TabStop = False
         '
         'rbPresionno
         '
         Me.rbPresionno.AutoSize = True
-        Me.rbPresionno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPresionno.Location = New System.Drawing.Point(12, 9)
+        Me.rbPresionno.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPresionno.Location = New System.Drawing.Point(218, 8)
         Me.rbPresionno.Name = "rbPresionno"
-        Me.rbPresionno.Size = New System.Drawing.Size(41, 17)
+        Me.rbPresionno.Size = New System.Drawing.Size(45, 23)
         Me.rbPresionno.TabIndex = 43
         Me.rbPresionno.TabStop = True
         Me.rbPresionno.Text = "No"
@@ -1184,10 +1109,10 @@ Partial Class consentimientofacial
         'rbPresionsi
         '
         Me.rbPresionsi.AutoSize = True
-        Me.rbPresionsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPresionsi.Location = New System.Drawing.Point(61, 9)
+        Me.rbPresionsi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPresionsi.Location = New System.Drawing.Point(268, 8)
         Me.rbPresionsi.Name = "rbPresionsi"
-        Me.rbPresionsi.Size = New System.Drawing.Size(36, 17)
+        Me.rbPresionsi.Size = New System.Drawing.Size(38, 23)
         Me.rbPresionsi.TabIndex = 44
         Me.rbPresionsi.TabStop = True
         Me.rbPresionsi.Text = "Si"
@@ -1195,22 +1120,23 @@ Partial Class consentimientofacial
         '
         'GroupBox16
         '
+        Me.GroupBox16.Controls.Add(Me.Label18)
         Me.GroupBox16.Controls.Add(Me.rbpielLevesecano)
         Me.GroupBox16.Controls.Add(Me.rbPielLevesecasi)
         Me.GroupBox16.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox16.Location = New System.Drawing.Point(183, 473)
+        Me.GroupBox16.Location = New System.Drawing.Point(17, 500)
         Me.GroupBox16.Name = "GroupBox16"
-        Me.GroupBox16.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox16.Size = New System.Drawing.Size(279, 35)
         Me.GroupBox16.TabIndex = 41
         Me.GroupBox16.TabStop = False
         '
         'rbpielLevesecano
         '
         Me.rbpielLevesecano.AutoSize = True
-        Me.rbpielLevesecano.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbpielLevesecano.Location = New System.Drawing.Point(12, 9)
+        Me.rbpielLevesecano.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbpielLevesecano.Location = New System.Drawing.Point(188, 9)
         Me.rbpielLevesecano.Name = "rbpielLevesecano"
-        Me.rbpielLevesecano.Size = New System.Drawing.Size(41, 17)
+        Me.rbpielLevesecano.Size = New System.Drawing.Size(45, 23)
         Me.rbpielLevesecano.TabIndex = 43
         Me.rbpielLevesecano.TabStop = True
         Me.rbpielLevesecano.Text = "No"
@@ -1219,10 +1145,10 @@ Partial Class consentimientofacial
         'rbPielLevesecasi
         '
         Me.rbPielLevesecasi.AutoSize = True
-        Me.rbPielLevesecasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPielLevesecasi.Location = New System.Drawing.Point(61, 9)
+        Me.rbPielLevesecasi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPielLevesecasi.Location = New System.Drawing.Point(238, 9)
         Me.rbPielLevesecasi.Name = "rbPielLevesecasi"
-        Me.rbPielLevesecasi.Size = New System.Drawing.Size(36, 17)
+        Me.rbPielLevesecasi.Size = New System.Drawing.Size(38, 23)
         Me.rbPielLevesecasi.TabIndex = 44
         Me.rbPielLevesecasi.TabStop = True
         Me.rbPielLevesecasi.Text = "Si"
@@ -1232,20 +1158,22 @@ Partial Class consentimientofacial
         '
         Me.GroupBox7.Controls.Add(Me.rbAzucarno)
         Me.GroupBox7.Controls.Add(Me.rbAzucarsi)
+        Me.GroupBox7.Controls.Add(Me.txtAzucar)
+        Me.GroupBox7.Controls.Add(Me.Label6)
         Me.GroupBox7.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox7.Location = New System.Drawing.Point(11, 346)
+        Me.GroupBox7.Location = New System.Drawing.Point(17, 361)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox7.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox7.TabIndex = 41
         Me.GroupBox7.TabStop = False
         '
         'rbAzucarno
         '
         Me.rbAzucarno.AutoSize = True
-        Me.rbAzucarno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbAzucarno.Location = New System.Drawing.Point(12, 9)
+        Me.rbAzucarno.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbAzucarno.Location = New System.Drawing.Point(214, 8)
         Me.rbAzucarno.Name = "rbAzucarno"
-        Me.rbAzucarno.Size = New System.Drawing.Size(41, 17)
+        Me.rbAzucarno.Size = New System.Drawing.Size(45, 23)
         Me.rbAzucarno.TabIndex = 43
         Me.rbAzucarno.TabStop = True
         Me.rbAzucarno.Text = "No"
@@ -1254,10 +1182,10 @@ Partial Class consentimientofacial
         'rbAzucarsi
         '
         Me.rbAzucarsi.AutoSize = True
-        Me.rbAzucarsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbAzucarsi.Location = New System.Drawing.Point(61, 9)
+        Me.rbAzucarsi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbAzucarsi.Location = New System.Drawing.Point(264, 8)
         Me.rbAzucarsi.Name = "rbAzucarsi"
-        Me.rbAzucarsi.Size = New System.Drawing.Size(36, 17)
+        Me.rbAzucarsi.Size = New System.Drawing.Size(38, 23)
         Me.rbAzucarsi.TabIndex = 44
         Me.rbAzucarsi.TabStop = True
         Me.rbAzucarsi.Text = "Si"
@@ -1267,20 +1195,21 @@ Partial Class consentimientofacial
         '
         Me.grouppiel.Controls.Add(Me.rbPielsecano)
         Me.grouppiel.Controls.Add(Me.rbPielsecasi)
+        Me.grouppiel.Controls.Add(Me.Label16)
         Me.grouppiel.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grouppiel.Location = New System.Drawing.Point(183, 437)
+        Me.grouppiel.Location = New System.Drawing.Point(17, 473)
         Me.grouppiel.Name = "grouppiel"
-        Me.grouppiel.Size = New System.Drawing.Size(104, 32)
+        Me.grouppiel.Size = New System.Drawing.Size(279, 35)
         Me.grouppiel.TabIndex = 41
         Me.grouppiel.TabStop = False
         '
         'rbPielsecano
         '
         Me.rbPielsecano.AutoSize = True
-        Me.rbPielsecano.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPielsecano.Location = New System.Drawing.Point(12, 9)
+        Me.rbPielsecano.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPielsecano.Location = New System.Drawing.Point(188, 10)
         Me.rbPielsecano.Name = "rbPielsecano"
-        Me.rbPielsecano.Size = New System.Drawing.Size(41, 17)
+        Me.rbPielsecano.Size = New System.Drawing.Size(45, 23)
         Me.rbPielsecano.TabIndex = 43
         Me.rbPielsecano.TabStop = True
         Me.rbPielsecano.Text = "No"
@@ -1289,10 +1218,10 @@ Partial Class consentimientofacial
         'rbPielsecasi
         '
         Me.rbPielsecasi.AutoSize = True
-        Me.rbPielsecasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPielsecasi.Location = New System.Drawing.Point(61, 9)
+        Me.rbPielsecasi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbPielsecasi.Location = New System.Drawing.Point(238, 10)
         Me.rbPielsecasi.Name = "rbPielsecasi"
-        Me.rbPielsecasi.Size = New System.Drawing.Size(36, 17)
+        Me.rbPielsecasi.Size = New System.Drawing.Size(38, 23)
         Me.rbPielsecasi.TabIndex = 44
         Me.rbPielsecasi.TabStop = True
         Me.rbPielsecasi.Text = "Si"
@@ -1335,22 +1264,24 @@ Partial Class consentimientofacial
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.Label5)
+        Me.GroupBox6.Controls.Add(Me.txtCirculatorias)
         Me.GroupBox6.Controls.Add(Me.rbCirculatoriasno)
         Me.GroupBox6.Controls.Add(Me.rbCirculatoriassi)
         Me.GroupBox6.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(11, 296)
+        Me.GroupBox6.Location = New System.Drawing.Point(17, 309)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox6.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox6.TabIndex = 41
         Me.GroupBox6.TabStop = False
         '
         'rbCirculatoriasno
         '
         Me.rbCirculatoriasno.AutoSize = True
-        Me.rbCirculatoriasno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbCirculatoriasno.Location = New System.Drawing.Point(12, 9)
+        Me.rbCirculatoriasno.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbCirculatoriasno.Location = New System.Drawing.Point(218, 8)
         Me.rbCirculatoriasno.Name = "rbCirculatoriasno"
-        Me.rbCirculatoriasno.Size = New System.Drawing.Size(41, 17)
+        Me.rbCirculatoriasno.Size = New System.Drawing.Size(45, 23)
         Me.rbCirculatoriasno.TabIndex = 43
         Me.rbCirculatoriasno.TabStop = True
         Me.rbCirculatoriasno.Text = "No"
@@ -1359,10 +1290,10 @@ Partial Class consentimientofacial
         'rbCirculatoriassi
         '
         Me.rbCirculatoriassi.AutoSize = True
-        Me.rbCirculatoriassi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbCirculatoriassi.Location = New System.Drawing.Point(61, 9)
+        Me.rbCirculatoriassi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbCirculatoriassi.Location = New System.Drawing.Point(268, 8)
         Me.rbCirculatoriassi.Name = "rbCirculatoriassi"
-        Me.rbCirculatoriassi.Size = New System.Drawing.Size(36, 17)
+        Me.rbCirculatoriassi.Size = New System.Drawing.Size(38, 23)
         Me.rbCirculatoriassi.TabIndex = 44
         Me.rbCirculatoriassi.TabStop = True
         Me.rbCirculatoriassi.Text = "Si"
@@ -1407,20 +1338,22 @@ Partial Class consentimientofacial
         '
         Me.GroupBox5.Controls.Add(Me.rbDentalesno)
         Me.GroupBox5.Controls.Add(Me.rbDentalessi)
+        Me.GroupBox5.Controls.Add(Me.Label4)
+        Me.GroupBox5.Controls.Add(Me.txtDentales)
         Me.GroupBox5.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(11, 256)
+        Me.GroupBox5.Location = New System.Drawing.Point(17, 257)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox5.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox5.TabIndex = 41
         Me.GroupBox5.TabStop = False
         '
         'rbDentalesno
         '
         Me.rbDentalesno.AutoSize = True
-        Me.rbDentalesno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbDentalesno.Location = New System.Drawing.Point(12, 9)
+        Me.rbDentalesno.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbDentalesno.Location = New System.Drawing.Point(218, 8)
         Me.rbDentalesno.Name = "rbDentalesno"
-        Me.rbDentalesno.Size = New System.Drawing.Size(41, 17)
+        Me.rbDentalesno.Size = New System.Drawing.Size(45, 23)
         Me.rbDentalesno.TabIndex = 43
         Me.rbDentalesno.TabStop = True
         Me.rbDentalesno.Text = "No"
@@ -1429,10 +1362,10 @@ Partial Class consentimientofacial
         'rbDentalessi
         '
         Me.rbDentalessi.AutoSize = True
-        Me.rbDentalessi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbDentalessi.Location = New System.Drawing.Point(61, 9)
+        Me.rbDentalessi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbDentalessi.Location = New System.Drawing.Point(268, 8)
         Me.rbDentalessi.Name = "rbDentalessi"
-        Me.rbDentalessi.Size = New System.Drawing.Size(36, 17)
+        Me.rbDentalessi.Size = New System.Drawing.Size(38, 23)
         Me.rbDentalessi.TabIndex = 44
         Me.rbDentalessi.TabStop = True
         Me.rbDentalessi.Text = "Si"
@@ -1475,22 +1408,24 @@ Partial Class consentimientofacial
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Label3)
         Me.GroupBox4.Controls.Add(Me.rbLcontactono)
         Me.GroupBox4.Controls.Add(Me.rbLcontactosi)
+        Me.GroupBox4.Controls.Add(Me.txtLcontacto)
         Me.GroupBox4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(11, 203)
+        Me.GroupBox4.Location = New System.Drawing.Point(17, 205)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox4.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox4.TabIndex = 41
         Me.GroupBox4.TabStop = False
         '
         'rbLcontactono
         '
         Me.rbLcontactono.AutoSize = True
-        Me.rbLcontactono.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbLcontactono.Location = New System.Drawing.Point(12, 9)
+        Me.rbLcontactono.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLcontactono.Location = New System.Drawing.Point(218, 8)
         Me.rbLcontactono.Name = "rbLcontactono"
-        Me.rbLcontactono.Size = New System.Drawing.Size(41, 17)
+        Me.rbLcontactono.Size = New System.Drawing.Size(45, 23)
         Me.rbLcontactono.TabIndex = 43
         Me.rbLcontactono.TabStop = True
         Me.rbLcontactono.Text = "No"
@@ -1499,10 +1434,10 @@ Partial Class consentimientofacial
         'rbLcontactosi
         '
         Me.rbLcontactosi.AutoSize = True
-        Me.rbLcontactosi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbLcontactosi.Location = New System.Drawing.Point(61, 9)
+        Me.rbLcontactosi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbLcontactosi.Location = New System.Drawing.Point(268, 8)
         Me.rbLcontactosi.Name = "rbLcontactosi"
-        Me.rbLcontactosi.Size = New System.Drawing.Size(36, 17)
+        Me.rbLcontactosi.Size = New System.Drawing.Size(38, 23)
         Me.rbLcontactosi.TabIndex = 44
         Me.rbLcontactosi.TabStop = True
         Me.rbLcontactosi.Text = "Si"
@@ -1545,22 +1480,24 @@ Partial Class consentimientofacial
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.txtDigestivas)
         Me.GroupBox2.Controls.Add(Me.rbDigestivasno)
         Me.GroupBox2.Controls.Add(Me.rbDigestivassi)
         Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(11, 157)
+        Me.GroupBox2.Location = New System.Drawing.Point(17, 153)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox2.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox2.TabIndex = 41
         Me.GroupBox2.TabStop = False
         '
         'rbDigestivasno
         '
         Me.rbDigestivasno.AutoSize = True
-        Me.rbDigestivasno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbDigestivasno.Location = New System.Drawing.Point(12, 9)
+        Me.rbDigestivasno.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbDigestivasno.Location = New System.Drawing.Point(218, 8)
         Me.rbDigestivasno.Name = "rbDigestivasno"
-        Me.rbDigestivasno.Size = New System.Drawing.Size(41, 17)
+        Me.rbDigestivasno.Size = New System.Drawing.Size(45, 23)
         Me.rbDigestivasno.TabIndex = 43
         Me.rbDigestivasno.TabStop = True
         Me.rbDigestivasno.Text = "No"
@@ -1569,10 +1506,10 @@ Partial Class consentimientofacial
         'rbDigestivassi
         '
         Me.rbDigestivassi.AutoSize = True
-        Me.rbDigestivassi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbDigestivassi.Location = New System.Drawing.Point(61, 9)
+        Me.rbDigestivassi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbDigestivassi.Location = New System.Drawing.Point(268, 8)
         Me.rbDigestivassi.Name = "rbDigestivassi"
-        Me.rbDigestivassi.Size = New System.Drawing.Size(36, 17)
+        Me.rbDigestivassi.Size = New System.Drawing.Size(38, 23)
         Me.rbDigestivassi.TabIndex = 44
         Me.rbDigestivassi.TabStop = True
         Me.rbDigestivassi.Text = "Si"
@@ -1590,22 +1527,25 @@ Partial Class consentimientofacial
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txtRenales)
         Me.GroupBox1.Controls.Add(Me.rbRenalesno)
         Me.GroupBox1.Controls.Add(Me.rbRenalessi)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(11, 111)
+        Me.GroupBox1.Location = New System.Drawing.Point(17, 101)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox1.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox1.TabIndex = 41
         Me.GroupBox1.TabStop = False
         '
         'rbRenalesno
         '
         Me.rbRenalesno.AutoSize = True
-        Me.rbRenalesno.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbRenalesno.Location = New System.Drawing.Point(12, 9)
+        Me.rbRenalesno.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbRenalesno.Location = New System.Drawing.Point(218, 8)
         Me.rbRenalesno.Name = "rbRenalesno"
-        Me.rbRenalesno.Size = New System.Drawing.Size(41, 17)
+        Me.rbRenalesno.Size = New System.Drawing.Size(45, 23)
         Me.rbRenalesno.TabIndex = 43
         Me.rbRenalesno.TabStop = True
         Me.rbRenalesno.Text = "No"
@@ -1614,24 +1554,14 @@ Partial Class consentimientofacial
         'rbRenalessi
         '
         Me.rbRenalessi.AutoSize = True
-        Me.rbRenalessi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbRenalessi.Location = New System.Drawing.Point(61, 9)
+        Me.rbRenalessi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbRenalessi.Location = New System.Drawing.Point(268, 8)
         Me.rbRenalessi.Name = "rbRenalessi"
-        Me.rbRenalessi.Size = New System.Drawing.Size(36, 17)
+        Me.rbRenalessi.Size = New System.Drawing.Size(38, 23)
         Me.rbRenalessi.TabIndex = 44
         Me.rbRenalessi.TabStop = True
         Me.rbRenalessi.Text = "Si"
         Me.rbRenalessi.UseVisualStyleBackColor = True
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(11, 44)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(117, 13)
-        Me.Label14.TabIndex = 43
-        Me.Label14.Text = "Enfermedades cardiacas"
         '
         'txtFracturafacial
         '
@@ -1651,18 +1581,18 @@ Partial Class consentimientofacial
         '
         'txtPresion
         '
-        Me.txtPresion.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPresion.Location = New System.Drawing.Point(121, 400)
+        Me.txtPresion.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPresion.Location = New System.Drawing.Point(7, 31)
         Me.txtPresion.Name = "txtPresion"
-        Me.txtPresion.Size = New System.Drawing.Size(214, 21)
+        Me.txtPresion.Size = New System.Drawing.Size(294, 23)
         Me.txtPresion.TabIndex = 42
         '
         'txtAzucar
         '
-        Me.txtAzucar.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAzucar.Location = New System.Drawing.Point(121, 354)
+        Me.txtAzucar.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAzucar.Location = New System.Drawing.Point(9, 31)
         Me.txtAzucar.Name = "txtAzucar"
-        Me.txtAzucar.Size = New System.Drawing.Size(214, 21)
+        Me.txtAzucar.Size = New System.Drawing.Size(292, 23)
         Me.txtAzucar.TabIndex = 42
         '
         'txtObeservacionesPiel
@@ -1691,14 +1621,6 @@ Partial Class consentimientofacial
         Me.txtMedicamento.Size = New System.Drawing.Size(214, 21)
         Me.txtMedicamento.TabIndex = 42
         '
-        'txtCirculatorias
-        '
-        Me.txtCirculatorias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCirculatorias.Location = New System.Drawing.Point(121, 304)
-        Me.txtCirculatorias.Name = "txtCirculatorias"
-        Me.txtCirculatorias.Size = New System.Drawing.Size(214, 21)
-        Me.txtCirculatorias.TabIndex = 42
-        '
         'txtCirugias
         '
         Me.txtCirugias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1709,10 +1631,10 @@ Partial Class consentimientofacial
         '
         'txtDentales
         '
-        Me.txtDentales.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDentales.Location = New System.Drawing.Point(121, 264)
+        Me.txtDentales.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDentales.Location = New System.Drawing.Point(9, 31)
         Me.txtDentales.Name = "txtDentales"
-        Me.txtDentales.Size = New System.Drawing.Size(214, 21)
+        Me.txtDentales.Size = New System.Drawing.Size(292, 23)
         Me.txtDentales.TabIndex = 42
         '
         'txtCremas
@@ -1725,10 +1647,10 @@ Partial Class consentimientofacial
         '
         'txtLcontacto
         '
-        Me.txtLcontacto.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLcontacto.Location = New System.Drawing.Point(121, 211)
+        Me.txtLcontacto.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLcontacto.Location = New System.Drawing.Point(9, 31)
         Me.txtLcontacto.Name = "txtLcontacto"
-        Me.txtLcontacto.Size = New System.Drawing.Size(214, 21)
+        Me.txtLcontacto.Size = New System.Drawing.Size(292, 23)
         Me.txtLcontacto.TabIndex = 42
         '
         'txtConvulsiones
@@ -1738,14 +1660,6 @@ Partial Class consentimientofacial
         Me.txtConvulsiones.Name = "txtConvulsiones"
         Me.txtConvulsiones.Size = New System.Drawing.Size(214, 21)
         Me.txtConvulsiones.TabIndex = 42
-        '
-        'txtDigestivas
-        '
-        Me.txtDigestivas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDigestivas.Location = New System.Drawing.Point(121, 165)
-        Me.txtDigestivas.Name = "txtDigestivas"
-        Me.txtDigestivas.Size = New System.Drawing.Size(214, 21)
-        Me.txtDigestivas.TabIndex = 42
         '
         'GroupBox11
         '
@@ -1782,14 +1696,6 @@ Partial Class consentimientofacial
         Me.rbAlergiassi.Text = "Si"
         Me.rbAlergiassi.UseVisualStyleBackColor = True
         '
-        'txtRenales
-        '
-        Me.txtRenales.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRenales.Location = New System.Drawing.Point(121, 119)
-        Me.txtRenales.Name = "txtRenales"
-        Me.txtRenales.Size = New System.Drawing.Size(214, 21)
-        Me.txtRenales.TabIndex = 42
-        '
         'txtAlergias
         '
         Me.txtAlergias.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1800,22 +1706,25 @@ Partial Class consentimientofacial
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Label14)
+        Me.GroupBox3.Controls.Add(Me.txtcardiacas)
         Me.GroupBox3.Controls.Add(Me.rbCardiacano)
         Me.GroupBox3.Controls.Add(Me.rbCardiacasi)
+        Me.GroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(11, 60)
+        Me.GroupBox3.Location = New System.Drawing.Point(17, 49)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(104, 32)
+        Me.GroupBox3.Size = New System.Drawing.Size(309, 60)
         Me.GroupBox3.TabIndex = 41
         Me.GroupBox3.TabStop = False
         '
         'rbCardiacano
         '
         Me.rbCardiacano.AutoSize = True
-        Me.rbCardiacano.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbCardiacano.Location = New System.Drawing.Point(12, 9)
+        Me.rbCardiacano.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbCardiacano.Location = New System.Drawing.Point(218, 8)
         Me.rbCardiacano.Name = "rbCardiacano"
-        Me.rbCardiacano.Size = New System.Drawing.Size(41, 17)
+        Me.rbCardiacano.Size = New System.Drawing.Size(45, 23)
         Me.rbCardiacano.TabIndex = 43
         Me.rbCardiacano.TabStop = True
         Me.rbCardiacano.Text = "No"
@@ -1824,10 +1733,10 @@ Partial Class consentimientofacial
         'rbCardiacasi
         '
         Me.rbCardiacasi.AutoSize = True
-        Me.rbCardiacasi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbCardiacasi.Location = New System.Drawing.Point(61, 9)
+        Me.rbCardiacasi.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbCardiacasi.Location = New System.Drawing.Point(268, 8)
         Me.rbCardiacasi.Name = "rbCardiacasi"
-        Me.rbCardiacasi.Size = New System.Drawing.Size(36, 17)
+        Me.rbCardiacasi.Size = New System.Drawing.Size(38, 23)
         Me.rbCardiacasi.TabIndex = 44
         Me.rbCardiacasi.TabStop = True
         Me.rbCardiacasi.Text = "Si"
@@ -1835,26 +1744,18 @@ Partial Class consentimientofacial
         '
         'txtDocumento
         '
-        Me.txtDocumento.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDocumento.Location = New System.Drawing.Point(122, 17)
+        Me.txtDocumento.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDocumento.Location = New System.Drawing.Point(112, 12)
         Me.txtDocumento.Name = "txtDocumento"
-        Me.txtDocumento.Size = New System.Drawing.Size(214, 21)
+        Me.txtDocumento.Size = New System.Drawing.Size(214, 27)
         Me.txtDocumento.TabIndex = 42
-        '
-        'txtcardiacas
-        '
-        Me.txtcardiacas.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcardiacas.Location = New System.Drawing.Point(121, 68)
-        Me.txtcardiacas.Name = "txtcardiacas"
-        Me.txtcardiacas.Size = New System.Drawing.Size(214, 21)
-        Me.txtcardiacas.TabIndex = 42
         '
         'GroupBox19
         '
         Me.GroupBox19.Controls.Add(Me.rbPielgrasano)
         Me.GroupBox19.Controls.Add(Me.rbPielgrasasi)
         Me.GroupBox19.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox19.Location = New System.Drawing.Point(446, 437)
+        Me.GroupBox19.Location = New System.Drawing.Point(475, 476)
         Me.GroupBox19.Name = "GroupBox19"
         Me.GroupBox19.Size = New System.Drawing.Size(104, 32)
         Me.GroupBox19.TabIndex = 41
@@ -1883,6 +1784,108 @@ Partial Class consentimientofacial
         Me.rbPielgrasasi.TabStop = True
         Me.rbPielgrasasi.Text = "Si"
         Me.rbPielgrasasi.UseVisualStyleBackColor = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(3, 10)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(172, 19)
+        Me.Label14.TabIndex = 46
+        Me.Label14.Text = "Enfermedades cardiacas:"
+        '
+        'txtcardiacas
+        '
+        Me.txtcardiacas.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtcardiacas.Location = New System.Drawing.Point(9, 31)
+        Me.txtcardiacas.Name = "txtcardiacas"
+        Me.txtcardiacas.Size = New System.Drawing.Size(294, 23)
+        Me.txtcardiacas.TabIndex = 45
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(158, 19)
+        Me.Label1.TabIndex = 46
+        Me.Label1.Text = "Enfermedades renales:"
+        '
+        'txtRenales
+        '
+        Me.txtRenales.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRenales.Location = New System.Drawing.Point(9, 31)
+        Me.txtRenales.Name = "txtRenales"
+        Me.txtRenales.Size = New System.Drawing.Size(292, 23)
+        Me.txtRenales.TabIndex = 45
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 10)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(176, 19)
+        Me.Label2.TabIndex = 46
+        Me.Label2.Text = "Enfermedades digestivas:"
+        '
+        'txtDigestivas
+        '
+        Me.txtDigestivas.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDigestivas.Location = New System.Drawing.Point(9, 30)
+        Me.txtDigestivas.Name = "txtDigestivas"
+        Me.txtDigestivas.Size = New System.Drawing.Size(292, 23)
+        Me.txtDigestivas.TabIndex = 45
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 10)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(136, 19)
+        Me.Label3.TabIndex = 49
+        Me.Label3.Text = "Lentes de contacto:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 10)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(190, 19)
+        Me.Label5.TabIndex = 46
+        Me.Label5.Text = "Enfermedades circulatorias:"
+        '
+        'txtCirculatorias
+        '
+        Me.txtCirculatorias.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCirculatorias.Location = New System.Drawing.Point(9, 31)
+        Me.txtCirculatorias.Name = "txtCirculatorias"
+        Me.txtCirculatorias.Size = New System.Drawing.Size(292, 23)
+        Me.txtCirculatorias.TabIndex = 45
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(6, 11)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(143, 19)
+        Me.Label18.TabIndex = 45
+        Me.Label18.Text = "Piel levemente seca:"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(3, 10)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(102, 19)
+        Me.Label20.TabIndex = 45
+        Me.Label20.Text = "Piel muy seca:"
         '
         'consentimientofacial
         '
@@ -1975,15 +1978,11 @@ Partial Class consentimientofacial
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox10 As GroupBox
     Friend WithEvents rbFfacialno As RadioButton
     Friend WithEvents rbFfacialsi As RadioButton
@@ -2024,7 +2023,6 @@ Partial Class consentimientofacial
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents rbRenalesno As RadioButton
     Friend WithEvents rbRenalessi As RadioButton
-    Friend WithEvents Label14 As Label
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents rbAlergiasno As RadioButton
     Friend WithEvents rbAlergiassi As RadioButton
@@ -2037,12 +2035,10 @@ Partial Class consentimientofacial
     Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label25 As Label
-    Friend WithEvents Label20 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents Label18 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents GroupBox26 As GroupBox
     Friend WithEvents rbStandarno As RadioButton
@@ -2094,17 +2090,13 @@ Partial Class consentimientofacial
     Friend WithEvents txtPresion As TextBox
     Friend WithEvents txtAzucar As TextBox
     Friend WithEvents txtMedicamento As TextBox
-    Friend WithEvents txtCirculatorias As TextBox
     Friend WithEvents txtCirugias As TextBox
     Friend WithEvents txtDentales As TextBox
     Friend WithEvents txtCremas As TextBox
     Friend WithEvents txtLcontacto As TextBox
     Friend WithEvents txtConvulsiones As TextBox
-    Friend WithEvents txtDigestivas As TextBox
-    Friend WithEvents txtRenales As TextBox
     Friend WithEvents txtAlergias As TextBox
     Friend WithEvents txtDocumento As TextBox
-    Friend WithEvents txtcardiacas As TextBox
     Friend WithEvents Label31 As Label
     Friend WithEvents GroupBox28 As GroupBox
     Friend WithEvents RadioButton3 As RadioButton
@@ -2115,4 +2107,15 @@ Partial Class consentimientofacial
     Friend WithEvents GenerarDocumentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsentimientoHidrafacialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EnvieFacturaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label14 As Label
+    Friend WithEvents txtcardiacas As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtRenales As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtDigestivas As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtCirculatorias As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label20 As Label
 End Class

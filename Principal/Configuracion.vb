@@ -1,7 +1,7 @@
 ﻿Public Class Configuracion
 
     Dim con As conexion = New conexion
-  
+
     Private Sub Configuracion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtUnidad.Text = Principal.strunidad
         If Principal.intIngresoClientes = 1 Then chkIngresoClientes.Checked = True

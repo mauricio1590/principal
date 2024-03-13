@@ -1,11 +1,9 @@
-﻿Imports Soltec
+﻿Imports System.IO
+Imports System.Runtime.InteropServices
+Imports System.Text
 Imports DPFP
 Imports DPFP.Capture
-Imports System.Text
 Imports MySql.Data.MySqlClient
-Imports MySql.Data
-Imports System.IO
-Imports System.Runtime.InteropServices
 
 Public Class Clientes
     Implements DPFP.Capture.EventHandler
