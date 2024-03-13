@@ -86,3 +86,108 @@ D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\PROGYM.vbproj.Up2Date
 D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\SISTEMGYM 5.1.exe
 D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\SISTEMGYM 5.1.xml
 D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\SISTEMGYM 5.1.pdb
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\SISTEMGYM 5.1.exe.config
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\SISTEMGYM 5.1.exe.manifest
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\SISTEMGYM 5.1.application
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\SISTEMGYM 5.1.exe
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\SISTEMGYM 5.1.pdb
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\SISTEMGYM 5.1.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\BouncyCastle.Crypto.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\BouncyCastle.Cryptography.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Conta.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\DPFPDevNET.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\DPFPEngNET.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\DPFPShrNET.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\DPFPVerNET.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\FirmaXadesNet.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Ionic.Zip.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\itextsharp.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\itextsharp.xmlworker.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\MailKit.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Microsoft.Xades.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\MimeKit.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\MySql.Data.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\MySqlBackup.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Select.HtmlToPdf.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\SoltecFirmaDigital.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\System.Buffers.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\System.Formats.Asn1.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\System.Memory.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\System.Numerics.Vectors.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\zxing.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Conta.pdb
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Conta.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Conta.dll.config
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\itextsharp.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\MySql.Data.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Select.HtmlToPdf.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\System.Buffers.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Select.Html.dep
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\Interop.AcroPDFLib.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.AssemblyReference.cache
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.SuggestedBindingRedirects.cache
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Interop.AcroPDFLib.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.ResolveComReference.cache
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.AjusteDeInventario.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Arqueoventa.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Arqueo.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.ArquepSpa.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.bancoscuentas.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.CambiarFecha.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Clientes.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.ClientesPorVencer.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.ClientesSpa.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Compras.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Configuracion.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Congelar.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Consentimientocorporal.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.consentimientofacial.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Cortesias.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Cumpleaños.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.EliminarSaldoMensualidad.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Empleados.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.firmaAcompañante.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.firmar.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.historialCliente.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.HistorialDeAcceso.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.HistorialDeSaldoVentas.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.HistorialIngreso.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.horarios.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.InasistenciaUsuarios.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.InicioSecion.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.leerConsentimiento.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Medidas.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.MensajesWhatsap.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.pagoSpa.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Personalizado.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Principal.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Gastos.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Resources.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.PagarSaldo.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Pago.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Productos.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.reportes.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.ReportesMes.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.SaldoMensualidad.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.SaldoSpa.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.SaldoVentas.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.TarifasNoCongelables.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Tipogasto.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Tarifas.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.TarifasEspeciales.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.VALIDAR.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.Ventas.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\Principal.VentasDetallado.resources
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.GenerateResource.cache
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.CoreCompileInputs.cache
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\SISTEMGYM 5.1.TrustInfo.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\SISTEMGYM 5.1.exe.manifest
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\SISTEMGYM 5.1.application
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\PROGYM.vbproj.CopyComplete
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\SISTEMGYM 5.1.exe
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\SISTEMGYM 5.1.xml
+D:\SISTEMA GYM COD\VERSION MAYO 17\Principal\Principal\obj\Debug\SISTEMGYM 5.1.pdb

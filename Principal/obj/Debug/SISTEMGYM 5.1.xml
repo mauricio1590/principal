@@ -37,14 +37,6 @@ SISTEMGYM 5.1
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
-<<<<<<< HEAD
-<member name="P:Principal.My.Resources.Resources.check">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-=======
->>>>>>> 32e95576d93ec165b1e1e6d9871f66e2fa00ee2d
 <member name="P:Principal.My.Resources.Resources.cliente1">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
