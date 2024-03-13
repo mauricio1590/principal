@@ -43,6 +43,7 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.AcroPDFLib.dll" size="8192">
       <assemblyIdentity name="AxInterop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -55,6 +56,8 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+=======
+>>>>>>> 32e95576d93ec165b1e1e6d9871f66e2fa00ee2d
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BouncyCastle.Crypto.dll" size="2609152">
       <assemblyIdentity name="BouncyCastle.Crypto" version="1.8.9.0" publicKeyToken="0E99375E54769942" language="neutral" />
       <hash>
@@ -151,6 +154,7 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.AcroPDFLib.dll" size="11776">
       <assemblyIdentity name="Interop.AcroPDFLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -163,6 +167,8 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+=======
+>>>>>>> 32e95576d93ec165b1e1e6d9871f66e2fa00ee2d
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ionic.Zip.dll" size="462336">
       <assemblyIdentity name="Ionic.Zip" version="1.9.1.8" publicKeyToken="EDBE51AD942A3F5C" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -307,14 +313,23 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1310208">
       <assemblyIdentity name="SISTEMGYM 5.1" version="5.2.0.279" language="neutral" processorArchitecture="msil" />
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1288192">
+      <assemblyIdentity name="SISTEMGYM 5.1" version="5.2.0.278" language="neutral" processorArchitecture="msil" />
+>>>>>>> 32e95576d93ec165b1e1e6d9871f66e2fa00ee2d
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>0AjRnhZ9AR2FbQQoKcDjIqm5bEahwJYlzrYkxceASxM=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>jjhJZccIF+yvQzVYiXu26mK/u6/2wa7rshJqOilxEw8=</dsig:DigestValue>
+>>>>>>> 32e95576d93ec165b1e1e6d9871f66e2fa00ee2d
       </hash>
     </dependentAssembly>
   </dependency>

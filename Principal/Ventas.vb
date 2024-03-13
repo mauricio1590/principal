@@ -319,7 +319,7 @@ Public Class Ventas
             End If
             valorcaja = txtAbono.Text
         End If
-            If booregistrado Then
+        If booregistrado Then
             MessageBox.Show("El registro se actualizo correctamente", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             If chkAbono.Checked Then
                 txtAbono.Visible = True

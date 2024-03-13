@@ -61,7 +61,7 @@
         End If
     End Sub
 
-  
+
     Private Sub txtHora2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtHora2.KeyPress
         If Asc(e.KeyChar) = 13 Then
             If btnAceptar.Enabled Then

@@ -14,7 +14,7 @@
         txtNameEmleado.Focus()
     End Sub
 
-    
+
 
     Private Sub txtnameCliente_TextChanged(sender As Object, e As EventArgs) Handles txtnameCliente.TextChanged
         If txtnameCliente.Text = "" Then Exit Sub
@@ -95,7 +95,7 @@
         lstNombresCliente.Visible = False
     End Sub
 
- 
+
 
     Private Sub txtHora_KeyDown(sender As Object, e As KeyEventArgs) Handles txtHora.KeyDown
         Dim intMovimiento As Integer = 0
@@ -152,7 +152,7 @@
     Private Sub lstHoras_MouseClick(sender As Object, e As MouseEventArgs) Handles lstHoras.MouseClick
         intIdHora = lstHoras.SelectedItems(0).Tag
         registre()
-        
+
     End Sub
     Public Sub registre()
         If lstHoras.SelectedItems.Count = 0 Then Exit Sub
@@ -182,7 +182,7 @@
 
     End Sub
 
-  
+
     Private Sub txtNameEmleado_TextChanged(sender As Object, e As EventArgs) Handles txtNameEmleado.TextChanged
         If txtNameEmleado.Text = "" Then Exit Sub
         Dim arlCoincidencias = Gestor1.DatosDeConsulta("SELECT id, CONCAT(nombre,' ',apellido) FROM EMPLEADO WHERE nombre LIKE '%" & txtNameEmleado.Text & "%' ORDER BY nombre LIMIT 30", , Principal.cadenadeconexion)

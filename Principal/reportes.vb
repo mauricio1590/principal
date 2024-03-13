@@ -1,10 +1,4 @@
-﻿
-Imports System.IO
-
-
-
-
-Public Class reportes
+﻿Public Class reportes
 
     Dim con As New conexion()
     Dim lsttag As Integer = -1
@@ -265,7 +259,7 @@ Public Class reportes
 
     End Sub
 
-    Private Sub txtReporte_MouseClick(sender As Object, e As MouseEventArgs) 
+    Private Sub txtReporte_MouseClick(sender As Object, e As MouseEventArgs)
 
     End Sub
 

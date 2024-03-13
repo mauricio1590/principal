@@ -1,11 +1,9 @@
 ﻿
-Imports MySql.Data.MySqlClient
-Imports MySql.Data
-Imports iTextSharp.text
-Imports iTextSharp.tool.xml
-Imports iTextSharp.text.pdf
 Imports System.IO
-Imports System.Diagnostics
+Imports iTextSharp.text
+Imports iTextSharp.text.pdf
+Imports iTextSharp.tool.xml
+Imports MySql.Data.MySqlClient
 
 
 Public Class ClientesSpa

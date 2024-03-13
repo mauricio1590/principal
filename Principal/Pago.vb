@@ -1,10 +1,8 @@
-﻿Imports DPFP
-Imports DPFP.Capture
-Imports System.Text
-Imports MySql.Data.MySqlClient
-Imports MySql.Data
+﻿Imports System.Globalization
 Imports System.IO
-Imports System.Globalization
+Imports DPFP
+Imports DPFP.Capture
+Imports MySql.Data.MySqlClient
 
 Public Class Pago
     Implements DPFP.Capture.EventHandler
@@ -679,7 +677,7 @@ Public Class Pago
                 MessageBox.Show("El usuario debe estar inactivo por mas de 6 meses", "Informacion Del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
             End If
         End If
-            If Not lstBancos.SelectedItems.Count = 0 Then
+        If Not lstBancos.SelectedItems.Count = 0 Then
             intBanco = lstBancos.SelectedItems(0).Tag
         End If
         If Not ValideCedulaExistente(txtCedula.Text.ToString, "cliente") Then
@@ -802,7 +800,7 @@ Public Class Pago
             cam.ShowDialog()
 
         End If
-       
+
     End Sub
 
     Private Sub lstTarifas_MouseClick(sender As Object, e As MouseEventArgs) Handles lstTarifas.MouseClick
@@ -923,7 +921,7 @@ Public Class Pago
 
 
 
-   
+
     Private Sub txtBanco_KeyDown(sender As Object, e As KeyEventArgs) Handles txtBanco.KeyDown
         lstBancos.Visible = True
         Dim intMovimiento As Integer = 0
