@@ -925,4 +925,15 @@ Public Class Clientes
         PDF = New Report
         PDF.Consentimiento_DraJulianaMeneses_RADIESSE(img, "APLICACIÓN DE HIDROXIAPATITA DE CALCIO (RADIESSE)", Datos)
     End Sub
+
+    Private Sub TOXINABOTULÍNICATIPOAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TOXINABOTULÍNICATIPOAToolStripMenuItem.Click
+        Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
+        Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
+                                                 "1092364918",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg")
+
+        PDF = New Report
+        PDF.Consentimiento_TOXINA_BOTULINICA_A(img, "APLICACIÓN DE TOXINA BOTULÍNICA TIPO A EN CARA Y-O CUELLO", Datos)
+    End Sub
 End Class

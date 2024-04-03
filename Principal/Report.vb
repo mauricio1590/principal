@@ -4144,49 +4144,6 @@ Public Class Report
         tabla.AddCell(cell)
         docPDF.Add(tabla)
 
-        ''SEGUNDA LINEA TEXTO FIRMA DEL PACIENTE
-
-        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_JUSTIFIED,
-        '    .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-        '    .PaddingTop = 5,
-        '    .Border = 0
-        '}
-        'tabla.AddCell(cell)
-
-        'cell = New PdfPCell(New Phrase("Firma del Paciente", fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_TOP,
-        '    .HorizontalAlignment = Element.ALIGN_CENTER,
-        '    .PaddingTop = 5,
-        '    .Border = 0
-        '}
-        'tabla.AddCell(cell)
-
-        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_JUSTIFIED,
-        '    .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
-        '    .PaddingTop = 5,
-        '    .Border = 0
-        '}
-        'tabla.AddCell(cell)
-
-        'docPDF.Add(tabla)
-
-        'tabla = New PdfPTable(New Single() {100.0F})
-        'tabla.WidthPercentage = 100.0F
-
-
-        'Dim fecha As Date = Now.Date
-        'cell = New PdfPCell(New Phrase("Fecha del tratamiento: " + fecha, fuenteTexto)) With {
-        '    .VerticalAlignment = Element.ALIGN_BOTTOM,
-        '    .HorizontalAlignment = Element.ALIGN_CENTER,
-        '    .PaddingTop = 10,
-        '    .Border = 0
-        '}
-        'tabla.AddCell(cell)
-
-        'docPDF.Add(tabla)
-
         docPDF.Close()
         docPDF.Dispose()
         'MsgBox("siii")
@@ -4195,6 +4152,998 @@ Public Class Report
         Proc.StartInfo.FileName = ruta
         Proc.Start()
 
+
+    End Sub
+
+    Public Sub Consentimiento_TOXINA_BOTULINICA_A(Logo As Bitmap, Titulo As String, Datos As CirugiaPlasticaOcularVO)
+
+        crearDirectorio()
+        ruta = rutaDirectorio & "\\Consentimiento_" & Titulo & ".pdf"
+        If File.Exists(ruta) Then
+            File.Delete(ruta)
+
+        End If
+
+        If Not File.Exists(ruta) Then
+
+        End If
+        pdfw = PdfWriter.GetInstance(docPDF, New FileStream(ruta, FileMode.Create))
+        docPDF.SetPageSize(PageSize.A4)
+        'docPDF.SetMargins(70.8661F, 70.8661F, 85.0394F, 85.0394F)
+        'docPDF.SetPageSize(New Rectangle(612.0F, 792.0F).Rotate) 'tamaño de la página
+        docPDF.SetMargins(28.34F, 28.34F, 10.0F, 10.0F) 'CONVERTIR CM A PUNTOS
+        'docPDF.SetMargins(20.0F, 20.0F, 0.0F, 0.0F) 'CONVERTIR CM A PUNTOS
+        docPDF.Open()
+
+        Dim cb As PdfContentByte
+        Dim colorBordes As New BaseColor(201, 128, 138) 'COLOR DE BORDES
+
+
+        'y -= 150
+        Dim fuente As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.TIMES, 18, iTextSharp.text.Font.BOLD).BaseFont, 18)
+        Dim fuente14 As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.TIMES, 14).BaseFont, 14)
+        Dim fuenteTexto As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA, 12).BaseFont, 12)
+        Dim fuenteTextoNegrita As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA_BOLDOBLIQUE, 12).BaseFont, 12)
+        Dim fuenteTextoNegrita2 As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12).BaseFont, 12)
+        Dim fuenteTitulo14 As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, iTextSharp.text.Font.BOLD).BaseFont, 14)
+
+        'Dim textoRojo As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.TIMES, 9, New BaseColor(255, 0, 0)).BaseFont, 9)
+        Dim textoBorde = FontFactory.GetFont(FontFactory.TIMES, 26, colorBordes)
+        Dim textoblanco = FontFactory.GetFont(FontFactory.TIMES, 18, BaseColor.WHITE)
+
+        'LOGO
+        fotoPDF = iTextSharp.text.Image.GetInstance(Logo, BaseColor.WHITE)
+        fotoPDF.ScaleAbsolute(230, 50)
+
+        'TABLA
+        Dim tabla As New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+
+        Dim cell As New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("De conformidad con lo estipulado en la Ley 23 de 1981 y los paquetes instruccionales de Seguridad del Paciente emitidos en 2010 por Ministerio de Salud y Protección Social", fuenteTextoNegrita)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 20,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Yo " & Datos.NomPaciente1 & ", identificado con documento de identidad C.C " & Datos.CCPaciente1 & ", se me ha informado los siguientes lineamientos sobre el procedimiento de APLICACIÓN DE TOXINA BOTULÍNICA TIPO A en cara y/o cuello.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cómo se llama el procedimiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Aplicación de Toxina Botulínica Tipo A en cara y/o cuello", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+
+        cell = New PdfPCell(New Phrase("¿Qué es la Toxina Botulínica Tipo A?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Es un medicamento que produce la relajación de los músculos donde se aplica. Esta relajación es transitoria y el músculo recuperará su fuerza original al cabo de cierto tiempo.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Para qué se realiza este tratamiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Los movimientos de los músculos debajo de la piel de la cara y del cuello se encargan de generar todos los gestos normales en una persona. Sin embargo, con el tiempo esta constante gesticulación produce marcas a nivel de la piel, más conocidas como arrugas. El tratamiento con Toxina Botulínica Tipo A, busca relajar esta musculatura para que en consecuencia los dobleces y marcas en la piel sean menos visibles o se evite su aparición.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cómo se realiza este tratamiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Se hace a través de la inyección intramuscular del medicamento, usando agujas muy finas y delgadas que atraviesan la piel.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Todas las arrugas se pueden tratar con Toxina Botulínica Tipo A?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. Solamente aquellas asociadas a los movimientos musculares debajo de la piel, las más frecuentes son las líneas de la frente al levantar los ojos, las líneas en el entrecejo al fruncir el ceño y algunas de las líneas alrededor de los ojos al sonreír. También se pueden tratar las líneas o depresiones que se forman a nivel del mentón al hablar o hacer gestos de tristeza, se puede disminuir la caída de las comisuras (esquinas de la boca) cuando dependen de un movimiento muscular exagerado, se puede disminuir el tamaño de los músculos masticadores llamados maseteros cuando el paciente presenta una condición llamada bruxismo (mordida nocturna), se puede usar para disminuir la elevación excesiva del labio superior al sonreír llamada sonrisa gingival, se puede usar para disminuir algunas líneas del cuello siempre y cuando sean causadas por la contracción de un músculo llamado platisma, se puede usar para mejorar el contorno inferior de la cara cuando el músculo platisma actúa de forma excesiva, se puede usar para evitar o mejorar la caída de la punta nasal cuando se detecta actividad excesiva de un músculo llamado depresor de la punta nasal y se puede usar en microdosis muy superficialmente en toda la piel de la cara para mejorar el aspecto de la piel y disminuir la sudoración o el exceso de producción de grasa.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿La Toxina Botulínica Tipo A rellena las arrugas?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. Solamente tiene efecto sobre los músculos debajo de la piel. No produce ningún efecto de relleno o aumento de volumen del tejido tratado.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Existen alternativas a este tratamiento que puedan mejorar el aspecto de mi piel y arrugas?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Existen otros tratamientos orientados a la mejoría del aspecto de la piel desde no invasivos como el uso de cremas, mascarillas y lociones, el uso de aparatos no invasivos como la radiofrecuencia o la microdermoabrasión, tratamientos mínimamente invasivos como la aplicación de inyecciones de estimuladores de colágeno y también cirugías plásticas. Sin embargo, ninguno de los tratamientos mencionados comparte el mismo mecanismo de acción, por lo que los resultados serían distintos a los obtenidos con la aplicación de Toxina Botulínica Tipo A.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'NUMERACIÓN
+        cell = New PdfPCell(New Phrase("1", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        '--SALTO DE PÁGINA--
+        docPDF.NewPage()
+
+        '---ENCABEZADO---
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+        '---FIN ENCABEZADO---
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("¿Cuándo se ven los resultados?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Lo más común es que empiecen a hacerse visibles hacia el tercer día de la aplicación y su resultado alcanzará su pico máximo entre el día 10 y 15 después de la aplicación. Recuerda  que los tiempos aquí descritos son los tiempos promedio, esto significa que aunque la gran mayoría reaccionan de esta manera, pueden existir pacientes que muestren los cambios antes, o después.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cuánto duran los resultados?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("El efecto de la toxina Botulínica tiene una duración promedio de 120 días, es decir 4 meses. Esto significa que habrán pacientes a quienes les dure menos de 4 meses y pacientes que les dure más de 4 meses. Se ha comprobado también que la realización de actividad física frecuente acorta el efecto de la Toxina Botulínica Tipo A.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Voy a ver el mismo resultado durante todo el tiempo de duración del efecto?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. como ha sido explicado antes, el efecto empieza a ser visible a los 3 días aproximadamente, alcanza un punto máximo hacia el día 15, momento desde el cual inicia su descenso paulatino y gradual hasta volver al punto inicial. Es decir que los resultados no se mantienen estáticos hasta el día final de duración, sino que van lentamente desapareciendo. En promedio si el efecto de la toxina botulínica Tipo A dura 120 días (4 meses) es probable que en la mitad de ese tiempo (60) días, ya se tenga una pérdida del Resultado inicial que se encuentre en algún punto entre el efecto del día 15 y el estado previo a la aplicación.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Las dosis (unidades) aplicadas influyen en el resultado?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Principalmente en la duración del mismo. Aplicar dosis por debajo de las recomendadas acorta el tiempo de duración de los resultados, por esta razón el médico aplicará siempre las dosis completas.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Puedo elegir la dosis (unidades) para mi tratamiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. Existen dosis determinadas para cada área según estudios clínicos científicos que definen la cantidad necesaria de unidades para conseguir el efecto deseado. El médico usará las dosis que se conocen como dosis efectivas para cada caso, evitando que exista una subdosificación (poner menos unidades de las necesarias) que conduzca a un resultado insatisfactorio.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cuáles son los cuidados que debo tener después del tratamiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No aplicar maquillaje el día del procedimiento, no entrar en contacto con superficies o agua contaminada, abstenerse de hacer ejercicio el día del procedimiento, abstenerse de entrar en cuerpos de agua como piscinas, lagos, o el mar, no consumir licor en el día del procedimiento, no usar medicaciones distintas a las prescritas por su médico, no masajear las zonas tratadas, no manipular las zonas tratadas, no acostarse a dormir hasta tanto no hayan transcurrido 4 horas después de la aplicación del medicamento.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Debo volver a algún control?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Se recomienda que asistas a una cita de control entre el día 10 y 15 después de la aplicación. Esto permitirá en algunos casos, no en todos, realizar pequeños ajustes adicionales a los resultados. No debes asistir antes, pues los resultados aún no serán evaluables, y aunque puedes asistir después del día 15 solamente servirá para tomar nota de los resultados pues no se recomienda realizar re-aplicaciones pasados los 15 días. En ese caso se debe esperar un tiempo mínimo de 3 meses.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cuáles son los riesgos a los que me expongo al realizarme este procedimiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Aunque la mayoría de los pacientes no experimentan efectos adversos, secundarios y/o complicaciones, pueden aparecer después de la aplicación de la toxina botulínica a nivel de la cara o cuello los siguientes riesgos:", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        '---salto
+        'NUMERACIÓN
+        cell = New PdfPCell(New Phrase("2", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 40,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        '--SALTO DE PÁGINA--
+        docPDF.NewPage()
+
+        '---ENCABEZADO---
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+        '---FIN ENCABEZADO---
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("Riesgos asociados al uso de agujas que atraviesan la piel de la cara y/o cuello: Cefalea (dolor de cabeza), parestesia (alteraciones de la sensibilidad), tirantez de la piel, dolor facial,edema (hinchazón), dolor, parálisis facial, irritación, hematomas y prurito (comezón) en el sitio de inyección, equimosis (moretones), infección de los puntos de inyección.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Riesgos asociados al medicamento: Raramente diplopía (visión doble), ptosis de alguno o ambos párpados (caída de los párpados), debilidad muscular, nódulos inflamatorios persistentes en los sitios de inyección, alteraciones en la deglución de alimentos y saliva (dificultad para tragar), asimetrías faciales en reposo o al realizar movimientos, dificultad para retener líquidos en la boca.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Pueden existir efectos secundarios y/o adversos que no estén descritos anteriormente debido a la respuesta biológica única e irrepetible de cada persona ante un procedimiento o medicamento. Sin embargo han sido mencionados los que figuran en la literatura científica.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Hay alguna forma de minimizar los riesgos?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. En primer lugar proveer toda la información que el médico tratante pregunte, no ocultar nada de la historia clínica, informar de tratamientos previos o eventos adversos previos si los hubiera, informar acerca de todos los medicamentos que esté tomando este momento, no tomar medicamentos que favorezcan el sangrado en los 3 a 7 días previos como aspirina, antiinflamatorios, o suplementos como el omega o las vitaminas. Mantener una higiene del área tratada, no manipular las zonas tratadas y seguir todas las indicaciones que el médico ordene.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Además, el entrenamiento y amplio conocimiento del médico tratante permitirá reducir la posibilidad de algunos de los eventos adversos.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Hay alguna forma de GARANTIZAR que no ocurran eventos adversos, efectos secundarios o complicaciones?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. No existe forma de garantizarlo.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Hay alguna forma de NO CORRER NINGÚN RIESGO?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Abstenerse de realizarse el procedimiento lo mantendrá libre de todo riesgo asociado al procedimiento.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Es posible que el tratamiento no surta ningún efecto en mi caso?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Existen casos documentados en la literatura médica de pacientes que son resistentes al medicamento. También se ha documentado que en algunas personas puede desarrollarse resistencia al repetir el tratamiento por lo que es posible que aunque hubiera funcionado antes, no haya efecto en una futura aplicación, esto ocurre generalmente cuando el paciente hace de forma repetida aplicaciones en períodos de tiempo menores a 3 meses.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Están garantizados los resultados positivos y a mi agrado?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. Garantizamos que usamos el medicamento adecuado y en cumplimiento con la ley vigente de las entidades sanitarias, garantizamos que quien realiza el procedimiento se encuentra plenamente capacitado para ello y cuenta con experiencia suficiente, garantizamos que los métodos usados cumplen con los estándares de calidad y académicos a nivel mundial, sin embargo la práctica de la medicina no es una ciencia exacta, y aunque se esperan buenos resultados no hay garantía explícita de que puedan obtenerse, pues están afectados por factores intrínsecos y extrínsecos del paciente", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        '------------------------
+
+        cell = New PdfPCell(New Phrase("¿Qué pasa si no me gusta el resultado y quiero eliminar el efecto del medicamento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("La primera opción es esperar a que el resultado ceda por sí mismo. En caso de querer acelerar el proceso, se ha documentado en la literatura médica que el uso de la radiofrecuencia puede algunas veces hacer que el efecto pase más rápidamente. Los gastos que se generen en este caso no serán cubiertos por el médico tratante.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'salto
+        'NUMERACIÓN DE PÁGINA
+        cell = New PdfPCell(New Phrase("3", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        'SALTO DE PÁGINA
+        docPDF.NewPage()
+
+        'ENCABEZADO
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("¿Si no me agrada el resultado se me devolverá el dinero?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Como se explicó antes, no es posible asegurar el resultado y toda realización del procedimiento genera un costo independientemente del resultado, por este motivo no habrá lugar a devoluciones una vez haya sido realizado el procedimiento. Sin embargo, si el procedimiento aún no ha tenido lugar, el paciente está en todo su derecho de cambiar de opinión y solicitar la devolución del dinero pagado", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Certifico que el presente documento ha sido leído y entendido por mi en su integridad.  Doy fe que no he omitido o alterado datos al exponer mi historial clínico y antecedentes clínico-quirúrgicos.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Certifico que lo aquí escrito me ha sido explicado adicionalmente de forma personal por mi médico y que ha respondido de forma satisfactoria a todas las preguntas adicionales que he tenido.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Declaro haber comprendido cuáles son los cuidados posteriores al tratamiento y exonero a mi médico tratante de cualquier responsabilidad derivada del incumplimiento de los mismos.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Me ha sido explicado de forma comprensible el procedimiento de aplicación de toxina botulínica tipo A, los procedimientos alternativos u otros métodos de tratamiento, los riesgos del procedimiento de aplicación de toxina botulínica tipo A, y que estoy en total libertad de elegir no correr ningún riesgo a través de la abstención de la realización del procedimiento aquí descrito.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Anexo Covid 19:", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Es posible que después de un tratamiento médico, su sistema inmunológico se pueda ver comprometido y por ende facilitar el riesgo de contagio frente a esta enfermedad, por lo cual se han tomado y debe tomar medidas por mitigar su contagio, sin embargo este riesgo existe y por ello se le hace entrega de un instructivo para mitigareste riesgo en el momento que solicita su cita, además será atendido bajo protocolos de seguridad que disminuyan el riesgo de un posible contagio durante la atención médica. En caso de que se presente la enfermedad, tomará las medidas sanitarias necesarias de aislamiento social para salvaguardar la salud de todas las personas de su entorno, dicha enfermedad podría llegar a afectar los resultados del tratamiento realizado y también comprometer de manera importante su salud.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Medidas de Mitigación Covid 19:", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Aseguró no haber estado en contacto con mi familia, amigos, y en el trabajo que presenten síntomas respiratorios o sugestivos de Covid 19 o que sean Covid 19 positivos en el último mes. No he tenido síntomas como tos, fiebre, malestar general, fatiga, alteración del olfato, alteraciones del gusto o cualquier otro síntoma relacionado con Covid 19 en el último mes. He cumplido con las medidas preventivas de contagio de Covid 19 como lavado de manos, uso de tapabocas y lentes protectores, distanciamiento social de mínimo 2 metros con otras personas, desinfección adecuada de alimentos, superficies y además en mi entorno, con el fin de evitar el riesgo de contagiarme. En caso de iniciar algún síntoma posterior a la realización del tratamiento, me pondré inmediatamente en contacto con mi médico tratante para evaluar la posibilidad de un posible contagio con Covid 19. En caso de no cumplir con estas medidas enunciadas para evitar el contagio, el médico podrá negarse a la realización de mi consulta y procedimiento.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'salto
+        'NUMERACIÓN DE PÁGINA
+        cell = New PdfPCell(New Phrase("4", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 80,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        'SALTO DE PÁGINA
+        docPDF.NewPage()
+
+        'ENCABEZADO
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("Autorizo a la Dra. JULIANA MENESES PEREZ a llevar a cabo en mi rostro y/o cuello el procedimiento APLICACIÓN DE TOXINA BOTULÍNICA TIPO A.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        '''parte de las firmas 
+
+        tabla = New PdfPTable(New Single() {10.0F, 35.0F, 10.0F, 35.0F, 10.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaPaciente1)
+        fotoPDF.ScaleAbsolute(180, 45)
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .PaddingBottom = 5,
+            .Border = 0,
+            .BorderWidthBottom = 1
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaProfesional1)
+        fotoPDF.ScaleAbsolute(180, 45)
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .PaddingBottom = 5,
+            .Border = 0,
+            .BorderWidthBottom = 1
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'TEXTO FIRMAS
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("FIRMA DEL PACIENTE", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("FIRMA DEL PROFESIONAL", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        'CC
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CC: " & Datos.CCPaciente1, fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("JULIANA MENESES PEREZ", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'FECHA
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        Dim fecha As Date = Now.Date
+        cell = New PdfPCell(New Phrase("FECHA: " & fecha, fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("TP – R.M. 543677", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        'NUMERACIÓN DE PÁGINA
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+        cell = New PdfPCell(New Phrase("5", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 550,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+
+        docPDF.Close()
+        docPDF.Dispose()
+        'MsgBox("siii")
+        Dim msgBoxResult = MsgBox("Documento prueba generado")
+        Dim Proc As New System.Diagnostics.Process
+        Proc.StartInfo.FileName = ruta
+        Proc.Start()
 
     End Sub
 

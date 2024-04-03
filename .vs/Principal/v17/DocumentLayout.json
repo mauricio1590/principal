@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\DATOS\\Desktop\\SPA 2\\principal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\cirugiaplasticaocularvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\cirugiaplasticaocularvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\cirugiaplasticaocularvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -35,11 +35,11 @@
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\hidrafacialvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\hidrafacialvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\hidrafacialvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -121,7 +121,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -151,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Clientes.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
               "RelativeDocumentMoniker": "Principal\\Clientes.vb",
@@ -163,13 +163,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Clientes.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
               "RelativeDocumentMoniker": "Principal\\Clientes.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
               "RelativeToolTip": "Principal\\Clientes.vb",
-              "ViewState": "AQIAAIgDAAAAAAAAAAAvwJcDAABSAAAA",
+              "ViewState": "AQIAAJUDAAAAAAAAAAA5wKYDAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-12T21:37:23.788Z",
               "EditorCaption": ""
@@ -189,13 +189,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Report.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Report.vb",
               "RelativeDocumentMoniker": "Principal\\Report.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Report.vb",
               "RelativeToolTip": "Principal\\Report.vb",
-              "ViewState": "AQIAACQHAAAAAAAAAAAQwBIMAAAAAAAA",
+              "ViewState": "AQIAAPYTAAAAAAAAAAAwwAMUAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-08T19:32:42.228Z",
               "EditorCaption": ""
@@ -210,8 +210,7 @@
               "RelativeToolTip": "Principal\\CirugiaPlasticaOcularVO.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-02T02:10:05.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T02:10:05.767Z"
             },
             {
               "$type": "Document",
@@ -235,8 +234,7 @@
               "RelativeToolTip": "Principal\\HidraFacialVO.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-02T02:09:13.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-02T02:09:13.273Z"
             },
             {
               "$type": "Document",
@@ -261,8 +259,7 @@
               "RelativeToolTip": "Principal\\FichaFacialVO.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-12T21:32:24.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T21:32:24.416Z"
             },
             {
               "$type": "Document",
@@ -273,8 +270,7 @@
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\reportes.vb [Dise\u00F1o]",
               "RelativeToolTip": "Principal\\reportes.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-12T21:34:02.707Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-03-12T21:34:02.707Z"
             },
             {
               "$type": "Document",
@@ -309,8 +305,7 @@
               "RelativeToolTip": "Principal\\FichaCorporalVO.vb",
               "ViewState": "AQIAACYAAAAAAAAAAAAQwH8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-12T21:07:57.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T21:07:57.671Z"
             },
             {
               "$type": "Document",
@@ -376,7 +371,6 @@
               "RelativeDocumentMoniker": "Principal\\Funciones-MAURICIO.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Funciones-MAURICIO.vb",
               "RelativeToolTip": "Principal\\Funciones-MAURICIO.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-12T21:33:32.038Z"
             },
@@ -401,8 +395,7 @@
               "RelativeToolTip": "Principal\\My Project\\Resources.resx",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAOoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-03-09T02:52:03.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T02:52:03.696Z"
             },
             {
               "$type": "Document",

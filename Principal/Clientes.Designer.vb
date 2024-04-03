@@ -54,6 +54,8 @@ Partial Class Clientes
         Me.FichaCorporalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FirmarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FirmaDelAcompañanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DRAJULIANAMENESESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lstNombres = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -80,8 +82,7 @@ Partial Class Clientes
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.imagenfoto = New System.Windows.Forms.PictureBox()
         Me.capturada = New System.Windows.Forms.PictureBox()
-        Me.DRAJULIANAMENESESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         CType(Me.huella4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -363,6 +364,19 @@ Partial Class Clientes
         Me.FirmaDelAcompañanteToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
         Me.FirmaDelAcompañanteToolStripMenuItem.Text = "Firma del Acompañante"
         '
+        'DRAJULIANAMENESESToolStripMenuItem
+        '
+        Me.DRAJULIANAMENESESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HIDROXIAPATITADECALCIOToolStripMenuItem, Me.TOXINABOTULÍNICATIPOAToolStripMenuItem})
+        Me.DRAJULIANAMENESESToolStripMenuItem.Name = "DRAJULIANAMENESESToolStripMenuItem"
+        Me.DRAJULIANAMENESESToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.DRAJULIANAMENESESToolStripMenuItem.Text = "DRA JULIANA MENESES"
+        '
+        'HIDROXIAPATITADECALCIOToolStripMenuItem
+        '
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Name = "HIDROXIAPATITADECALCIOToolStripMenuItem"
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Text = "HIDROXIAPATITA DE CALCIO"
+        '
         'lstNombres
         '
         Me.lstNombres.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
@@ -603,18 +617,11 @@ Partial Class Clientes
         Me.capturada.TabIndex = 32
         Me.capturada.TabStop = False
         '
-        'DRAJULIANAMENESESToolStripMenuItem
+        'TOXINABOTULÍNICATIPOAToolStripMenuItem
         '
-        Me.DRAJULIANAMENESESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HIDROXIAPATITADECALCIOToolStripMenuItem})
-        Me.DRAJULIANAMENESESToolStripMenuItem.Name = "DRAJULIANAMENESESToolStripMenuItem"
-        Me.DRAJULIANAMENESESToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
-        Me.DRAJULIANAMENESESToolStripMenuItem.Text = "DRA JULIANA MENESES"
-        '
-        'HIDROXIAPATITADECALCIOToolStripMenuItem
-        '
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Name = "HIDROXIAPATITADECALCIOToolStripMenuItem"
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Text = "HIDROXIAPATITA DE CALCIO"
+        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem.Name = "TOXINABOTULÍNICATIPOAToolStripMenuItem"
+        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem.Text = "TOXINA BOTULÍNICA TIPO A"
         '
         'Clientes
         '
@@ -744,4 +751,5 @@ Partial Class Clientes
     Friend WithEvents FirmaDelAcompañanteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DRAJULIANAMENESESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HIDROXIAPATITADECALCIOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TOXINABOTULÍNICATIPOAToolStripMenuItem As ToolStripMenuItem
 End Class
