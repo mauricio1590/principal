@@ -15,7 +15,8 @@ Public Class firmar
     Public Declare Function DestroyWindow Lib "user32" (ByVal hndw As Integer) As Boolean
     Dim strCedulaCliente As String = ""
     Dim strFirma As String
-    Private firmaRectangle As New Rectangle(10, 10, 300, 80) ' Rectángulo que limita el área de firma X,Y, ANCHO, ALTO
+
+    Private firmaRectangle As New Rectangle(0, 0, 588, 244) ' Rectángulo que limita el área de firma X,Y, ANCHO, ALTO
     Private Sub firmar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Bounds = Screen.FromPoint(MousePosition).Bounds
@@ -40,19 +41,20 @@ Public Class firmar
     End Sub
 
     Private Sub pic_MouseMove(sender As Object, e As MouseEventArgs) Handles pic.MouseMove
+
         If paintd = True Then
             'If index = 1 Then
             'g.DrawLine(p, px, py)
             'py = px
             ' Dibuja una línea dentro del rectángulo de firma
             Dim currentPoint As Point = e.Location
-                currentPoint.X = Math.Max(firmaRectangle.Left, Math.Min(firmaRectangle.Right, currentPoint.X))
-                currentPoint.Y = Math.Max(firmaRectangle.Top, Math.Min(firmaRectangle.Bottom, currentPoint.Y))
+            currentPoint.X = Math.Max(firmaRectangle.Left, Math.Min(firmaRectangle.Right, currentPoint.X))
+            currentPoint.Y = Math.Max(firmaRectangle.Top, Math.Min(firmaRectangle.Bottom, currentPoint.Y))
 
-                g.DrawLine(p, px, currentPoint)
+            g.DrawLine(p, px, currentPoint)
 
-                pic.Invalidate()
-                px = currentPoint
+            pic.Invalidate()
+            px = currentPoint
 
             'End If
         End If
@@ -69,6 +71,29 @@ Public Class firmar
         If Not strCedula.Equals("") Then
             strCedulaCliente = strCedula
             index = 1
+            'Definimos una variable estatica para saber si hay que liberar al mouse o capturarlo
+            Static blnAtrapado As Boolean = False
+            ' x: coordenada horizontal del ángulo superior izquierdo del area cliente del formulario
+            Dim x As Integer = Me.ClientRectangle.Location.X
+            ' y: coordenada vertical del ángulo superior izquierdo del area cliente del formulario
+            Dim y As Integer = Me.ClientRectangle.Location.Y
+            ' Creamos el punto que representa el ángulo superior izquierdo
+            ' de el area cliente de nuestro formulario
+            Dim PuntoInicio As Point = Me.PointToScreen(New Point(x, y))
+            'Creamos un rectangulo del tamaño de el area cliente de nuestro formulario
+            Dim r As New Rectangle(PuntoInicio, Me.ClientSize)
+
+            If Not blnAtrapado Then
+                'pic.Text = "¡Cursor Atrapado!"
+                ' Aquí atrapamos el cursor, pasando como argumento el rectangulo creado
+                Me.Cursor.Clip = r
+                blnAtrapado = True
+            Else
+                'pic.Text = "¡Cursor Liberado!"
+                ' Liberamos el cursor
+                Me.Cursor.Clip = Nothing
+                blnAtrapado = False
+            End If
         End If
 
     End Sub
@@ -115,6 +140,7 @@ Public Class firmar
     End Sub
 
     Private Sub btncerrar_Click(sender As Object, e As EventArgs) Handles btncerrar.Click
+        Me.Cursor.Clip = Nothing
         Me.Close()
     End Sub
 
@@ -127,6 +153,10 @@ Public Class firmar
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub firmar_Closed(sender As Object, e As EventArgs) Handles Me.Closed
 
     End Sub
 End Class

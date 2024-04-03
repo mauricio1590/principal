@@ -6,6 +6,8 @@ Imports DPFP.Capture
 Imports MySql.Data.MySqlClient
 
 Public Class Clientes
+
+
     Implements DPFP.Capture.EventHandler
     Dim intIdPago = 0
     Public intidmodificado As Integer = 0
@@ -15,6 +17,8 @@ Public Class Clientes
     Dim validaciones As conexion = New conexion()
     Public boohuella As Boolean = False
     Public strFoto As String = ""
+
+    Dim PDF As Report 'reportes
 
     'NUEVA CAMARA
     Dim strCedulaAntigua As String = ""
@@ -909,5 +913,16 @@ Public Class Clientes
     Private Sub FirmaDelAcompañanteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FirmaDelAcompañanteToolStripMenuItem.Click
         Dim cong As New firmaAcompañante()
         cong.ShowDialog()
+    End Sub
+
+    Private Sub HIDROXIAPATITADECALCIOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HIDROXIAPATITADECALCIOToolStripMenuItem.Click
+        Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
+        Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
+                                                 "1092364918",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg")
+
+        PDF = New Report
+        PDF.Consentimiento_DraJulianaMeneses_RADIESSE(img, "APLICACIÓN DE HIDROXIAPATITA DE CALCIO (RADIESSE)", Datos)
     End Sub
 End Class

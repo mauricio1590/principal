@@ -1,5 +1,6 @@
 ﻿'Imports iTextSharp.text.Table
 Imports System.IO
+Imports System.Text
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 'Imports WebSupergoo.ABCpdf11.Elements
@@ -1398,7 +1399,7 @@ Public Class Report
         tabla.AddCell(cell)
 
         fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaPaciente1)
-        fotoPDF.ScaleAbsolute(100, 30)
+        fotoPDF.ScaleAbsolute(180, 45)
         cell = New PdfPCell(fotoPDF) With {
             .VerticalAlignment = Element.ALIGN_CENTER,
             .HorizontalAlignment = Element.ALIGN_CENTER,
@@ -1752,7 +1753,7 @@ Public Class Report
         tabla.AddCell(cell)
 
         fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaPaciente1)
-        fotoPDF.ScaleAbsolute(100, 30)
+        fotoPDF.ScaleAbsolute(180, 45)
         cell = New PdfPCell(fotoPDF) With {
             .VerticalAlignment = Element.ALIGN_CENTER,
             .HorizontalAlignment = Element.ALIGN_CENTER,
@@ -3084,4 +3085,1117 @@ Public Class Report
             Return unidad + ":\sistemgym_datos\imagenes\NO-4.png"
         End If
     End Function
+
+
+    Public Sub Consentimiento_DraJulianaMeneses_RADIESSE(Logo As Bitmap, Titulo As String, Datos As CirugiaPlasticaOcularVO)
+
+        crearDirectorio()
+        ruta = rutaDirectorio & "\\Consentimiento_" & Titulo & ".pdf"
+        If File.Exists(ruta) Then
+            File.Delete(ruta)
+
+        End If
+
+        If Not File.Exists(ruta) Then
+
+        End If
+        pdfw = PdfWriter.GetInstance(docPDF, New FileStream(ruta, FileMode.Create))
+        docPDF.SetPageSize(PageSize.A4)
+        'docPDF.SetMargins(70.8661F, 70.8661F, 85.0394F, 85.0394F)
+        'docPDF.SetPageSize(New Rectangle(612.0F, 792.0F).Rotate) 'tamaño de la página
+        docPDF.SetMargins(28.34F, 28.34F, 10.0F, 10.0F) 'CONVERTIR CM A PUNTOS
+        'docPDF.SetMargins(20.0F, 20.0F, 0.0F, 0.0F) 'CONVERTIR CM A PUNTOS
+        docPDF.Open()
+
+        Dim cb As PdfContentByte
+        Dim colorBordes As New BaseColor(201, 128, 138) 'COLOR DE BORDES
+
+
+        'y -= 150
+        Dim fuente As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.TIMES, 18, iTextSharp.text.Font.BOLD).BaseFont, 18)
+        Dim fuente14 As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.TIMES, 14).BaseFont, 14)
+        Dim fuenteTexto As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA, 12).BaseFont, 12)
+        Dim fuenteTextoNegrita As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA_BOLDOBLIQUE, 12).BaseFont, 12)
+        Dim fuenteTextoNegrita2 As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12).BaseFont, 12)
+        Dim fuenteTitulo14 As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, iTextSharp.text.Font.BOLD).BaseFont, 14)
+
+        'Dim textoRojo As New iTextSharp.text.Font(FontFactory.GetFont(FontFactory.TIMES, 9, New BaseColor(255, 0, 0)).BaseFont, 9)
+        Dim textoBorde = FontFactory.GetFont(FontFactory.TIMES, 26, colorBordes)
+        Dim textoblanco = FontFactory.GetFont(FontFactory.TIMES, 18, BaseColor.WHITE)
+
+        'LOGO
+        fotoPDF = iTextSharp.text.Image.GetInstance(Logo, BaseColor.WHITE)
+        fotoPDF.ScaleAbsolute(230, 50)
+
+        'TABLA
+        Dim tabla As New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+
+        Dim cell As New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("De conformidad con lo estipulado en la Ley 23 de 1981 y los paquetes instruccionales de Seguridad del Paciente emitidos en 2010 por Ministerio de Salud y Protección Social", fuenteTextoNegrita)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 20,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Yo " & Datos.NomPaciente1 & ", identificado con documento de identidad C.C " & Datos.CCPaciente1 & ", se me ha informado los siguientes lineamientos sobre el procedimiento de APLICACIÓN DE HIDROXIAPATITA DE CALCIO.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cómo se llama el procedimiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Aplicación de Hidroxiapatita de Calcio en Cara, cuello, escote y/o manos.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+
+        cell = New PdfPCell(New Phrase("¿Qué es la Hidroxiapatita de Calcio?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("La Hidroxiapatita de Calcio es una sustancia ampliamente utilizada en medicina desde hace más de 10 años en especialidades como la ortopedia y también en odontología. Es un material muy bien aceptado por el cuerpo humano.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("En estudios científicos se encontró que este material es capaz de promover la formación de colágeno alrededor del mismo durante el tiempo que se encuentra presente en el cuerpo humano. A partir de estos hallazgos se estudió y se estableció la implantación de micropartículas de hidroxiapatita de calcio debajo de la piel con fines estéticos.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("La hidroxiapatita de calcio para inyección es un dispositivo médico que se implanta debajo de la piel, que viene en jeringas pre-llenadas y puede ser aplicado puro o también puede diluirse según el uso y la zona de aplicación. Dentro de la jeringa se encuentra una suspensión compuesta por una matriz de sostén en la que se encuentran las micropartículas de hidroxiapatita de calcio. La suspensión es de consistencia tipo gel y de color blanquecino.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿La Hidroxiapatita de Calcio para inyección contiene otras sustancias diferentes a la Hidroxiapatita de Calcio?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Si. La hidroxiapatita de Calcio viene en forma de microesferas sólidas. Para que estas microesferas puedan inyectarse y acomodarse según el médico determine, deben estar suspendidas en un gel que de celulosa y agua para inyección, un material totalmente biocompatible y que se reabsorbe rápidamente.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Además, muchas preparaciones de Hidroxiapatita de calcio para inyección añaden Lidocaína en una pequeña cantidad, un anestésico local ampliamente conocido y usado en medicina y odontología con el fin de maximizar el confort del paciente al momento de la aplicación.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("El médico tratante le informará si la preparación de hidroxiapatita de calcio contiene o no Lidocaína y así mismo debes informar al médico tratante si tienes algún historial de alergia a esta sustancia.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Para qué se realiza este tratamiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Por su capacidad de inducir la formación de colágeno, este dispositivo se usa para mejorar el aspecto, turgencia, lozanía y tensión de la piel en cualquier parte del cuerpo. Las zonas donde más frecuentemente se implanta la hidroxiapatita de calcio son la cara, el cuello, el escote, la piel de los senos, espalda, abdomen, brazos, piernas, glúteos, manos.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Dependiendo de la forma de aplicación, cantidad y concentración también puede usarse con el fin de dar volumen a los tejidos y rellenar depresiones o arrugas.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("El médico le informará de que manera se va a usar en su caso particular y si es con el fin de otorgar volumen a los tejidos o solamente con el fin de mejorar el aspecto de la piel.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("1", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 40,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        'SALTO DE PÁGINA
+        docPDF.NewPage()
+
+        'ENCABEZADO
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+        cell = New PdfPCell(New Phrase("¿Cómo se realiza este tratamiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Se hace a través de la inyección, subdérmica (debajo de la piel) o perióstica (en la superficie del hueso) de la sustancia, usando agujas muy finas y delgadas que atraviesan lapiel y en algunos casos microcánulas que se diferencian de las agujas en tener un extremo no cortante (redondeado) para minimizar la posibilidad de sangrado o evitar la punción de un vaso sanguíneo.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Es mejor el uso de cánulas o de agujas?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Dependiendo de la anatomía y la zona a tratar del paciente se elige cuál de los dos instrumentos médicos es el más apropiado para la zona, maximizando el resultado y minimizando los riesgos. Ambos dispositivos son considerados de bajo riesgo al ser usados por un médico entrenado y con experiencia.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Todas las arrugas se pueden tratar con Hidroxiapatita de Calcio para Inyección?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. Algunas arrugas se originan por movimientos musculares debajo de la piel en cuyo caso se indicará tratarlas mejor con otros procedimientos como la aplicación de Toxina Botulínica Tipo A, algunas arrugas muy superficiales serán tratadas mejor con tratamientos abrasivos físicos como la microdermoabrasión o químicos como el peeling médico, otras pueden mejorar con cremas o lociones. También existen líneas de expresión consideradas normales y típicas del ser humano que no serán tratadas.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cuándo se ven los resultados?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("En los casos donde se aplique en la forma y concentración necesaria para obtener aumento de volumen del tejido, parte de los resultados serán apreciables de forma inmediata. Sin embargo, al momento de la aplicación se producirá inflamación, puede haber sangrados, equimosis (moretones) o hematomas que pueden distorsionar temporalmente los resultados finales. Se considera que aproximadamente a los 7 días de la aplicación se pueden apreciar los resultados sin distorsión, una vez hayan cedido la inflamación, se hayan reabsorbido las equimosis o hematomas y se haya producido el efecto de hidratación de la zona.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Hacia la segunda o tercera semana de la aplicación se dejará de percibir el efecto o disminuirá debido a la reabsorción de la matriz de gel de celulosa. Después de los 21 días de la aplicación inicia la formación de colágeno a partir de las microesferas de hidroxiapatitade calcio, es decir que pasados los 30 días se recuperará la visibilidad de los resultados que habían sido percibidos durante la primera semana y que habían disminuido o desaparecido hacia la tercera semana.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("En los casos en los que la hidroxiapatita de calcio sea diluida con el fin de evitar el efecto de volumen y al ser un tratamiento de inducción de la formación del colágeno, los resultados no serán visibles sino hasta cuando el proceso de formación de colágeno se haya dado.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Tras la implantación inicial, el cuerpo humano tomará aproximadamente 21 días en INICIAR la producción de colágeno alrededor de las microesferas de hidroxiapatita de calcio, por lo que pueden llegar a ser inicialmente perceptibles los cambios en la piel del paciente a partir del día 30 aproximadamente. De ahí en adelante la cantidad de colágeno irá en aumento hasta el tiempo de duración de las microesferas de hidroxiapatita de calcio, con una mejoría gradual del aspecto de la piel.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cuánto duran los resultados?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("En promedio los resultados son apreciables al ojo no entrenado por un tiempo de aproximadamente un año, oscilando desde 6 meses hasta 18 meses. Este tiempo puede estar afectado por factores como los estados de deshidratación crónica causados por bajo consumo de líquidos, ejercicio sin la correcta reposición de líquidos, exposición excesiva al sol, consumo frecuente de diuréticos como el café o el té o algunos medicamentos, abuso de alcohol y niveles altos de actividad física influyen de forma negativa sobre la duración del resultado.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'NUMERACIÓN DE PÁGINA
+        cell = New PdfPCell(New Phrase("2", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 20,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        'SALTO DE PÁGINA
+        docPDF.NewPage()
+
+        'ENCABEZADO
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("¿Voy a ver el mismo resultado durante todo el tiempo de duración del efecto?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. En el caso del uso de la hidroxiapatita de calcio sin diluir para lograr efecto de volumen se verá inicialmente un aumento del volumen de la zona tratada que disminuye o desaparece  hacia la tercera semana. Una vez pasados los 30 días y adelante se recupera la visibilidad  de los resultados y éstos desaparecerán de forma lenta y paulatina en un periodo promedio de 1 año.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Cuando la hidroxiapatita de calcio es diluida y usada con el único fin de mejorar el aspecto de la piel, el resultado suele ser imperceptible por los primeros 30 días, luego empiezan a percibirse y a mejorar paulatinamente con los días hasta culminar el proceso de degradación de las microesferas de hidroxiapatita. Si el paciente hace sesiones adicionales, el aspecto de la piel continúa en mejoría.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Existen alternativas a este tratamiento que puedan mejorar el aspecto de mi piel y arrugas?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Existen otros tratamientos orientados a la mejoría del aspecto de la piel desde no invasivos  como el uso de cremas, mascarillas y lociones, el uso de aparatos no invasivos como la radiofrecuencia o la microdermoabrasión, tratamientos mínimamente invasivos como la aplicación de inyecciones de estimuladores de colágeno y también cirugías plásticas que incluyan injertos de grasa del mismo paciente o prótesis. Sin embargo, ninguno de los  tratamientos mencionados comparte el mismo mecanismo de acción, por lo que los  resultados serían distintos a los obtenidos con la aplicación de Hidroxiapatita de Calcio.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cuáles son los cuidados que debo tener después del tratamiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No aplicar maquillaje el día del procedimiento, no entrar en contacto con superficies o agua contaminada, abstenerse de hacer ejercicio el día del procedimiento, abstenerse de entrar en cuerpos de agua como piscinas, lagos, o el mar, no consumir licor en el día del procedimiento,  no usar medicaciones distintas a las prescritas por su médico, no masajear las zonas tratadas, no manipular las zonas tratadas.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Debo volver a algún control?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No es necesario regresar a control a menos que el paciente note algún efecto o síntoma que no haya sido advertido por el médico. Se recomienda al paciente regresar al año para hacer una nueva sesión. En caso de querer mayor nivel de volumen en los tejidos, es necesario aplicar más cantidad de producto por lo que se generarían costos adicionales.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Cuáles son los riesgos a los que me expongo al realizarme este procedimiento?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Aunque la mayoría de los pacientes no experimentan efectos adversos, secundarios y/o complicaciones, pueden aparecer después de la aplicación de Hidroxiapatita de Calcio a nivel de la cara, cuello, escote o manos los siguientes riesgos:", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Riesgos asociados al uso de agujas que atraviesan la piel de la cara, cuello, escote o manos:  Cefalea (dolor de cabeza), parestesia (alteraciones de la sensibilidad), tirantez de lapiel, dolor facial, edema (hinchazón), dolor, parálisis facial, irritación, hematomas y prurito (comezón) en el sitio de inyección, equimosis (moretones), infección de los puntos de inyección, dolor en las manos.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Riesgos asociados a la hidroxiapatita de calcio o alguna de las sustancias presentes en la preparación: Edema (hinchazón), inflamación, hematomas, enrojecimiento de la zona después de la aplicación, prurito (rasquiña), dolor, induración o nódulos en el punto de inyección, coloración o decoloración en la zona de inyección, inyecciones intravasculares accidentales (dentro de los vasos sanguíneos) que conlleven a necrosis (muerte del tejido) cutánea con o sin pérdida de tejido y cicatrices y/o ceguera permanente, abscesos, granulomas, hipersensibilidad inmediata o tardía, inflamación recurrente y persistente de las zonas tratadas (edema transitorio intermitente), alergias.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'NUMERACIÓN DE PÁGINA
+        cell = New PdfPCell(New Phrase("3", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        'SALTO DE PÁGINA
+        docPDF.NewPage()
+
+        'ENCABEZADO
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("En el caso extremadamente raro de complicaciones por inyección intravascular (dentro de un vaso sanguíneo) no existe forma de diluir o degradar la sustancia para restablecer el flujo de sangre.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Pueden existir efectos secundarios y/o adversos que no estén descritos anteriormente debido  a la respuesta biológica única e irrepetible de cada persona ante un procedimiento o medicamento. Sin embargo han sido mencionados los que figuran en la literatura científica.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Hay alguna forma de minimizar los riesgos?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. En primer lugar proveer toda la información que el médico tratante pregunte, no ocultar nada de la historia clínica, informar de tratamientos previos o eventos adversos previos si los hubiera, informar acerca de todos los medicamentos que esté tomando en este momento, no tomar medicamentos que favorezcan el sangrado en los 3 a 7 días previos como aspirina, antiinflamatorios, o suplementos como el omega o las vitaminas. Mantener una higiene del área tratada, no manipular las zonas tratadas y seguir todas las indicacionesque el médico ordene.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Además, el entrenamiento y amplio conocimiento del médico tratante permitirá reducir la posibilidad de algunos de los eventos adversos.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Hay alguna forma de GARANTIZAR que no ocurran eventos adversos, efectos secundarios o complicaciones?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. No existe forma de garantizarlo.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Hay alguna forma de NO CORRER NINGÚN RIESGO?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Abstenerse de realizarse el procedimiento lo mantendrá libre de todo riesgo asociado al procedimiento.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Es posible que el tratamiento no surta ningún efecto en mi caso?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Si. Existen arrugas que aunque sean rellenadas pueden no desaparecer por completo.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Están garantizados los resultados positivos y a mi agrado?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("No. Garantizamos que usamos el dispositivo adecuado y en cumplimiento con la ley vigente de las entidades sanitarias, garantizamos que quien realiza el procedimiento se encuentra plenamente capacitado para ello y cuenta con experiencia suficiente, garantizamos que los métodos usados cumplen con los estándares de calidad y académicos a nivel mundial, sin embargo la práctica de la medicina no es una ciencia exacta, y aunque se esperan buenos resultados no hay garantía explícita de que puedan obtenerse, pues están afectados por factores intrínsecos y extrínsecos del paciente.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Qué pasa si no me gusta el resultado y/o quiero eliminar el dispositivo de mi cuerpo?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Las microesferas de hidroxiapatita de calcio se degradan por sí solas en un periodo de aproximadamente 18 meses y deben desaparecer del cuerpo una vez transcurridos los tiempos mencionados anteriormente. Sin embargo, no existe ninguna forma de retirar el material aplicado antes de degradación espontánea y tampoco se conoce ninguna sustancia o procedimiento que haya probado en la literatura científica poder degradar más rápidamente la hidroxiapatita de Calcio.", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("¿Si no me agrada el resultado se me devolverá el dinero?", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Como se explicó antes, no es posible asegurar el resultado y toda realización del procedimiento genera un costo independientemente del resultado, por este motivo no habrá lugar a devoluciones una vez haya sido realizado el procedimiento. Sin embargo, si el procedimiento aún no ha tenido lugar, el paciente está en todo su derecho de cambiar de opinión y solicitar la devolución del dinero pagado", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'NUMERACIÓN DE PÁGINA
+        cell = New PdfPCell(New Phrase("4", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 40,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        'SALTO DE PÁGINA
+        docPDF.NewPage()
+
+        'ENCABEZADO
+        tabla = New PdfPTable(New Single() {50.0F, 50.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_LEFT,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CONSENTIMIENTO INFORMADO " + Titulo, fuenteTitulo14)) With { 'LOGO
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase("Certifico que el presente documento ha sido leído y entendido por mi en su integridad.  Doy fe que no he omitido o alterado datos al exponer mi historial clínico y antecedentes clínico-quirúrgicos.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Certifico que lo aquí escrito me ha sido explicado adicionalmente de forma personal por mi médico y que ha respondido de forma satisfactoria a todas las preguntas adicionales que he tenido.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Declaro haber comprendido cuáles son los cuidados posteriores al tratamiento y exonero a mi médico tratante de cualquier responsabilidad derivada del incumplimiento de los mismos.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Me ha sido explicado de forma comprensible el procedimiento de aplicación de hidroxiapatita de calcio, los procedimientos alternativos u otros métodos de tratamiento, los riesgos del procedimiento de aplicación de hidroxiapatita de calcio, y que estoy en total libertad de elegir no correr ningún riesgo a través de la abstención de la realización del procedimiento aquí descrito.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Anexo Covid 19:", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Es posible que después de un tratamiento médico, su sistema inmunológico se pueda ver comprometido y por ende facilitar el riesgo de contagio frente a esta enfermedad, por lo cual se han tomado y debe tomar medidas por mitigar su contagio, sin embargo este riesgo existe y por ello se le hace entrega de un instructivo para mitigareste riesgo en el momento que solicita su cita, además será atendido bajo protocolos de seguridad que disminuyan el riesgo de un posible contagio durante la atención médica. En caso de que se presente la enfermedad, tomará las medidas sanitarias necesarias de aislamiento social para salvaguardar la salud de todas las personas de su entorno, dicha enfermedad podría llegar a afectar los resultados del tratamiento realizado y también comprometer de manera importante su salud.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Medidas de Mitigación Covid 19:", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("Aseguró no haber estado en contacto con mi familia, amigos, y en el trabajo que presenten síntomas respiratorios o sugestivos de Covid 19 o que sean Covid 19 positivos en el último mes. No he tenido síntomas como tos, fiebre, malestar general, fatiga, alteración del olfato, alteraciones del gusto o cualquier otro síntoma relacionado con Covid 19 en el último mes. He cumplido con las medidas preventivas de contagio de Covid 19 como lavado de manos, uso de tapabocas y lentes protectores, distanciamiento social de mínimo 2 metros con otras personas, desinfección adecuada de alimentos, superficies y además en mi entorno, con el fin de evitar el riesgo de contagiarme. En caso de iniciar algún síntoma posterior a la realización del tratamiento, me pondré inmediatamente en contacto con mi médico tratante para evaluar la posibilidad de un posible contagio con Covid 19. En caso de no cumplir con estas medidas enunciadas para evitar el contagio, el médico podrá negarse a la realización de mi consulta y procedimiento.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("Autorizo a la Dra. JULIANA MENESES PEREZ a llevar a cabo en mi cuerpo el procedimiento APLICACIÓN DE HIDROXIAPATITA DE CALCIO.", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        docPDF.Add(tabla)
+
+        '''parte de las firmas 
+
+        tabla = New PdfPTable(New Single() {10.0F, 35.0F, 10.0F, 35.0F, 10.0F})
+        tabla.WidthPercentage = 100.0F
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaPaciente1)
+        fotoPDF.ScaleAbsolute(180, 45)
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .PaddingBottom = 5,
+            .Border = 0,
+            .BorderWidthBottom = 1
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        fotoPDF = iTextSharp.text.Image.GetInstance(Datos.FirmaProfesional1)
+        fotoPDF.ScaleAbsolute(180, 45)
+        cell = New PdfPCell(fotoPDF) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 30,
+            .PaddingBottom = 5,
+            .Border = 0,
+            .BorderWidthBottom = 1
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 30,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'TEXTO FIRMAS
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("FIRMA DEL PACIENTE", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("FIRMA DEL PROFESIONAL", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        'CC
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        cell = New PdfPCell(New Phrase("CC: " & Datos.CCPaciente1, fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("JULIANA MENESES PEREZ", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        'FECHA
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        Dim fecha As Date = Now.Date
+        cell = New PdfPCell(New Phrase("FECHA: " & fecha, fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase("TP – R.M. 543677", fuenteTextoNegrita2)) With {
+            .VerticalAlignment = Element.ALIGN_CENTER,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+
+        cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+            .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+            .PaddingTop = 0,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        'NUMERACIÓN DE PÁGINA
+        tabla = New PdfPTable(New Single() {100.0F})
+        tabla.WidthPercentage = 100.0F
+        cell = New PdfPCell(New Phrase("5", fuenteTexto)) With {
+            .VerticalAlignment = Element.ALIGN_BOTTOM,
+            .HorizontalAlignment = Element.ALIGN_CENTER,
+            .PaddingTop = 10,
+            .PaddingLeft = 20,
+            .PaddingRight = 20,
+            .Border = 0
+        }
+        tabla.AddCell(cell)
+        docPDF.Add(tabla)
+
+        ''SEGUNDA LINEA TEXTO FIRMA DEL PACIENTE
+
+        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+        '    .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+        '    .PaddingTop = 5,
+        '    .Border = 0
+        '}
+        'tabla.AddCell(cell)
+
+        'cell = New PdfPCell(New Phrase("Firma del Paciente", fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_TOP,
+        '    .HorizontalAlignment = Element.ALIGN_CENTER,
+        '    .PaddingTop = 5,
+        '    .Border = 0
+        '}
+        'tabla.AddCell(cell)
+
+        'cell = New PdfPCell(New Phrase(" ", fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_JUSTIFIED,
+        '    .HorizontalAlignment = Element.ALIGN_JUSTIFIED,
+        '    .PaddingTop = 5,
+        '    .Border = 0
+        '}
+        'tabla.AddCell(cell)
+
+        'docPDF.Add(tabla)
+
+        'tabla = New PdfPTable(New Single() {100.0F})
+        'tabla.WidthPercentage = 100.0F
+
+
+        'Dim fecha As Date = Now.Date
+        'cell = New PdfPCell(New Phrase("Fecha del tratamiento: " + fecha, fuenteTexto)) With {
+        '    .VerticalAlignment = Element.ALIGN_BOTTOM,
+        '    .HorizontalAlignment = Element.ALIGN_CENTER,
+        '    .PaddingTop = 10,
+        '    .Border = 0
+        '}
+        'tabla.AddCell(cell)
+
+        'docPDF.Add(tabla)
+
+        docPDF.Close()
+        docPDF.Dispose()
+        'MsgBox("siii")
+        Dim msgBoxResult = MsgBox("Documento prueba generado")
+        Dim Proc As New System.Diagnostics.Process
+        Proc.StartInfo.FileName = ruta
+        Proc.Start()
+
+
+    End Sub
+
 End Class

@@ -505,4 +505,36 @@ Public Class consentimientofacial
     Private Sub GroupBox16_Enter(sender As Object, e As EventArgs) Handles GroupBox16.Enter
 
     End Sub
+
+    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+
+    End Sub
+
+    Private Sub rbConvulsionno_CheckedChanged(sender As Object, e As EventArgs) Handles rbConvulsionno.CheckedChanged
+
+    End Sub
+
+    Private Sub rbConvulsionsi_CheckedChanged(sender As Object, e As EventArgs) Handles rbConvulsionsi.CheckedChanged
+
+    End Sub
+
+    Private Sub GroupBox15_Enter(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub rbStandarno_CheckedChanged(sender As Object, e As EventArgs) Handles rbStandarno.CheckedChanged
+
+    End Sub
+
+    Private Sub rbStandarsi_CheckedChanged(sender As Object, e As EventArgs) Handles rbStandarsi.CheckedChanged
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtDocumento_TextChanged(sender As Object, e As EventArgs) Handles txtDocumento.TextChanged
+
+    End Sub
 End Class
