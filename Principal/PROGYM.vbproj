@@ -262,6 +262,7 @@
     <Compile Include="CambiarFecha.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CirugiaPlasticaOcularVO.vb" />
     <Compile Include="Clientes.Designer.vb">
       <DependentUpon>Clientes.vb</DependentUpon>
     </Compile>

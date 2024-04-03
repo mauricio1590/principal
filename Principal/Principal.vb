@@ -1,5 +1,6 @@
 ﻿
 Imports System.Runtime.InteropServices
+Imports iTextSharp.tool.xml.html.head
 Imports MySql.Data.MySqlClient
 
 Public Class Principal
@@ -43,6 +44,8 @@ Public Class Principal
     Public intFormatoDias As Integer = 1 ' controlar sumar dias por fechas o dias 
     Public intFormularioClientespa = 0
     Public intCongelarConClaveAdmin As Integer = 2
+
+
 
     '' cedula del clietne que firma 
 
@@ -712,5 +715,13 @@ Public Class Principal
         intValidar = 9
         Dim validar As New VALIDAR
         validar.ShowDialog()
+    End Sub
+
+    Private Sub DRAJULIAMENESESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DRAJULIAMENESESToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub HIDROXIAPATITADECALCIOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HIDROXIAPATITADECALCIOToolStripMenuItem.Click
+
     End Sub
 End Class

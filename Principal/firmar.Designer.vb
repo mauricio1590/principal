@@ -110,7 +110,7 @@ Partial Class firmar
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 338)
+        Me.Panel2.Location = New System.Drawing.Point(0, 370)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(612, 31)
         Me.Panel2.TabIndex = 1
@@ -118,9 +118,9 @@ Partial Class firmar
         'pic
         '
         Me.pic.BackColor = System.Drawing.Color.IndianRed
-        Me.pic.Location = New System.Drawing.Point(154, 133)
+        Me.pic.Location = New System.Drawing.Point(12, 88)
         Me.pic.Name = "pic"
-        Me.pic.Size = New System.Drawing.Size(320, 100)
+        Me.pic.Size = New System.Drawing.Size(588, 244)
         Me.pic.TabIndex = 2
         Me.pic.TabStop = False
         '
@@ -128,16 +128,16 @@ Partial Class firmar
         '
         Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Location = New System.Drawing.Point(153, 228)
+        Me.Label1.Location = New System.Drawing.Point(12, 332)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(322, 5)
+        Me.Label1.Size = New System.Drawing.Size(588, 5)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Label1"
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(154, 236)
+        Me.Label2.Location = New System.Drawing.Point(154, 337)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(321, 32)
         Me.Label2.TabIndex = 4
@@ -149,7 +149,7 @@ Partial Class firmar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(612, 369)
+        Me.ClientSize = New System.Drawing.Size(612, 401)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.pic)

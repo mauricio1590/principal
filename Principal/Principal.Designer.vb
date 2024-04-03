@@ -65,6 +65,8 @@ Partial Class Principal
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SolucionAProblemasConocidosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProblemaConLaHuellaEnElAccesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DRAJULIAMENESESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelCabecera = New System.Windows.Forms.Panel()
         Me.btnrestaurar = New System.Windows.Forms.Button()
         Me.btnminimizar = New System.Windows.Forms.Button()
@@ -104,7 +106,7 @@ Partial Class Principal
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnCongelar, Me.ProductosToolStripMenuItem, Me.ConfiguracionToolStripMenuItem, Me.CajaToolStripMenuItem, Me.TemporalesToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnCongelar, Me.ProductosToolStripMenuItem, Me.ConfiguracionToolStripMenuItem, Me.CajaToolStripMenuItem, Me.TemporalesToolStripMenuItem, Me.AyudaToolStripMenuItem, Me.DRAJULIAMENESESToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1219, 25)
@@ -364,6 +366,19 @@ Partial Class Principal
         Me.ProblemaConLaHuellaEnElAccesoToolStripMenuItem.Name = "ProblemaConLaHuellaEnElAccesoToolStripMenuItem"
         Me.ProblemaConLaHuellaEnElAccesoToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
         Me.ProblemaConLaHuellaEnElAccesoToolStripMenuItem.Text = "Problema con la huella en el acceso"
+        '
+        'DRAJULIAMENESESToolStripMenuItem
+        '
+        Me.DRAJULIAMENESESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HIDROXIAPATITADECALCIOToolStripMenuItem})
+        Me.DRAJULIAMENESESToolStripMenuItem.Name = "DRAJULIAMENESESToolStripMenuItem"
+        Me.DRAJULIAMENESESToolStripMenuItem.Size = New System.Drawing.Size(127, 21)
+        Me.DRAJULIAMENESESToolStripMenuItem.Text = "DRA JULIA MENESES"
+        '
+        'HIDROXIAPATITADECALCIOToolStripMenuItem
+        '
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Name = "HIDROXIAPATITADECALCIOToolStripMenuItem"
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Text = "HIDROXIAPATITA DE CALCIO"
         '
         'PanelCabecera
         '
@@ -804,4 +819,6 @@ Partial Class Principal
     Friend WithEvents HistorialDeSaldoDeVentasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DescargarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents logosistem As PictureBox
+    Friend WithEvents DRAJULIAMENESESToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HIDROXIAPATITADECALCIOToolStripMenuItem As ToolStripMenuItem
 End Class
