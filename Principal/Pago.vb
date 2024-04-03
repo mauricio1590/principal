@@ -821,8 +821,11 @@ Public Class Pago
         If dias = 0 Then dias = 1
         Dim intFormatoDia As Integer = Principal.intFormatoDias
         Dim diasdelmes As Integer = DateTime.DaysInMonth(Now.Year, Now.Month)
-        If diasdelmes = 30 Or diasdelmes = 28 Or diasdelmes = 29 And dias > 15 Then
-            dias = dias - 1
+        If diasdelmes = 30 Or diasdelmes = 28 Or diasdelmes = 29 Then
+            If dias > 15 Then
+                dias = dias - 1
+            End If
+
         End If
         Select Case intFormatoDia
 
