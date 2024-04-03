@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\DATOS\\Desktop\\SPA 2\\principal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -169,7 +169,7 @@
               "RelativeDocumentMoniker": "Principal\\Clientes.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
               "RelativeToolTip": "Principal\\Clientes.vb",
-              "ViewState": "AQIAAJUDAAAAAAAAAAA5wKYDAAAAAAAA",
+              "ViewState": "AQIAAKADAAAAAAAAAAA5wLMDAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-12T21:37:23.788Z",
               "EditorCaption": ""
@@ -195,7 +195,7 @@
               "RelativeDocumentMoniker": "Principal\\Report.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Report.vb",
               "RelativeToolTip": "Principal\\Report.vb",
-              "ViewState": "AQIAAPYTAAAAAAAAAAAwwAMUAAAAAAAA",
+              "ViewState": "AQIAADgYAAAAAAAAAAAQwEYYAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-08T19:32:42.228Z",
               "EditorCaption": ""
@@ -395,7 +395,8 @@
               "RelativeToolTip": "Principal\\My Project\\Resources.resx",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAOoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-03-09T02:52:03.696Z"
+              "WhenOpened": "2024-03-09T02:52:03.696Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
