@@ -947,4 +947,26 @@ Public Class Clientes
         PDF = New Report
         PDF.Consentimiento_ACIDO_L_POLILACTICO(img, "APLICACION DE ACIDO L-POLILACTICO", Datos)
     End Sub
+
+    Private Sub HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem.Click
+        Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
+        Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
+                                                 "1092364918",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg")
+
+        PDF = New Report
+        PDF.Consentimiento_POLIDIOXANONA(img, "HILOS LISOS DE POLIDIOXANONA (PDO)", Datos)
+    End Sub
+
+    Private Sub HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem.Click
+        Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
+        Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
+                                                 "1092364918",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg")
+
+        PDF = New Report
+        PDF.Consentimiento_HIALURONIDASA(img, "APLICACIÓN DE HIALURONIDASA PARA DEGRADACIÓN DE ÁCIDO HIALURÓNICO", Datos)
+    End Sub
 End Class

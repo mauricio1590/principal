@@ -283,14 +283,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1400320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1452032">
       <assemblyIdentity name="SISTEMGYM 5.1" version="5.2.0.278" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mqYqrhwcMd2FoH595cW8halwv4KfmGZDxM6NYmTaSZI=</dsig:DigestValue>
+        <dsig:DigestValue>CWPa6iq7BxCoB7a5gUnu68ut2GiBAA2S3AhfbABFF38=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
