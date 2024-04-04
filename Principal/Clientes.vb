@@ -915,7 +915,7 @@ Public Class Clientes
         cong.ShowDialog()
     End Sub
 
-    Private Sub HIDROXIAPATITADECALCIOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HIDROXIAPATITADECALCIOToolStripMenuItem.Click
+    Private Sub HIDROXIAPATITADECALCIOToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
         Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
                                                  "1092364918",
@@ -926,7 +926,7 @@ Public Class Clientes
         PDF.Consentimiento_DraJulianaMeneses_RADIESSE(img, "APLICACIÓN DE HIDROXIAPATITA DE CALCIO (RADIESSE)", Datos)
     End Sub
 
-    Private Sub TOXINABOTULÍNICATIPOAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TOXINABOTULÍNICATIPOAToolStripMenuItem.Click
+    Private Sub TOXINABOTULÍNICATIPOAToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
         Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
                                                  "1092364918",
@@ -937,7 +937,7 @@ Public Class Clientes
         PDF.Consentimiento_TOXINA_BOTULINICA_A(img, "APLICACIÓN DE TOXINA BOTULÍNICA TIPO A EN CARA Y-O CUELLO", Datos)
     End Sub
 
-    Private Sub ÁCIDOLPOLILÁCTICOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÁCIDOLPOLILÁCTICOToolStripMenuItem.Click
+    Private Sub ÁCIDOLPOLILÁCTICOToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
         Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
                                                  "1092364918",
@@ -948,7 +948,7 @@ Public Class Clientes
         PDF.Consentimiento_ACIDO_L_POLILACTICO(img, "APLICACION DE ACIDO L-POLILACTICO", Datos)
     End Sub
 
-    Private Sub HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem.Click
+    Private Sub HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
         Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
                                                  "1092364918",
@@ -959,7 +959,7 @@ Public Class Clientes
         PDF.Consentimiento_POLIDIOXANONA(img, "HILOS LISOS DE POLIDIOXANONA (PDO)", Datos)
     End Sub
 
-    Private Sub HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem.Click
+    Private Sub HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
         Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
                                                  "1092364918",
@@ -970,7 +970,7 @@ Public Class Clientes
         PDF.Consentimiento_HIALURONIDASA(img, "APLICACIÓN DE HIALURONIDASA PARA DEGRADACIÓN DE ÁCIDO HIALURÓNICO", Datos)
     End Sub
 
-    Private Sub HILOSESPICULADOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HILOSESPICULADOSToolStripMenuItem.Click
+    Private Sub HILOSESPICULADOSToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
         Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
                                                  "1092364918",
@@ -981,7 +981,7 @@ Public Class Clientes
         PDF.Consentimiento_HILOS_ESPICULADOS_POLIDIOXANONA(img, "APLICACIÓN DE HILOS ESPICULADOS DE POLIDIOXANONA (PDO)", Datos)
     End Sub
 
-    Private Sub ACIDOHIALURONICORETICULADOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ACIDOHIALURONICORETICULADOToolStripMenuItem.Click
+    Private Sub ACIDOHIALURONICORETICULADOToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
         Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
                                                  "1092364918",
@@ -990,5 +990,9 @@ Public Class Clientes
 
         PDF = New Report
         PDF.Consentimiento_ACIDO_HIALURONICO_RETICULADO(img, "ACIDO HIALURONICO RETICULADO", Datos)
+    End Sub
+
+    Private Sub ConsentimientosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsentimientosToolStripMenuItem.Click
+        Principal.AbrirFormularios(Of ConsentimientosCPO)()
     End Sub
 End Class

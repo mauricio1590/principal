@@ -55,12 +55,6 @@ Partial Class Clientes
         Me.FirmarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FirmaDelAcompañanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DRAJULIANAMENESESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ÁCIDOLPOLILÁCTICOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HILOSESPICULADOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lstNombres = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -87,7 +81,7 @@ Partial Class Clientes
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.imagenfoto = New System.Windows.Forms.PictureBox()
         Me.capturada = New System.Windows.Forms.PictureBox()
-        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsentimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         CType(Me.huella4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -371,46 +365,10 @@ Partial Class Clientes
         '
         'DRAJULIANAMENESESToolStripMenuItem
         '
-        Me.DRAJULIANAMENESESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HIDROXIAPATITADECALCIOToolStripMenuItem, Me.TOXINABOTULÍNICATIPOAToolStripMenuItem, Me.ÁCIDOLPOLILÁCTICOToolStripMenuItem, Me.HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem, Me.HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem, Me.HILOSESPICULADOSToolStripMenuItem, Me.ACIDOHIALURONICORETICULADOToolStripMenuItem})
+        Me.DRAJULIANAMENESESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsentimientosToolStripMenuItem})
         Me.DRAJULIANAMENESESToolStripMenuItem.Name = "DRAJULIANAMENESESToolStripMenuItem"
         Me.DRAJULIANAMENESESToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
         Me.DRAJULIANAMENESESToolStripMenuItem.Text = "DRA JULIANA MENESES"
-        '
-        'HIDROXIAPATITADECALCIOToolStripMenuItem
-        '
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Name = "HIDROXIAPATITADECALCIOToolStripMenuItem"
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
-        Me.HIDROXIAPATITADECALCIOToolStripMenuItem.Text = "HIDROXIAPATITA DE CALCIO"
-        '
-        'TOXINABOTULÍNICATIPOAToolStripMenuItem
-        '
-        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem.Name = "TOXINABOTULÍNICATIPOAToolStripMenuItem"
-        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
-        Me.TOXINABOTULÍNICATIPOAToolStripMenuItem.Text = "TOXINA BOTULÍNICA TIPO A"
-        '
-        'ÁCIDOLPOLILÁCTICOToolStripMenuItem
-        '
-        Me.ÁCIDOLPOLILÁCTICOToolStripMenuItem.Name = "ÁCIDOLPOLILÁCTICOToolStripMenuItem"
-        Me.ÁCIDOLPOLILÁCTICOToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
-        Me.ÁCIDOLPOLILÁCTICOToolStripMenuItem.Text = "ÁCIDO L-POLILÁCTICO"
-        '
-        'HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem
-        '
-        Me.HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem.Name = "HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem"
-        Me.HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
-        Me.HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem.Text = "HILOS LISOS DE POLIDIOXANONA"
-        '
-        'HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem
-        '
-        Me.HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem.Name = "HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem"
-        Me.HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
-        Me.HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem.Text = "HIALURONIDASA PARA DEGRADACIÓN"
-        '
-        'HILOSESPICULADOSToolStripMenuItem
-        '
-        Me.HILOSESPICULADOSToolStripMenuItem.Name = "HILOSESPICULADOSToolStripMenuItem"
-        Me.HILOSESPICULADOSToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
-        Me.HILOSESPICULADOSToolStripMenuItem.Text = "HILOS ESPICULADOS DE POLIDIOXANONA"
         '
         'lstNombres
         '
@@ -652,11 +610,11 @@ Partial Class Clientes
         Me.capturada.TabIndex = 32
         Me.capturada.TabStop = False
         '
-        'ACIDOHIALURONICORETICULADOToolStripMenuItem
+        'ConsentimientosToolStripMenuItem
         '
-        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem.Name = "ACIDOHIALURONICORETICULADOToolStripMenuItem"
-        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
-        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem.Text = "ACIDO HIALURONICO RETICULADO"
+        Me.ConsentimientosToolStripMenuItem.Name = "ConsentimientosToolStripMenuItem"
+        Me.ConsentimientosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ConsentimientosToolStripMenuItem.Text = "CONSENTIMIENTOS"
         '
         'Clientes
         '
@@ -785,11 +743,5 @@ Partial Class Clientes
     Friend WithEvents FirmarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FirmaDelAcompañanteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DRAJULIANAMENESESToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HIDROXIAPATITADECALCIOToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TOXINABOTULÍNICATIPOAToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ÁCIDOLPOLILÁCTICOToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HILOSESPICULADOSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ACIDOHIALURONICORETICULADOToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsentimientosToolStripMenuItem As ToolStripMenuItem
 End Class

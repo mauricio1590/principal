@@ -86,3 +86,4 @@ D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\PROGYM.vbproj.Up2Date
 D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\SISTEMGYM 5.1.exe
 D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\SISTEMGYM 5.1.xml
 D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\SISTEMGYM 5.1.pdb
+D:\DATOS\Desktop\SPA 2\principal\Principal\obj\Debug\Principal.ConsentimientosCPO.resources

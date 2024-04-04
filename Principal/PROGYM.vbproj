@@ -317,6 +317,12 @@
     <Compile Include="consentimientofacial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ConsentimientosCPO.Designer.vb">
+      <DependentUpon>ConsentimientosCPO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsentimientosCPO.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cortesias.Designer.vb">
       <DependentUpon>Cortesias.vb</DependentUpon>
     </Compile>
@@ -596,6 +602,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consentimientofacial.resx">
       <DependentUpon>consentimientofacial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsentimientosCPO.resx">
+      <DependentUpon>ConsentimientosCPO.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cortesias.resx">
       <DependentUpon>Cortesias.vb</DependentUpon>

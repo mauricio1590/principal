@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "D:\\DATOS\\Desktop\\SPA 2\\principal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\consentimientoscpo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientoscpo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\consentimientoscpo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientoscpo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\clientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\cirugiaplasticaocularvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\cirugiaplasticaocularvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\ajustedeinventario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\ajustedeinventario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\consentimientofacial.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|d:\\datos\\desktop\\spa 2\\principal\\principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\report.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\funciones.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\cirugiaplasticaocularvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|solutionrelative:principal\\cirugiaplasticaocularvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66C3A62E-04FF-430C-8C8C-C180BA32EF13}|Principal\\PROGYM.vbproj|D:\\DATOS\\Desktop\\SPA 2\\principal\\principal\\hidrafacialvo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -121,11 +133,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "consentimientofacial.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb",
               "RelativeDocumentMoniker": "Principal\\consentimientofacial.vb",
@@ -139,19 +151,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Principal.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Principal.vb",
-              "RelativeDocumentMoniker": "Principal\\Principal.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Principal.vb [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\Principal.vb [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "ConsentimientosCPO.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ConsentimientosCPO.vb",
+              "RelativeDocumentMoniker": "Principal\\ConsentimientosCPO.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ConsentimientosCPO.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\ConsentimientosCPO.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-12T21:33:55.818Z",
+              "WhenOpened": "2024-04-04T15:59:29.772Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Clientes.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
               "RelativeDocumentMoniker": "Principal\\Clientes.vb",
@@ -163,20 +175,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Clientes.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
               "RelativeDocumentMoniker": "Principal\\Clientes.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Clientes.vb",
               "RelativeToolTip": "Principal\\Clientes.vb",
-              "ViewState": "AQIAAMwDAAAAAAAAAAA5wN8DAAA3AAAA",
+              "ViewState": "AQIAANUDAAAAAAAAAAAEwOMDAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-12T21:37:23.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "ConsentimientosCPO.vb",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ConsentimientosCPO.vb",
+              "RelativeDocumentMoniker": "Principal\\ConsentimientosCPO.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ConsentimientosCPO.vb",
+              "RelativeToolTip": "Principal\\ConsentimientosCPO.vb",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAAAJYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-04T20:39:58.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "consentimientofacial.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb",
+              "RelativeDocumentMoniker": "Principal\\consentimientofacial.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\consentimientofacial.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-08T19:32:42.233Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Principal.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Principal.vb",
+              "RelativeDocumentMoniker": "Principal\\Principal.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Principal.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\Principal.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-12T21:33:55.818Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AjusteDeInventario.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\AjusteDeInventario.vb",
+              "RelativeDocumentMoniker": "Principal\\AjusteDeInventario.vb",
+              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\AjusteDeInventario.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Principal\\AjusteDeInventario.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-04-04T15:59:37.296Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Funciones.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Funciones.vb",
               "RelativeDocumentMoniker": "Principal\\Funciones.vb",
@@ -189,20 +250,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Report.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Report.vb",
               "RelativeDocumentMoniker": "Principal\\Report.vb",
               "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Report.vb",
               "RelativeToolTip": "Principal\\Report.vb",
-              "ViewState": "AQIAAHEXAAAAAAAAAAAwwH0XAAAOAAAA",
+              "ViewState": "AQIAAF4XAAAAAAAAAAAQwH0XAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-03-08T19:32:42.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "CirugiaPlasticaOcularVO.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\CirugiaPlasticaOcularVO.vb",
               "RelativeDocumentMoniker": "Principal\\CirugiaPlasticaOcularVO.vb",
@@ -214,19 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "consentimientofacial.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb",
-              "RelativeDocumentMoniker": "Principal\\consentimientofacial.vb",
-              "ToolTip": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\consentimientofacial.vb [Dise\u00F1o]",
-              "RelativeToolTip": "Principal\\consentimientofacial.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-08T19:32:42.233Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "HidraFacialVO.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\HidraFacialVO.vb",
               "RelativeDocumentMoniker": "Principal\\HidraFacialVO.vb",
@@ -238,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Principal.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Principal.vb",
               "RelativeDocumentMoniker": "Principal\\Principal.vb",
@@ -251,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "FichaFacialVO.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\FichaFacialVO.vb",
               "RelativeDocumentMoniker": "Principal\\FichaFacialVO.vb",
@@ -263,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "reportes.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\reportes.vb",
               "RelativeDocumentMoniker": "Principal\\reportes.vb",
@@ -274,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ClientesSpa.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ClientesSpa.vb",
               "RelativeDocumentMoniker": "Principal\\ClientesSpa.vb",
@@ -285,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "firmar.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmar.vb",
               "RelativeDocumentMoniker": "Principal\\firmar.vb",
@@ -297,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "FichaCorporalVO.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\FichaCorporalVO.vb",
               "RelativeDocumentMoniker": "Principal\\FichaCorporalVO.vb",
@@ -309,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "firmar.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmar.vb",
               "RelativeDocumentMoniker": "Principal\\firmar.vb",
@@ -320,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ReportesMes.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ReportesMes.vb",
               "RelativeDocumentMoniker": "Principal\\ReportesMes.vb",
@@ -331,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "VentasDetallado.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\VentasDetallado.vb",
               "RelativeDocumentMoniker": "Principal\\VentasDetallado.vb",
@@ -343,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Medidas.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Medidas.vb",
               "RelativeDocumentMoniker": "Principal\\Medidas.vb",
@@ -354,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "leerConsentimiento.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\leerConsentimiento.vb",
               "RelativeDocumentMoniker": "Principal\\leerConsentimiento.vb",
@@ -365,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "Funciones-MAURICIO.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Funciones-MAURICIO.vb",
               "RelativeDocumentMoniker": "Principal\\Funciones-MAURICIO.vb",
@@ -376,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "firmaAcompa\u00F1ante.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\firmaAcompa\u00F1ante.vb",
               "RelativeDocumentMoniker": "Principal\\firmaAcompa\u00F1ante.vb",
@@ -387,7 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "Resources.resx",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\My Project\\Resources.resx",
               "RelativeDocumentMoniker": "Principal\\My Project\\Resources.resx",
@@ -400,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "conexion.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\conexion.vb",
               "RelativeDocumentMoniker": "Principal\\conexion.vb",
@@ -413,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "PROGYM",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\PROGYM.vbproj",
               "RelativeDocumentMoniker": "Principal\\PROGYM.vbproj",
@@ -424,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "ExamineBase.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\ExamineBase.vb",
               "RelativeDocumentMoniker": "Principal\\ExamineBase.vb",
@@ -436,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "Pago.vb",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Pago.vb",
               "RelativeDocumentMoniker": "Principal\\Pago.vb",
@@ -449,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Pago.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\DATOS\\Desktop\\SPA 2\\principal\\Principal\\Pago.vb",
               "RelativeDocumentMoniker": "Principal\\Pago.vb",
