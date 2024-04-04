@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="SISTEMGYM 5.1.exe" version="5.2.0.281" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="SISTEMGYM 5.1.exe" version="5.2.0.282" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="logoadmon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -307,23 +307,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-<<<<<<< HEAD
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1288704">
-      <assemblyIdentity name="SISTEMGYM 5.1" version="5.2.0.281" language="neutral" processorArchitecture="msil" />
-=======
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISTEMGYM 5.1.exe" size="1341440">
-      <assemblyIdentity name="SISTEMGYM 5.1" version="5.2.0.278" language="neutral" processorArchitecture="msil" />
->>>>>>> ad6766a3ba25e95aa6af18d40d99a4bc8d1e74b6
+      <assemblyIdentity name="SISTEMGYM 5.1" version="5.2.0.281" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< HEAD
-        <dsig:DigestValue>wkehp0aPUpVS1eNs78jOzEZFyNiKq/UWvxfj/JOpjM8=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>2hetrfUZNcWx1NKVzOqZFU9honowp3G7MSgGeathjGk=</dsig:DigestValue>
->>>>>>> ad6766a3ba25e95aa6af18d40d99a4bc8d1e74b6
+        <dsig:DigestValue>AnMNFdHIcEG2wZyQ+CkzBUtppUWi6nEKu9OuV/CDgEY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
