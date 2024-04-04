@@ -980,4 +980,15 @@ Public Class Clientes
         PDF = New Report
         PDF.Consentimiento_HILOS_ESPICULADOS_POLIDIOXANONA(img, "APLICACIÓN DE HILOS ESPICULADOS DE POLIDIOXANONA (PDO)", Datos)
     End Sub
+
+    Private Sub ACIDOHIALURONICORETICULADOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ACIDOHIALURONICORETICULADOToolStripMenuItem.Click
+        Dim img As Image = Image.FromFile(Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\DRA JULIANA MENESES CIRUGIA PLASTICA OCULAR.jpg")
+        Dim Datos As New CirugiaPlasticaOcularVO("Jhon Alexander Grisales Aillon",
+                                                 "1092364918",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg",
+                                                 Principal.strunidad & ":\SISTEMGYM_DATOS\Logos\Firma_prueba.jpg")
+
+        PDF = New Report
+        PDF.Consentimiento_ACIDO_HIALURONICO_RETICULADO(img, "ACIDO HIALURONICO RETICULADO", Datos)
+    End Sub
 End Class

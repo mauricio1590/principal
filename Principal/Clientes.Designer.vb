@@ -87,6 +87,7 @@ Partial Class Clientes
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.imagenfoto = New System.Windows.Forms.PictureBox()
         Me.capturada = New System.Windows.Forms.PictureBox()
+        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.PanelCabecera.SuspendLayout()
         CType(Me.huella4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -370,7 +371,7 @@ Partial Class Clientes
         '
         'DRAJULIANAMENESESToolStripMenuItem
         '
-        Me.DRAJULIANAMENESESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HIDROXIAPATITADECALCIOToolStripMenuItem, Me.TOXINABOTULÍNICATIPOAToolStripMenuItem, Me.ÁCIDOLPOLILÁCTICOToolStripMenuItem, Me.HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem, Me.HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem, Me.HILOSESPICULADOSToolStripMenuItem})
+        Me.DRAJULIANAMENESESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HIDROXIAPATITADECALCIOToolStripMenuItem, Me.TOXINABOTULÍNICATIPOAToolStripMenuItem, Me.ÁCIDOLPOLILÁCTICOToolStripMenuItem, Me.HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem, Me.HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem, Me.HILOSESPICULADOSToolStripMenuItem, Me.ACIDOHIALURONICORETICULADOToolStripMenuItem})
         Me.DRAJULIANAMENESESToolStripMenuItem.Name = "DRAJULIANAMENESESToolStripMenuItem"
         Me.DRAJULIANAMENESESToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
         Me.DRAJULIANAMENESESToolStripMenuItem.Text = "DRA JULIANA MENESES"
@@ -651,6 +652,12 @@ Partial Class Clientes
         Me.capturada.TabIndex = 32
         Me.capturada.TabStop = False
         '
+        'ACIDOHIALURONICORETICULADOToolStripMenuItem
+        '
+        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem.Name = "ACIDOHIALURONICORETICULADOToolStripMenuItem"
+        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem.Size = New System.Drawing.Size(300, 22)
+        Me.ACIDOHIALURONICORETICULADOToolStripMenuItem.Text = "ACIDO HIALURONICO RETICULADO"
+        '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -784,4 +791,5 @@ Partial Class Clientes
     Friend WithEvents HILOSLISOSDEPOLIDIOXANONAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HIALURONIDASAPARADEGRADACIÓNToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HILOSESPICULADOSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ACIDOHIALURONICORETICULADOToolStripMenuItem As ToolStripMenuItem
 End Class
